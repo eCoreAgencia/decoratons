@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+body.home {
+	main{
+		padding-top: 0;
+		padding-bottom: 0;
+		section{
+			padding: 30px 0;
+			overflow: hidden;
+			&.banners-top, &.tipBar{
+				padding: 0;
+			}
+		}
+	}
+	.prateleira{
+		ul{
+			width: 90%;
+			margin: 0 auto;
+			li{
+				margin: 0;
+				height: auto;
+				padding: 10px;
+				position: relative;
+				vertical-align: top;
+				display: inline-block;
+			}
+			&.slick-slider{
+				display: block;
+				position: initial;
+				.slick-track{
+					display: -webkit-flex;
+					display: -moz-flex;
+					display: -ms-flex;
+					display: -o-flex;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: stretch;
+					justify-content: center;
+				}
+			}
+		}
+	}
+	
+	section{
+		$transition: .7s;
+		.section-title{
+			@extend .txt-center;
+			padding: 20px 0;
+			@media (max-width: $screen-sm-max){
+				@include font-size(2.4);
+				line-height: 28px;
+			}
+		}
+		&.banners-top{
+			.box-banner{
+				overflow: hidden;
+				a{
+					display: flex;
+					justify-content: center;
+					align-items: flex-start;
+					img{
+						width: 140%;
+						@include mq($screen-md){
+							width: 100%;
+						}
+					}
+				}
+			}
+
+			.slick-dots {
+			    white-space: nowrap;
+				li {
+					width: auto;
+					height: auto;
+					vertical-align: top;
+
+					button {
+						@extend .transition;
+						width: 12px;
+						height: 12px;
+						font-size: 0;
+						text-indent: 0;
+						overflow: hidden;
+						border: 3px solid #ccc;
+						background-size: cover;
+						background-position: center;
+						background-repeat: no-repeat;
+						@include mq($screen-sm){
+							width: 40px;
+							height: 40px;
+						}
+						@include mq($screen-md){
+							width: 50px;
+							height: 50px;
+						}
+					}
+					&.slick-active{
+						button{
+							border-color: #EB7733;
+						}
+					}
+				}
+			}
+		}
+		&.tipBar{
+			.slick-slide{
+				max-width: none;
+				display: inline-flex;
+				justify-content: center;
+			}
+		}
+		&.ambientes{
+			.Ambientes{
+				padding: 0 15px;
+				h3{
+					@media (max-width: $screen-xs-max){
+						@include font-size(1.4);
+						line-height: 18px;
+					}
+				}
+			}
+		}
+		.shelf.slider{
+			padding: 0 25px;
+			@include mq($screen-md){
+				padding: 0;
+			}
+			.slick-next, .slick-prev{
+				@media (max-width: $screen-xs-max){
+					padding: 0;
+					width: 25px;
+					height: 25px;
+					display: flex !important;
+					user-select: none;
+					align-items: center;
+					justify-content: center;
+					svg{
+						width: 15px;
+						height: 15px;
+						padding: 0 0 0 2px;
+					}
+				}
+			}
+		}
+		&.boxes{
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 0;
+			@include mq($screen-md){
+				padding-bottom: 30px;
+			}
+			h2{
+				@media (max-width: $screen-sm-max){
+					@include font-size(2.4);
+					line-height: 28px;
+				}
+			}
+			.youtube, .lancamentos{
+				margin: 10px 0;
+				padding: 20px 40px;
+				@include mq($screen-md){
+					margin: 0;
+					height: 100%;
+					padding: 15px 40px;
+				}
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			.lancamentos{
+				display: flex;
+				flex-wrap: wrap;
+				padding-left: 20px;
+				padding-right: 20px;
+				justify-content: center;
+				@include mq($screen-md){
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				& > div:last-of-type{
+					@include mq($screen-md){
+						align-self: stretch;
+					}
+				}
+				h2{
+					text-align: left;
+					@include mq($screen-md){
+						text-align: center;
+					}
+				}
+				.box-banner{
+					@include mq($screen-md){
+						height: 100%;
+					}
+					img{
+						@include mq($screen-md){
+							height: 100%;
+						}
+					}
+				}
+				.buyButton{
+				    // margin-top: -20px;
+				    // display: inline-block;
+				    // transform: translateY(50%);
+				    @include mq($screen-md){
+				    	left: 50%;
+				    	z-index: 1;
+				    	position: absolute;
+				    	transform: translateX(-50%);
+				    }
+				}
+			}
+		}
+	}
+}

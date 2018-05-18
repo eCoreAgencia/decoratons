@@ -1,0 +1,19 @@
+<form name="Fale-Conosco" action="javascript:masterDataContato()" method="POST" class="form-contato" data-module="newsletter">
+	<fieldset class="nome">
+		<label for="cl_nome">Nome</label>
+		<input type="text" name="newsletterClientNome" id="cl_nome" class="nome" placeholder="Digite seu nome" data-validation="required-nome" data-msg-required="Digite seu nome" data-msg-email="Digite seu nome" required/>
+	</fieldset>
+	<fieldset class="email">
+		<label for="cl_email">E-mail</label>
+		<input type="email" name="newsletterClientEmail" id="cl_email" class="email" placeholder="Digite seu e-mail" data-validation="required email" data-msg-required="Digite seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" required/>
+	</fieldset>
+	<fieldset class="telefone">
+		<label for="cl_telefone">Telefone</label>
+		<input type="text" name="newsletterClientTelefone" id="cl_telefone" class="telefone" placeholder="Digite seu e-mail" data-validation="required telefone" data-msg-required="Digite seu telefone" data-msg-telefone="Insira um telefone válido" />
+	</fieldset>
+	<fieldset class="mensagem">
+		<label for="cl_mensagem">Comentário</label>
+		<textarea name="newsletterClientMensagem" id="cl_mensagem" class="mensagem" placeholder="Digite seu e-mail" data-validation="required mensagem" data-msg-required="Digite seu mensagem" data-msg-mensagem="Insira uma mensagem válida" required></textarea>
+	</fieldset>
+	<button type="submit" class="newsletter-button-ok submit">Enviar</button>
+</form>

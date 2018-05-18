@@ -1,0 +1,24 @@
+<div class="shelfItem">
+	<a class="productImage" title="{{productName}}" alt="{{productName}}" href="{{link}}">{{{productImage}}}</a>
+	<div class="productInfo">
+		<h3 class="regular txt-dark-gray txt-sz-16"><a title="{{productName}}" href="{{link}}">{{productName}}</a></h3>
+		{{#if isInStock}}
+			<p class="price">
+				<a title="$escapedName" href="{{link}}">
+					{{#if hasBestPrice}}
+						<span class="listPrice txt-sz-14 txt-light-gray txt-ln-through">{{listPrice}}</span>
+					{{/if}}
+					<span class="bestPrice txt-sz-30 txt-dark-blue bold">{{bestPrice}}</span>
+				</a>
+			</p>
+			<a class="buyButton bg-dark-blue txt-white" title="{{productName}}" href="{{link}}"> 
+				Eu quero
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 451.846 451.847"><path d="M345.441 248.292L151.154 442.573c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744L278.318 225.92 106.409 54.017c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.287 194.284c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373z" fill="#FFF"/></svg>
+			</a>
+		{{else}}
+			<p class="outOfStock">Produto Esgotado</p> 
+		{{/if}}
+		<div class="discountHighLight">{{{discountHighLight}}}</div>
+		<a title="$escapedName" class="highlight" href="{{link}}">{{{productHighlight}}}</a>
+	</div>
+</div>

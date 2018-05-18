@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title><vtex:contentPlaceHolder id="title"/> | Decoratons</title>
+        <vtex:metaTags/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <vtex:template id="decoratons-commonStyles" />
+    </head>
+    <body>          
+        <vtex:template id="decoratons-header" />
+        <div class="container">
+        	<nav class="sidebar"><vtex.cmc:institucionalMenu /></nav>
+        	<main>
+        		<article>
+        			<section class="left-img">
+        				<vtex:contentPlaceHolder id="Imagem-esquerda" />
+        			</section>
+        			<section class="text">
+        				<h1><vtex:contentPlaceHolder id="Título" /></h1>
+        				<vtex:contentPlaceHolder id="Texto" />
+        			</section>
+        			<section class="right-img">
+        				<vtex:contentPlaceHolder id="Imagem-direita" />
+        			</section>
+        		</article>
+        	</main>
+        </div>
+        <vtex:template id="decoratons-footer" />
+        <vtex:template id="decoratons-commonScripts" />
+        <script>$('main > article > section:empty').remove()</script>
+    </body>
+</html>

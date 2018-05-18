@@ -1,0 +1,337 @@
+<form name="Pedido-parceria" method="POST" class="form-contato" data-module="newsletter">
+	<ul class="section-slider">
+		<li class="formSection active">
+			<div class="nome col-xs-12">
+				<label for="cl_nome" class="required">Nome:</label>
+				<input type="text" name="nome" id="cl_nome" class="nome" placeholder="Digite seu nome" data-validation="required-nome" data-msg-required="Digite seu nome" data-msg-email="Digite seu nome" required/>
+			</div>
+			<div class="cpf col-xs-6">
+				<label for="cl_cpf" class="required">CPF: </label>
+				<input type="text" name="cpf" id="cl_cpf" class="cpf" placeholder="Digite seu CPF" data-validation="required-cpf" data-msg-required="Digite seu CPF" data-msg-email="Digite seu CPF" required/>
+			</div>
+			<div class="rg col-xs-6">
+				<label for="cl_rg" class="required">RG:</label>
+				<input type="text" name="rg" id="cl_rg" class="rg" placeholder="Digite seu RG" data-validation="required-rg" data-msg-required="Digite seu RG" data-msg-email="Digite seu RG" required/>
+			</div>
+			<div class="endereco col-xs-6">
+				<label for="cl_addr" class="required">Endereço:</label>
+				<input type="text" name="endereco" id="cl_addr" class="rg" placeholder="Digite seu endereço" data-validation="required-addr" data-msg-required="Digite seu endereço" data-msg-email="Digite seu endereço" required/>
+			</div>
+			<div class="numero col-xs-6 col-sm-2">
+				<label for="cl_num" class="required"><span class="hidden-sm hidden-md hidden-lg">Nº</span><span class="hidden-xs">Numero</span>:</label>
+				<input type="text" name="numero" id="cl_num" class="num" placeholder="Nº" data-validation="required-num" data-msg-required="Digite o número" data-msg-email="Digite o número" required/>
+			</div>
+			<div class="numero col-xs-6 col-sm-4">
+				<label for="cl_comp">Complemento:</label>
+				<input type="text" name="complemento" id="cl_comp" class="comp" placeholder="Complemento" data-validation="required-comp" data-msg-required="Complemento" data-msg-email="Complemento"/>
+			</div>
+			<div class="numero col-xs-6 col-sm-6">
+				<label for="cl_nh" class="required">Bairro:</label>
+				<input type="text" name="bairro" id="cl_nh" class="nh" placeholder="Bairro" data-validation="required-nh" data-msg-required="Bairro" data-msg-email="Bairro" required/>
+			</div>
+			<div class="cep col-xs-6">
+				<label for="cl_cep" class="required">CEP:</label>
+				<input type="text" name="cep" id="cl_cep" class="cep" placeholder="CEP" data-validation="required-cep" data-msg-required="CEP" data-msg-email="CEP" required/>
+			</div>
+			<div class="st col-xs-6 col-sm-3">
+				<label for="cl_st" class="required">Estado:</label>
+				<div class="select">
+					<select name="estado" id="cl_st" class="estado" required>
+						<option value="">UF</option>
+						<option value="AC">AC</option>
+						<option value="AL">AL</option>
+						<option value="AM">AM</option>
+						<option value="AP">AP</option>
+						<option value="BA">BA</option>
+						<option value="CE">CE</option>
+						<option value="DF">DF</option>
+						<option value="ES">ES</option>
+						<option value="GO">GO</option>
+						<option value="MA">MA</option>
+						<option value="MG">MG</option>
+						<option value="MS">MS</option>
+						<option value="MT">MT</option>
+						<option value="PA">PA</option>
+						<option value="PB">PB</option>
+						<option value="PE">PE</option>
+						<option value="PI">PI</option>
+						<option value="PR">PR</option>
+						<option value="RJ">RJ</option>
+						<option value="RN">RN</option>
+						<option value="RO">RO</option>
+						<option value="RR">RR</option>
+						<option value="RS">RS</option>
+						<option value="SC">SC</option>
+						<option value="SE">SE</option>
+						<option value="SP">SP</option>
+						<option value="TO">TO</option>
+					</select>
+				</div>
+			</div>
+			<div class="cep col-xs-12 col-sm-9">
+				<label for="cl_city" class="required">Cidade:</label>
+				<input type="text" name="cidade" id="cl_city" class="city" placeholder="Cidade" data-validation="required-city" data-msg-required="Cidade" data-msg-email="Cidade" required/>
+			</div>
+			<div class="bday col-xs-6 col-sm-4">
+				<label for="cl_email" class="required">Data de Nascimento</label>
+				<input type="date" name="nascimento" required/>
+			</div>
+			<div class="email col-xs-6 col-sm-8">
+				<label for="cl_email" class="required">E-mail</label>
+				<input type="email" name="email" id="cl_email" class="email" placeholder="Digite seu e-mail" data-validation="required email" data-msg-required="Digite seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" required/>
+			</div>
+		</li>
+		<li class="formSection ">
+			<span class="formSection-title">Declaro-me Responsável pelas Seguintes Mídias Sociais:</span>
+			<span class="formSection-sub-title">Site, Blog, Canal no Youtube e Redes Sociais</span>
+			<fieldset>
+				<div class="siteAddr col-xs-12">
+					<label for="cl_siteAddr">Endereço do Blog/Site:</label>
+					<input type="url" name="siteAddr" id="cl_siteAddr" class="siteAddr" placeholder="Digite seu nome"/>
+				</div>
+				<div class="siteDate col-xs-6">
+					<label for="cl_siteDate">Criado em:</label>
+					<input type="date" name="siteDate" id="cl_siteDate" class="siteDate" placeholder="Digite seu nome"/>
+				</div>
+				<div class="siteAccess col-xs-6">
+					<label for="cl_siteAccess">Média mensal de acessos: </label>
+					<input type="number" name="siteAccess" id="cl_siteAccess" class="siteAccess" placeholder="Digite seu nome"/>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="ytChannel col-xs-12">
+					<label for="cl_ytChannel">Canal do Youtube:</label>
+					<input type="text" name="ytChannel" id="cl_ytChannel" class="ytChannel" placeholder="Digite seu nome"/>
+				</div>
+				<div class="ytDate col-xs-4">
+					<label for="cl_ytDate">Criado em:</label>
+					<input type="date" name="ytDate" id="ytDate" class="ytDate" placeholder="Digite seu nome"/>
+				</div>
+				<div class="ytAccess col-xs-4">
+					<label for="cl_ytAccess">Média mensal de acessos: </label>
+					<input type="number" name="ytAccess" id="cl_ytAccess" class="ytAccess" placeholder="Digite seu nome"/>
+				</div>
+				<div class="ytSubs col-xs-4">
+					<label for="cl_ytSubs">Total de Inscritos: </label>
+					<input type="number" name="ytSubs" id="cl_ytSubs" class="ytSubs" placeholder="Digite seu nome"/>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="fbPage col-xs-12">
+					<label for="cl_fbPage">Facebook - page:</label>
+					<input type="text" name="fbPage" id="cl_fbPage" class="fbPage" placeholder="Digite seu nome"/>
+				</div>
+				<div class="fbDate col-xs-6">
+					<label for="cl_fbDate">Criado em:</label>
+					<input type="date" name="fbDate" id="cl_fbDate" class="fbDate" placeholder="Digite seu nome"/>
+				</div>
+				<div class="fbLikes col-xs-6">
+					<label for="cl_fbLikes">Total de Curtidas: </label>
+					<input type="number" name="fbLikes" id="cl_fbLikes" class="fbLikes" placeholder="Digite seu nome"/>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="instaPage col-xs-12">
+					<label for="cl_instaPage">Instagram:</label>
+					<input type="text" name="instaPage" id="cl_instaPage" class="instaPage" placeholder="Digite seu nome"/>
+				</div>
+				<div class="instaDate col-xs-6">
+					<label for="cl_instaDate">Criado em:</label>
+					<input type="date" name="instaDate" id="cl_instaDate" class="instaDate" placeholder="Digite seu nome"/>
+				</div>
+				<div class="instaFollows col-xs-6">
+					<label for="cl_instaFollows">Total de Seguidores: </label>
+					<input type="number" name="instaFollows" id="cl_instaFollows" class="instaFollows" placeholder="Digite seu nome"/>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="otherSM col-xs-12">
+					<label for="cl_otherSM">Possui Alguma Outra Mídia Social:</label>
+					<input type="text" name="otherSM" id="cl_otherSM" class="otherSM" placeholder="Digite seu nome"/>
+				</div>
+				<div class="socialNotes col-xs-12">
+					<label for="cl_socialNotes">Observações:</label>
+					<textarea type="text" name="socialNotes" id="cl_socialNotes" class="socialNotes"/></textarea>
+				</div>
+			</fieldset>
+		</li>
+		<li class="formSection ">
+			<span class="formSection-title">Material Necessário:</span>
+			<p class="formSection-sub-title">Informe os materiais e os dados adicionais - as medidas deverão ser em metros.</p>
+			<div class="wallHeight col-xs-4" class="required">
+				<label for="cl_wallHeight">Altura da parede:</label>
+				<input type="text" name="wallHeight" id="cl_wallHeight" class="wallHeight" placeholder="Ex.: 2m" required/>
+			</div>
+			<div class="wallLength col-xs-4" class="required">
+				<label for="cl_wallLength">Largura da parede: </label>
+				<input type="text" name="wallLength" id="cl_wallLength" class="wallLength" placeholder="Ex.: 5m" required/>
+			</div>
+			<div class="pattern col-xs-4" class="required">
+				<label for="cl_pattern">Referência de Estampa</label>
+				<input type="text" name="pattern" id="cl_pattern" class="pattern"  required/>
+			</div>
+			<div class="wallNotes col-xs-12">
+				<label for="cl_wallNotes">Observações:</label>
+				<textarea type="text" name="wallNotes" id="cl_wallNotes" class="wallNotes"/></textarea>
+			</div>
+		</li>
+		<li class="formSection ">
+			<span class="formSection-title">Termo de Parceria:</span>
+			<div class="formSection-sub-title">
+				<p>Caso a parceria seja firmada pela empresa requerida(Decoratons), o requerente terá que cumprir com os seguintes termos:</p>
+				<ul>	
+					<li>1- Expor a qualidade dos papeis de parede, e exibir os mesmos em foto ou em vídeo o material devidamente aplicado;</li>
+					<li>
+						2 - Na descrição do conteúdo postado deverá conter os links de acesso às mídias sócias e ao e-commerce da parte requerida;
+						<ul>
+							<li>2.1 -  Referenciar o material concedido pela requerida, fazendo ligação à marca Decoratons;</li>
+							<li>2.2 Fazer um agradecimento no final do conteúdo postado;</li>
+							<li>2.3 Não realizar parcerias, em um prazo de três meses, com nenhuma empresa na mesma área de atuação que a do requerido. (Papeis de parede).</li>
+							<li>2.4 Todos os termos citados acima deverão ser cumprindo em um prazo máximo de 30 dias após a entrega dos materiais.</li>
+						</ul>
+					</li>
+					<li>
+						3 - Links Obrigatórios na descrição da postagem do vídeo					
+						<ul>
+							<li>3.1 - Loja Virtual Decoratons: http://www.decoratons.com.br</li>
+							<li>3.2 - Pagina no Facebook Decoratons: https://www.facebook.com/decoratons.com.br/</li>
+							<li>3.3 - Instagram: https://www.instagram.com/decoratons - @decoratons</li>
+						</ul>
+					</li>
+				</ul>
+				<p>Caso ocorra a quebra de um ou mais termos citados acima, o requerido se encontrará no direito efetuar o envio da nota fiscal juntamente com o boleto dos materiais concedidos e uma multa adicional de 10% do valor da nota fiscal. Podendo negativar o nome do requerente ou do responsável do requerente juntamente aos órgãos de proteção ao credito (SPC e SERASA).</p>
+			</div>
+			<div class="termAgreement col-xs-12">
+				<label for="cl_termAgreement" class="required">Li e Concordo com Os Termos da Parceria?</label>
+				<label for="cl_termAgreement1"><input type="radio" name="termAgreement" id="cl_termAgreement1" value="true" class="pattern"  required/>Sim</label>
+				<label for="cl_termAgreement0"><input type="radio" name="termAgreement" id="cl_termAgreement0" value="false" class="pattern" checked  required/>Não</label>
+			</div>
+			<div class="termNotes col-xs-12">
+				<label for="cl_termNotes">Observações:</label>
+				<textarea type="text" name="termNotes" id="cl_termNotes" class="termNotes"/></textarea>
+			</div>
+		</li>
+	</ul>
+	<div class="menu col-xs-12">
+		<button class="prev" style="display: none;">Anterior</button>
+		<div class="progresso">
+			<div class="progress-bar" data-value="1" data-max="4">
+				<span class="progress"></span>
+			</div>
+			<span>Página <em class="current">1</em> de <em class="last">4</em></span>
+		</div>
+		<button class="next">Próxima</button>
+		<button type="submit" style="display: none;" class="next">Enviar</button>
+	</div>
+</form>
+<script>
+	$(window).load(function(){
+		$('form[name="Pedido-parceria"]').each(function(){
+			var $form = $(this);
+			var $menu = $form.find('.menu');	
+			// Aplicação das máscaras
+				$('input.cep').mask('00000-000');
+				$('input.cpf').mask('000.000.000-00', {reverse: true});
+			// Aplicação das máscaras
+				
+			function calculateHeight(){
+				return $form.find('.formSection.active').clientHeight + $menu.clientHeight;
+			}
+			// Define altura mínima do formulário
+				// var formHeight = 0;
+				// var $sections = $form.find('.formSection');
+				// $.each($sections, function(i, item){
+				// 	if (item.clientHeight > formHeight) formHeight = item.clientHeight;
+				// });
+				$form.animate({height: calculateHeight()}, 300);
+			// Define altura mínima do formulário
+
+			$menu.each(function(){
+				function checkProgress(){
+					var emptyFields = $form.find('.formSection.active').find('[required]').filter(function () {return $.trim($(this).val()).length == 0});
+					return {empty: emptyFields.length == 0,emptyFields: emptyFields}
+				}
+				function updateProgress(el){
+					$progress.css("will-change", "width");
+					el.animate({width: ($current.innerText/max)*100 + '%'}, 300);
+					$progress.css("will-change", "");
+				}
+				var max = $form.find('.formSection').length;
+				var $progressBar = $(this).find('.progress-bar')[0];
+				var $progress = $(this).find('.progress-bar').find('.progress');
+				var $current = $(this).find('.current')[0];
+				$progress.css({"height": "100%", "display": "block", "background-color":"#147eb8", "border-radius": "25px"});
+				updateProgress($progress);
+				$(this).find('.last')[0].innerText = max;
+				$progressBar.attributes['data-max'].value = max;
+				$(this).find('button.prev').on('click', function(e){
+					e.preventDefault();
+					if ($progressBar.attributes['data-value'].value > 1){
+						$form.find('.formSection.active:not(:first-of-type)').each(function(){
+							$form.animate({height: $(this).prev().clientHeight + $menu.clientHeight}, 300);
+							$(this).removeClass('active').prev().removeClass('prev').addClass('active').prev().addClass('prev');
+						});
+						$current.innerText = --$progressBar.attributes['data-value'].value
+						if ($current.innerText <= 1) $(this).fadeOut();
+						if ($current.innerText == max - 1){
+							$menu.find('button.next').fadeIn();
+							$menu.find('button[type="submit"]').fadeOut();
+						}
+						updateProgress($progress);
+					};
+				});
+				$(this).find('button:not([type="submit"]).next').on('click', function(e){
+					e.preventDefault();
+					var progress = checkProgress();
+					$form.find('.formSection.active .empty').removeClass('empty');
+					if ($progressBar.attributes['data-value'].value < max && progress.empty){
+						$form.find('.formSection.active:not(:last-of-type)').each(function(){
+							$form.animate({height: $(this).next().clientHeight + $menu.clientHeight}, 300);
+							$(this).removeClass('active').addClass('prev').next().addClass('active');
+						});
+						$current.innerText = ++$progressBar.attributes['data-value'].value;
+						if ($current.innerText >= max){
+							$(this).fadeOut();
+							$menu.find('button[type="submit"]').fadeIn();
+						}
+						if ($current.innerText == 2) $menu.find('button.prev').fadeIn();
+						updateProgress($progress);
+					}else{
+						$(progress.emptyFields).each(function(){$(this).parent().addClass('empty');});
+						alert('Por favor, preencha os campos obrigatórios!');
+					}
+				});
+			});
+			$form.on('submit', function(e){
+				e.preventDefault();
+				var data = new Object();
+				$form.find('input, textarea, select').each(function(){
+				    console.log(i, this.name) 
+				    if ($(this).hasClass('.cpf') || $(this).hasClass('.cep')){
+						this.value = $(this).masked();
+				    }			    	
+					data[this.name] = (this.type == 'date')? new Date(this.value): this.value;
+				});
+				console.log('data', data);
+			    $.ajax({
+			        headers: {
+			            'Accept': 'application/vnd.vtex.ds.v10+json',
+			            'Content-Type': 'application/json',
+			        },
+			        data: JSON.stringify(data),
+			        type: 'PATCH',
+			        url: '/decoratons/dataentities/PS/documents/',
+			        success: function (data) {
+			          console.log(data);
+			          alert("Mensagem Enviada com sucesso!");
+			          $form.reset();
+			        },
+			        error: function (data) {
+			          console.log(data);
+			          alert("Houve um erro ao enviar a mensagem. Tente novamente mais tarde");
+			        }
+			    });
+			})
+		});
+	});
+</script>

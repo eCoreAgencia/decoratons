@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+	<head>
+		<title><vtex.cmc:searchTitle /> | Decoratons</title>
+		<vtex:metaTags/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<vtex:template id="decoratons-commonStyles" />
+		<link rel="stylesheet" type="text/css" href="/arquivos/vtex-smartResearch.css" />
+	</head>
+	<body>
+        <vtex:template id="decoratons-header" />
+        <main>
+        	<div class="container">
+        		<section class="breadcrumbs hidden-xs hidden-sm col-xs-12"><vtex.cmc:breadCrumb /></section>
+          		<section class="mainShelf col-xs-12 col-md-9">
+          			<div class="shearchTitle"><vtex.cmc:searchTitle /></div>
+		            <vtex.cmc:searchResult layout="0aa2169a-c76e-43c7-bb45-aa444810170e" itemCount="16" columnCount="16" />
+		        </section>
+                <section class="sidebar col-xs-12 col-md-3">
+                	<button class="menuClose filtrarProdutos hidden-md hidden-lg">
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491.1 491.1" width="28" height="27"><path d="M111.85 208.25l192.8-192.8c20.6-20.6 54-20.6 74.6 0s20.6 54 0 74.6l-155.5 155.5 155.5 155.5c20.6 20.6 20.6 54 0 74.6s-54 20.6-74.6 0l-192.8-192.8c-20.6-20.6-20.6-54 0-74.6z" fill="#FFF"/></svg>
+			            <span class="storeName txt-center">Decoratons</span>
+			        </button>
+	            	<vtex.cmc:searchNavigator />
+          		</section>
+          		<section class="banner-section-1 col-xs-12 col-md-3">
+          			<vtex.cmc:categoryBannerSecI />
+          		</section>                
+        	</div>
+        </main>
+        <vtex:template id="decoratons-footer" />
+		<vtex:template id="decoratons-commonScripts" />
+		<script type="text/javascript" src="/arquivos/vtex-smartResearch.js"></script>
+		<script type="text/javascript">
+			$('.shearchTitle').each(function(){
+				$(this).append($('.searchResultsTime:first-child'));
+				$(this).append($('.sub:first-child'));
+			});
+			if(window.matchMedia("(max-width: 1365px)").matches){
+				var showFilters = __element({type: 'button', class: 'filtrarProdutos hidden-md hidden-lg', name: 'filtrarProdutos', content: 'Filtrar produtos'});
+				$('.shearchTitle').append(showFilters);
+				$('.filtrarProdutos').click(function(){
+					$('.sidebar').toggleClass('slideActive');
+					$('.filtrarProdutos').toggleClass('active');
+				});
+	        }
+		</script>
+	</body>
+</html>

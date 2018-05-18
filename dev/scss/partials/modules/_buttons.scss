@@ -1,0 +1,282 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+ul.menu-subscribe{
+	width: 215px;
+	text-align: center;
+	li{
+		margin: 15px 0;
+		list-style: none;
+		a{
+			@include font-size(1.2);
+			color: #fff;
+			width: 100%;
+			padding: 15px 0;
+			font-weight: bold;
+			text-decoration: none;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		&.subscribe{
+			a{
+				background: #eb7733;
+			}
+		}
+		&.gift{
+			a{
+				background: #9d9d9d;
+			}
+		}
+	}
+}
+
+.btn-buscar {
+	@extend .bg-blue, .txt-sz-0;
+	border: 0;
+	cursor: pointer;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/arquivos/search.png');
+}
+
+.MiniCartButton{
+	border: 0;
+	display: flex;
+	margin: 0 auto;
+	background: none;
+	user-select: none;
+	position: relative;
+	align-items: center;
+	@include mq($screen-md){
+		display: block;
+	}
+	.total-cart strong, .title,
+	.amount-kits, .amount-products{
+		display: none;
+	}
+	li {list-style: none}
+	em {font-style: normal}
+	i{
+		@include mq($screen-md){
+			padding: 12px;
+			margin-right: 15px;
+			border-radius: 100%;
+			display: inline-block;
+			vertical-align: middle;
+			background-color: #147eb8;
+		}
+		svg{
+			path{fill: #147eb8}
+			display: block;
+		    @include mq($screen-md){
+		    	transform: translateX(-6%);
+		    	path{fill: #fff}
+		    }
+		}
+	}
+	.portal-totalizers-ref{
+		@extend .txt-dark-blue, .txt-sz-14;
+		display: inline-block;
+		vertical-align: middle;
+		.amount-items{
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: row-reverse;
+			strong{
+				@extend .txt-up;
+				display: none;
+				@include mq($screen-md){
+					display: inline-block;
+				}
+				&:before{
+					content: 'Itens',
+				}
+				span {display: none}
+			}
+			.amount-items-em{
+				@extend .bg-blue, .txt-white, .bold, .txt-up;
+			    @include font-size(1.0);
+			    top: 0;
+			    right: 0;
+			    width: 15px;
+			    height: 15px;
+			    padding: 5px;
+			    display: flex;
+			    position: absolute;
+			    border-radius: 100%;
+			    align-items: center;
+			    justify-content: center;
+				@include mq($screen-md){
+					@include font-size(1.4);
+					padding: 0;
+					width: auto;
+					height: auto;
+					top: initial;
+					color: #147eb8;
+					right: initial;
+					display: inline;
+					padding-right: 5px;
+					position: relative;
+					background: none !important;
+				}
+			}
+		}
+		.total-cart{
+			display: none;
+			@include mq($screen-md){
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}
+
+.buyButton{
+	padding: 10px;
+	align-items: center;
+	display: inline-flex;
+	svg{
+		width: 15px;
+		height: auto;
+		margin-left: 5px;
+	}
+}
+
+.menu-toggle{
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	pointer-events: none;
+
+	@include mq($screen-sm) {
+		width: 25px;
+		height: 25px;
+	}
+
+	span {
+		@extend .transition;
+		left: 0;
+		opacity: 1;
+		height: 12%;
+		width: 100%;
+		display: block;
+		background: #fff;
+		position: absolute;
+		border-radius: 9px;
+		transform: rotate(0deg);
+		// transition: .25s ease-in-out;
+
+		&:nth-child(1) {
+			top: 0px;
+		}
+
+		&:nth-child(2) {
+			top: 9px;
+		}
+
+		&:nth-child(3) {
+			top: 18px;
+		}
+	}
+	&:active{
+		span{
+			&:nth-child(1) {
+				top: 9px;
+				transform: rotate(135deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+				left: -60px;
+			}
+
+			&:nth-child(3) {
+				top: 9px;
+				transform: rotate(-135deg);
+			}
+		}
+	}
+}
+
+.AbrirCalculadora{
+	@extend .bg-dark-yellow, .txt-dark-blue, .txt-left, .txt-up;
+	@include font-size(0.9);
+	border: 0;
+	max-width: 100%;
+	line-height: 10px;
+	padding: 8px 10px;
+	align-items: center;
+	display: inline-flex;
+	@include mq($screen-sm){
+		@include font-size(1.4);
+		line-height: 18px;
+	}
+	strong{
+		width: 100%;
+		display: block;
+		@include mq($screen-md){
+			width: auto;
+			display: inline;
+			vertical-align: middle;
+		}
+	}
+	span{
+		display: inline;
+		font-weight: bold;
+		vertical-align: middle;
+	} 
+	svg{
+		width: 20px;
+		height: auto;
+		margin-right: 8px;
+		vertical-align: middle;
+		@include mq($screen-sm){
+			width: 30px;
+		}
+	}
+}
+
+.CloseButton{
+	border: 0;
+	width: 20px;
+	height: 20px;
+	background: none;
+	&:before, &:after{
+		top: 50%;
+		left: 50%;
+		content: '';
+		position: absolute;
+		border-radius: 5px;
+		background-color: #007fbb;
+		transform: translateY(-50%) translateX(-50%) rotate(45deg);
+	}
+	&:before{
+		width: 100%;
+		height: 3px;
+	}
+	&:after{
+		width: 3px;
+		height: 100%;
+	}
+}
+button[name="favorite"]{
+	user-select: none;
+	position: relative;
+	svg:last-of-type{
+		@extend .transition;
+		opacity: 0;
+		position: absolute;
+	}
+	&.isFavorite{
+		svg:first-of-type{
+			opacity: 1;
+		}
+		svg:last-of-type{
+			opacity: 1;
+		}
+	}
+}

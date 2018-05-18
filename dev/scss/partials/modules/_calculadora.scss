@@ -1,0 +1,161 @@
+.calculadora-popup{
+	@extend .txt-sz-14;
+	width: 100%;
+	max-width: 530px;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	h2,h3, ul, span{
+		padding: 5px 20px;
+	}
+	h2{
+		@extend .txt-center;
+		padding: 20px 15px;
+	}
+	.calc, .options{
+		@extend .txt-gray;
+		padding: 15px 0;
+	}
+	label{
+		cursor: pointer;
+		input{
+			display: none;
+			&:checked{
+				& + span{
+					&:before{
+						background-color: #007fbb;
+					}
+				}
+			}
+		}
+		span{
+			padding: 0;
+			&:before{
+				@extend .bg-white, .transition;
+				content: '';
+				margin: 5px;
+				width: 11px;
+				height: 11px;
+				cursor: pointer;
+				display: inline-block;
+				box-sizing: border-box;
+				border: 2px solid #fff;
+				vertical-align: middle;
+				outline: 1px solid #dddddd;
+			}
+		}
+		&:hover{
+			span:before{
+				background-color: #007fbb;
+			}
+		}
+	}
+	.options{
+		@extend .bd-clr-ligth-gray, .bd-dashed;
+		display: none;
+		text-align: center;
+		border-top-width: 2px;
+		p{
+			display: inline-block;
+		}
+		li{
+			text-align: left;
+		}
+		a{
+			display: none;
+		}
+		input{
+			@extend .txt-center;
+			margin: 0 5px;
+			max-width: 40px;
+		}
+	}
+	input:not([type="submit"]){
+		@extend .bg-white, .bd-solid, .bd-clr-ligth-gray;
+		border-width: 1px;
+	}
+	form{
+		@extend .txt-sz-12;
+		label{
+			@extend .txt-dark-gray;
+			display: block;
+			padding: 0 20px;
+			span{
+				@extend .txt-dark-gray, .bold;
+			}
+		}
+		fieldset{
+			@extend .bd-solid, .bd-clr-ligth-gray, .txt-sz-14;
+			padding: 15px 0;
+			text-align: center;
+			margin-bottom: 20px;
+			border-top-width: 2px;
+			border-bottom-width: 2px;
+			label{
+				@extend .txt-gray;
+				padding: 0 15px;
+				display: inline-block;
+				input{
+					display: inline-block;
+				}
+				span{
+					&:before{
+						display: none;
+					}
+				}
+			}
+			input{
+				@extend .txt-sz-18;
+				margin: 5px;
+				padding: 10px;
+				max-width: 100px;
+				text-align: center;
+			}
+		}
+		p{
+			padding: 5px 45px;
+		}
+		& > label{
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		& > span{
+			@extend .txt-dark-blue;
+			display: block;
+			padding: 5px 45px;
+		}
+		button{
+			margin: 10px auto !important;
+		}
+	}
+	ul{
+		width: 100%;
+		display: flex;
+		overflow: hidden;
+		padding: 20px 15px;
+		align-items: center;
+		flex-direction: column;
+	}
+	li{
+		@extend .col-xs-12;
+		padding: 10px 0; 
+		list-style: none;
+		max-width: 355px;
+		label{
+			@extend .bold;
+			width: 100%;
+			max-width: 120px;
+			display: inline-block;
+		}
+	}
+	button[type="submit"], a{
+		@extend .txt-sz-16, .txt-center, .bold, .txt-up, .txt-dc-none;
+		border: 0;
+		outline: 0;
+		width: 120px;
+		color: #00537f;
+		display: block;
+		margin: 0 auto;
+		padding: 10px 15px;
+		background-color: #ffd600;
+	}
+}

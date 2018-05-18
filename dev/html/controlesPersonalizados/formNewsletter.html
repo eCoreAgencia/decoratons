@@ -1,0 +1,56 @@
+<form method="POST" name="form-newsletter" class="form-newsletter" data-module="newsletter">
+	<input type="hidden" name="newsInternalPart" value="newsletter" />
+	<input type="hidden" name="newsInternalPage" value="_" />
+	<input type="hidden" name="newsInternalCampaign" value="newsletter:opt-in" />
+	<fieldset class="email">
+		<input type="email" name="email" id="email" class="email" placeholder="E-mail" data-validation="required email" data-msg-required="Preencha o seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" required/>
+	</fieldset>
+	<button type="submit" class="newsletter-button-ok submit">Enviar</button>
+</form>
+<script>
+	var disableSubmitButton = function(el,type){
+	  $(el).find('[type="submit"]').prop('disabled', type);
+	}
+	var validaEmail = function(email){
+	  var atpos = email.indexOf("@");
+	  var dotpos = email.lastIndexOf(".");
+	  return !( atpos < 1 || dotpos < atpos+2 || dotpos+2 >= email.length );
+	}
+	$('form[name="form-newsletter"]').replaceWith($('form[name="form-newsletter"]').clone());
+	$('form[name="form-newsletter"]').each(function(){
+		var _this = $(this);
+		_this.on('submit', function(e){
+			e.preventDefault();
+			console.log('submitted', e);
+			disableSubmitButton(true);
+			var data = new Object();
+			_this.find('input').each(function(){
+				if(this.type == 'email' && !validaEmail(this.value)){
+					return;
+				}
+				data[this.name] = this.value;
+			});
+			console.log('data', data);
+			$.ajax({
+			    headers: {
+			        'Accept': 'application/vnd.vtex.ds.v10+json',
+			        'Content-Type': 'application/json',
+			    },
+			    data: JSON.stringify(data),
+			    type: 'PATCH',
+			    url: '/decoratons/dataentities/NL/documents/',
+			    success: function (data) {
+			      	_this[0].reset();
+			      	alert("E-mail cadastrado com sucesso!");
+			      	disableSubmitButton(false);
+
+			    },
+			    error: function (data) {
+			      	console.log(data);
+			      	alert("Houve um erro ao cadastrar seu e-mail. Tente novamente mais tarde");
+					disableSubmitButton(false);
+			    }
+			});
+		});
+	});
+</script>

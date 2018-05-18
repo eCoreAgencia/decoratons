@@ -1,0 +1,35 @@
+<script>
+	$(window).on('load', function(){
+		var dimensions = new Object();
+		var $skus = $('.item-dimension-Tamanho input');
+		$skus.each(function(i){
+			$(this).click();
+			var width = $('#p1_lblLarguraReal').text();
+			width = (parseFloat(width)%1)? width.replace('.',','): width.split('.')[0];
+			var height =  $('#p1_lblAlturaReal').text();
+			height = (parseFloat(height)%1)? height.replace('.',','): height.split('.')[0];
+			var widthUnit = $('#p1_measures-width').text();
+			widthUnit = (heightUnit == 'Metro' || heightUnit == 'Metros')? 'm' : 'cm';
+			var heightUnit = $('#p1_measures-height').text();
+			heightUnit = (heightUnit == 'Metro' || heightUnit == 'Metros')? 'm' : 'cm';
+			dimensions[this.value] = {width: width, widthUnit: widthUnit, height: height, heightUnit: heightUnit}
+			console.log(i, i-1, dimensions.length);
+			
+			if(i == $($skus).length-1){
+				console.log('hooray!');
+				$('.item-dimension-Tamanho input:first-of-type').click();
+			}
+		});
+		var html = '';
+		$.each(dimensions, function(i, item){
+			html += '<li data-sku="'+i+'"><span>(A) '+item.height+item.heightUnit+'</span><span>(L) '+item.width+item.widthUnit+'</span></li>';
+		});
+		$('.skus-dimensoes').append(html);
+	});
+</script>
+
+
+// min
+<script>
+	$(window).on("load",function(){var t=new Object,e=$(".item-dimension-Tamanho input");e.each(function(i){$(this).click();var a=$("#p1_lblLarguraReal").text();a=parseFloat(a)%1?a.replace(".",","):a.split(".")[0];var n=$("#p1_lblAlturaReal").text();n=parseFloat(n)%1?n.replace(".",","):n.split(".")[0];var o=$("#p1_measures-width").text();o="Metro"==s||"Metros"==s?"m":"cm";var s=$("#p1_measures-height").text();s="Metro"==s||"Metros"==s?"m":"cm",t[this.value]={width:a,widthUnit:o,height:n,heightUnit:s},console.log(i,i-1,t.length),i==$(e).length-1&&(console.log("hooray!"),$(".item-dimension-Tamanho input:first-of-type").click())});var i="";$.each(t,function(t,e){i+='<li data-sku="'+t+'"><span>(A) '+e.height+e.heightUnit+"</span><span>(L) "+e.width+e.widthUnit+"</span></li>"}),$(".skus-dimensoes").append(i)});
+</script>

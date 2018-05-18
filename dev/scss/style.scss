@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@-ms-viewport { width: device-width; }
+
+/*
+Dependencies
+========================================================================== */
+
+@import "partials/base/mixins";
+@import "resetv2";
+@import "partials/all";
+
+/*
+Base Style
+========================================================================== */
+
+@include mq($screen-sm) {
+	*:focus { outline: none !important; }
+}
+
+html {
+	min-height: 100%;
+	box-sizing: border-box;
+	font: {
+		size: 16px;
+	}
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: inherit; }

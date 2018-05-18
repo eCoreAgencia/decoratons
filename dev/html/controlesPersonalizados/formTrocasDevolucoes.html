@@ -1,0 +1,69 @@
+<form name="trocas-devolucoes" method="POST" class="form-contato" data-module="trocas-devolucoes">
+	<input type="hidden" name="status" value="Início Troca">
+	<fieldset class="nome col-xs-12">
+		<label for="cl_nome">Nome</label>
+		<input type="text" name="nome" id="cl_nome" class="nome" placeholder="Digite seu nome" data-validation="required-nome" data-msg-required="Digite seu nome" data-msg-email="Digite seu nome" required/>
+	</fieldset>
+	<fieldset class="email col-xs-6">
+		<label for="cl_email">E-mail</label>
+		<input type="email" name="email" id="cl_email" class="email" placeholder="Digite seu e-mail" data-validation="required email" data-msg-required="Digite seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" required/>
+	</fieldset>
+	<fieldset class="telefone col-xs-6">
+		<label for="cl_telefone">Telefone</label>
+		<input type="text" name="telefone" id="cl_telefone" class="telefone" placeholder="Digite seu e-mail" data-validation="required telefone" data-msg-required="Digite seu telefone" data-msg-telefone="Insira um telefone válido" />
+	</fieldset>
+	<fieldset class="nome col-xs-8">
+		<label for="cl_nPedido">Número do Pedido</label>
+		<input type="text" name="pedido" id="cl_nPedido" class="pedido" placeholder="Digite o número do seu pedido" data-validation="required-pedido" data-msg-required="Digite o número do seu pedido" data-msg-email="Digite o número do seu pedido" required/>
+	</fieldset>
+	<fieldset class="nome col-xs-4">
+		<label for="cl_type">Tipo</label>
+		<select name="type">
+			<option value="Troca">Troca</option>
+			<option value="Devolução">Devolução</option>
+		</select>
+	</fieldset>
+	<fieldset class="mensagem col-xs-12">
+		<label for="cl_mensagem">Comentário</label>
+		<textarea name="comentario" id="cl_mensagem" class="mensagem" placeholder="Digite seu e-mail" data-validation="required mensagem" data-msg-required="Digite seu mensagem" data-msg-mensagem="Insira uma mensagem válida" required></textarea>
+	</fieldset>
+	<button type="submit" class="newsletter-button-ok submit">Enviar</button>
+</form>
+<script>
+	$(window).on('load', function(){
+		$('form[name="trocas-devolucoes"]').each(function(){
+			var $trocas =  $(this);
+	
+			$trocas.find('#cl_telefone').mask('(00) 00000-0000');
+			$trocas.ticketForm();
+			var l = '';
+			$trocas.find('[name="type"] option').each(function(i){
+				l += ((i)?' OR ':'')+'type='+this.value;
+			});
+			$.ajax({
+				url: '/decoratons/dataentities/ST/search?etapa=1&_where=('+l+')&_fields=nome,type,id',
+				type: 'GET',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/vnd.vtex.ds.v10+json'
+				},
+				success: function(data){
+					console.log('Sucesso', data);
+					var statuses = new Object();
+					$.each(data, function(i, item){
+						statuses[item.type] = item.id;
+					});
+					$trocas.find('[name="type"]').each(function(){
+						$trocas.find('[name="status"]')[0].value = statuses[this.value];
+						$(this).on('change', function(){
+							$trocas.find('[name="status"]')[0].value = statuses[this.value];
+						});
+					});
+				},
+				error: function(data){
+					console.log('error', data);
+				}
+			});
+		});
+	});
+</script>

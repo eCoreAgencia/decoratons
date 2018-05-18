@@ -1,0 +1,283 @@
+/* ==========================================================================
+   SidePanel
+   ========================================================================== */
+.menu-header{
+	@extend .transition;
+	@include font-size(1.2);
+	top: 0;
+	left: 0;
+	margin: 0;
+    padding: 0;
+	width: 100%;
+	height: 100%;
+    z-index: 99999;
+	position: fixed;
+	list-style: none;
+    max-width: 350px;
+	background: #fff;
+	font-size: 0.875em;
+	transform: translateX(-100%);
+	@include mq($screen-md){
+		width: 100%;
+    	z-index: 99;
+		display: flex;
+		max-width: 100%;
+		transform: none;
+		flex-wrap: wrap;
+		box-shadow: none;
+		position: relative;
+		align-items: stretch;
+		justify-content: center;
+	    background-color: #147eb8;
+	}
+	&.slideActive{
+		opacity: 1;
+		pointer-events: all;
+		transform: translateX(0);
+	    box-shadow: 0 0 3px 0 #000;
+	}
+    ul{
+    	@extend .txt-up;
+    	border: 1px solid #ededee; 
+    	@include mq($screen-md) {
+	    	border: 0;
+    		display: flex;
+	    	margin: 0 auto;
+    		flex-wrap: wrap;
+			justify-content: center;
+    	}
+    	.menuClose{
+    		@extend .bg-yellow, .bold;
+			width: 100%;
+    		display: flex;
+			padding: 10px 15px;
+    		align-items: center;
+			span{
+				flex: 1;
+			}
+    	}
+    	li{
+    		border-bottom: 1px solid #ededee;
+    		@include mq($screen-md){
+    			border-bottom: 0;
+    		}
+    		&:last-of-type{
+    			border-bottom: 0;
+    		}
+    		svg{
+    			width: 20px;
+    			height: 20px;
+    			margin-right: 10px;
+    		}
+    		svg, span{
+				vertical-align: middle;
+    		}
+    		a{
+    			@extend .transition, .txt-dc-none;
+    			@include font-size(1.4);
+		    	display: flex;
+		    	padding: 10px 15px;
+		    	align-items: center;
+	    		@include mq($screen-md){
+		    		color: #fff;
+					height: 100%;
+		    		font-weight: 700;
+					padding: 15px 10px;
+					text-transform: uppercase;
+					&:hover{
+						@include font-size(1.6);
+	    				padding: 15px 15px;
+					}
+		    	}
+	    	}
+	    	a:not(.txt-dark-gray){
+	    		color: red;
+	    	}
+    	}
+    	.menu-item{
+    		@extend .transition;
+    		margin: 0;
+    		text-align: left;
+    		position: relative;
+    		@include mq($screen-md){
+    			position: initial;
+    			text-align: center;
+				display: inline-block;
+			}
+	    	&.has-sub{
+	    		.js-open-sub{
+			    	top: 5px;
+			    	right: 0;
+			    	border: 0;
+			    	outline: none;
+			    	background: none;
+			    	position: absolute;
+			    	.menu-toggle{
+			    		width: 20px;
+			    		height: 20px;
+			    		display: block;
+			    		margin: 0 auto;
+			    		position: relative;
+			    		pointer-events: none;
+			    		@include mq($screen-sm) {
+			    			width: 25px;
+			    			height: 25px;
+			    		}
+			    		span {
+			    			@extend .transition;
+							left: 0;
+							opacity: 1;
+							height: 12%;
+							width: 100%;
+							display: block;
+							background: #fff;
+							position: absolute;
+							border-radius: 9px;
+							transform: rotate(0deg);
+							// transition: .25s ease-in-out;
+							&:nth-child(1) {
+							  top: 0px;
+							}
+
+							&:nth-child(2) {
+							  top: 9px;
+							}
+
+							&:nth-child(3) {
+							  top: 18px;
+							}
+
+						}
+			    	}
+			    	&.active{
+			    		.menu-toggle{
+			    			span{
+			    				&:nth-child(1) {
+									top: 9px;
+									transform: rotate(135deg);
+								}
+								&:nth-child(2) {
+									opacity: 0;
+									left: -60px;
+								}
+								&:nth-child(3) {
+									top: 9px;
+									transform: rotate(-135deg);
+								}
+			    			}
+			    		}
+			    	}
+			    }
+	    		.submenu{
+	    			@extend .transition;
+					left: 0;
+					right: 0;
+					padding: 0;
+					display: none;
+					padding-top: 0;
+					min-height: 100%;
+					background-color: #FFFFFF;
+					border-top: 1px solid #ededee;
+					@include mq($screen-md){
+						opacity: 0;
+						padding: 15px;
+					    margin: 0 auto;
+					    display: block;
+					    transition: .7s;
+					    max-width: 1200px;
+						position: absolute;
+						pointer-events: none;
+						border: 1px solid #BFBFBF;
+						transform: translateX(-100%);
+					    box-shadow: 0px 0px 7px -2px #000;
+					}
+		    		&.slideActive{
+		    			opacity: 1;
+		    			height: auto;
+		    			display: block;
+		    			position: relative;
+		    			pointer-events: all;
+		    		}
+    				h4{
+    					@include font-size(1.8);
+    					color: #ec7732;
+    					font-weight: 800;
+    					padding-left: 10px;
+    					padding-bottom: 10px;
+    					@include mq($screen-md){
+							padding-left: 0;
+    					}
+    				}
+    				ul{
+    					border: 0;
+    					padding: 0;
+    					@include mq($screen-md){
+							padding: 0 7px;
+    					}
+    				}
+    				li{
+						clear: both;
+						width: 100%;
+						display: list-item;
+						a{
+							@extend .txt-gray, .txt-dc-none, .regular, .txt-trans-none;
+    						@include font-size(1.6);
+							padding-left: 40px;
+							@include mq($screen-md){
+								height: auto;
+								padding: 5px 0;
+							}
+							&:hover{
+								@extend .txt-light-blue;
+								@include mq($screen-md){
+									text-decoration: underline;
+								}
+							}
+    					}
+					}
+					.box-banner{
+						padding-top: 10px;
+						padding-bottom: 10px;
+						@include mq($screen-md){
+							padding-top: 0;
+							padding-bottom: 0;
+						}
+						a{
+							padding: 0;
+						}
+						img{
+							height: auto;
+							display: block;
+							margin: 0 auto;
+							max-width: 100%;
+						}
+					}
+		    		.submenu-banner{
+	    				img{
+	    					height: auto;
+	    					max-width: 100%;
+	    					@include mq($screen-md){
+	    						max-width: initial;
+	    					}
+	    				}
+	    			}
+	    		}
+	    		&:hover{
+	    			.submenu{
+	    				opacity: 1;
+	    				@include mq($screen-md){
+	    					top: 100%;
+							pointer-events: all;
+	    					transform: translateX(0);
+	    				}
+	    			}
+	    		}
+	    	}
+    	}
+    }
+	    
+    &.slideActive{
+		left: 0;
+		opacity: 1;
+    }
+}

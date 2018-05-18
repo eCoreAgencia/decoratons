@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Form Busca
+   ========================================================================== */
+
+.search-box {
+	@extend .transition;
+    right: 0;
+    top: 100%;
+    padding: 0;
+    width: 100%;
+    z-index: -1;
+    text-align: left;
+    position: absolute;
+    pointer-events: none;
+    transform: translateX(-100%);
+    &.--active{
+    	pointer-events: initial;
+    	transform: translateX(0);
+		box-shadow: 0px 0px 3px 0px #000;
+    }
+
+	@include mq($screen-md) {
+		border: none;
+		margin-top: 0;
+		padding: 0 7px;
+		transform: none;
+		box-shadow: none;
+		z-index: initial;
+		position: relative;
+		pointer-events: initial;
+	}
+	label, legend, select {
+		display: none;
+	}
+	.busca{
+		width: 100%;
+    	text-align: center;
+    }
+	.fulltext-search-box{
+		@extend .ff-openSans, .txt-sz-14;
+		border: 0;
+		margin: 0;
+		width: 100%;
+		height: 42px;
+		border-radius: 0;
+		padding: 12px 15px;
+		display: inline-block;
+	}
+	.btn-buscar{
+		right: 0;
+		width: 42px;
+		height: 42px;
+		padding: 9px;
+		position: absolute;
+	}
+}

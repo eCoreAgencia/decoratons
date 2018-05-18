@@ -1,0 +1,180 @@
+body.categoria{
+	&.kirigami{
+
+		main{
+			@extend .transition;
+			padding-top: 0;
+			position: relative;
+			background: url('/arquivos/kirigami-parallax.jpg') #ebcae8;
+			background-size: 250%;
+			background-repeat: no-repeat;
+			background-position: left bottom;
+			@include mq($screen-sm){
+				padding-bottom: 0;
+			}
+			@include mq($screen-md){
+				padding-bottom: 50px;
+				background-size: initial;
+			}
+			&.parallax{
+				background-attachment: fixed;
+			}
+			section{
+				&.banners-top{
+					img{
+						width: 300%;
+						height: auto;
+						margin-left: -45%;
+						@include mq($screen-sm){
+							width: 100%;
+							margin-left: 0;
+						}
+					}
+				}
+				&.pageInfo{
+					@include font-size(1.4);
+					text-transform: none;
+					.container{
+						display: flex;
+						flex-wrap: wrap;
+    					justify-content: space-between;
+    					h3.tlt-shelf{
+    						text-transform: uppercase;
+    						&:before, &:after{
+    							border-color: #fff;
+    						}
+    						&+span{
+    							color: #ac3ea2;
+    						}
+    					}
+						& > div{
+							width: 100%;
+							padding: 25px;
+							margin: 15px 0;
+							background: #f5e0f3;
+							border: 5px solid #e6abe0;
+							@include mq($screen-md){
+								margin: 0;
+							}
+							&:first-of-type{
+								@include mq($screen-md){
+									max-width: 900px;
+								}
+								.texto{
+									float: left;
+									@include mq($screen-md){
+										padding-left: 25px;
+									}
+								}
+							}
+							&:last-of-type{
+								@include mq($screen-md){
+									max-width: 325px;
+								}
+								.fb-page{
+								    width: 100%;
+    								overflow: hidden;
+								}
+								a{
+									display: block;
+									color: #ba48ae;
+									padding: 4px 0;
+									text-decoration: none;
+									&:active, &:visited{
+										color: #ba48ae;
+									}
+									&:first-of-type{
+										padding-left: 30px;
+									}
+								    svg{
+								    	width: 20px;
+								    	height: 20px;
+								    	margin-right: 5px;
+								    	display: inline-block;
+								    	vertical-align: middle;
+								    	path{
+								    		fill: #b947ae;
+								    	}
+								    }
+								}
+							}
+							h3{
+								@include font-size(2.4);
+								color: #bb48af;
+							    padding: 15px 0 5px;
+								@include mq($screen-md){
+									padding: 0;
+								}
+							}
+							p{
+								padding: 10px 0;
+								line-height: 18px;
+								text-align: justify;
+							}
+						}
+					}
+				}
+				&.shelf{
+					border-bottom: 0;
+					li{
+						$ccShelfcolor: #bb48af;
+						h3.tlt-shelf{
+							&:after,
+						    &:before{
+						    	border-color: $ccShelfcolor;
+						    }
+						    &+span{
+								color: $ccShelfcolor;
+						    }
+						}
+						.box-item{
+							.best-price{
+								color: $ccShelfcolor;
+							}
+							.preco-boleto{
+								color: $ccShelfcolor;
+							}
+							.wrapper-buy-button-asynchronous{
+								.add{
+									a{
+										background: $ccShelfcolor;
+										&:hover{
+											background: #5a0d67;
+										}
+									}
+								}
+							}
+							.vejaMais{
+								a{
+									color: $ccShelfcolor;
+								}
+							}
+							&:hover{
+						    	border-color: $ccShelfcolor;
+							}
+						}
+					}
+				}
+				&.banners-bottom{
+					display: none;
+					@include mq($screen-sm){
+						display: block;
+					}
+					.box-banner{
+						img{
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+
+		&.blackFriday{
+			main{
+				background-image: none;
+				background-color: #000;
+			}
+		}
+	}
+}

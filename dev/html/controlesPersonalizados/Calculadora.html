@@ -1,0 +1,30 @@
+<div class="popup calculadora-popup">
+	<button class="CloseButton"></button>
+	<h2 class="txt-sz-24 txt-dark-blue bold txt-up">Calculadora de Papel de Parede</h2>
+	<h3 class="txt-sz-16 bold txt-dark-gray">Insira as medidas abaixo</h3>
+	<span class="txt-gray">Informe as medidas em metros. Ex: 1,20m x 2,40m </span>
+	<div class="calc"></div>
+	<div class="options">
+		<h3 class="txt-sz-16 txt-up bold">Escolha a Melhor Opção</h3>
+		<div class="sizeList"></div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(window).load(function(){
+		$('.calculadora-popup').each(function(){
+			Popupinator.newPopup('calculadora', $(this));
+			$(this).find('.CloseButton').on('click', function(){
+				Popupinator.close('calculadora');
+			});
+			$(this).find('.calc').Calc_calculadora();
+			$(this).find('.sizeList').Calc_tamanhos();
+			var $this = $(this);
+			window[(window.addEventListener)? 'addEventListener': 'attachEvent']('Calculadora.dimensaoAlterada', function(e){
+				console.log($this);
+				$this.find('.options').slideDown(300, function(){
+					Popupinator.needScrolling($this);
+				});
+			});
+		});
+	});
+</script>

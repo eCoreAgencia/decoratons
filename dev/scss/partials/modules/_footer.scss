@@ -1,0 +1,348 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+	.top-box{
+		z-index: 2;
+		.section-title{
+			display: none;
+			padding: 15px 0;
+			text-align: center;
+			@include mq($screen-md){
+				display: block;
+			}
+			svg{
+				path, circle{
+					stroke: #00aef0;
+				}
+			}
+		}
+		.instaApp-feed{
+			display: none;
+			@include mq($screen-md){
+				display: flex;
+			}
+		}
+	}
+	.mid-box{
+		padding: 45px 0;
+		h3:not(.title-3){
+			@extend .regular;
+		}
+		.container{
+			& > div{
+				padding: 0;
+				strong{
+					display: block;
+				}
+				.section-title{
+					padding: 15px 0;
+					text-align: center;
+					i{
+   						padding: 14px;
+   						line-height: 0;
+   						margin-right: 15px;
+    					border-radius: 100%;
+						display: inline-block;
+						vertical-align: middle;
+					}
+					h3{
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+			}
+			& > div:first-of-type{
+				display: flex;
+			    flex-wrap: wrap;
+			    justify-content: center;
+			    & > div:not(:first-of-type){
+					padding-top: 10px;
+					padding-bottom: 10px;
+			    }
+			    ul{
+			    	float: left;
+			    	padding-top: 10px; 
+			    }
+				li{
+					@include font-size(1.0);
+					padding: 5px 0;
+					list-style: none;
+					line-height: 14px;
+					@include mq($screen-sm){
+						@include font-size(1.2);
+						line-height: 14px;
+					}
+					@include mq($screen-md){
+						margin-left: 35px;
+					}
+					a{
+						width: 100%;
+						display: block;
+						color: inherit;
+						text-transform: none;
+						text-decoration: inherit;
+					}
+				}
+			}
+			& > div:last-of-type{
+				ul{
+					@include mq($screen-md){
+						column-count: 2;
+					}
+					li{
+						@include font-size(0);
+					    padding: 5px 0;
+						line-height: 0;
+						align-items: center;
+						display: inline-flex;
+						@include mq($screen-md){
+							@include font-size(1.4);
+							line-height: 18px;
+							display: inline-block;
+						}
+						a{
+							@include font-size(0.8);
+							line-height: 12px;
+							@include mq($screen-sm){
+								@include font-size(1.8);
+								line-height: 22px;
+							}
+						}
+						svg, span{
+							display: inline-block;
+							vertical-align: middle;
+						}
+						svg{
+							width: 15px; 
+							height: auto;
+							fill: #ef328a;
+							margin-right: 5px;
+							@include mq($screen-sm){
+								width: 30px;
+								margin-right: 10px;
+							}
+						}
+						a{
+							@extend .txt-magenta;
+						}
+						&:last-of-type{
+							a{
+								@include mq($screen-sm){
+									@include font-size(1.4);
+									line-height: 18px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.newsletter{
+			height: 200px;
+		    display: flex;
+		    flex-wrap: wrap;
+		    flex-direction: column;
+		    justify-content: center;
+			fieldset{
+				flex: 1;
+				display: inline-block;
+			}
+			.section-title{
+				padding-top: 0 !important;
+			}
+			form{
+    			width: 100%;
+			    display: flex;
+    			margin: 0 auto;
+    			max-width: 450px;
+			}
+			input{
+				@extend .txt-sz-14, .txt-black;
+				margin: 0;
+				padding: 0;
+				outline: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 0;
+				padding: 10px 15px;
+				display: inline-block;
+				border: 1px solid #dcdcdc;
+			}
+			button{
+				@extend .txt-sz-14, .bg-magenta, .txt-lo, .txt-white, .bd-clr-dark-magenta;
+				outline: 0;
+				border-width: 0;
+				margin-left: 5px;
+				border-style: inset;
+				display: inline-block;
+				padding: 10px 15px 6px;
+				border-bottom-width: 6px;
+			}
+		}
+		span{
+			padding: 0;
+		}
+		.title-3-icon{
+			padding-right: 5px; 
+			display: inline-block;
+			vertical-align: middle;
+			@include mq($screen-sm){
+				padding-right: 10px;
+			}
+			svg{
+				width: 15px;
+				height: auto;
+				@include mq($screen-sm){
+					width: 25px;
+				}
+			}
+		}
+		.title-3{
+			@extend .txt-sz-14, .txt-up;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			vertical-align: middle;
+			@include mq($screen-sm){
+				@include font-size(1.6);
+				line-height: 20px;
+			}
+		}
+		.facebookBox{
+			height: 200px;
+			padding: 10px 0;
+			margin-bottom: 127px;
+			.section-title{
+				width: 100%;
+				margin: 0 auto;
+				max-width: 500px;
+				text-align: left !important;
+				h3{
+					@include font-size(1.75);
+					line-height: 21.5px;
+					strong{
+						@include font-size(3.8);
+						line-height: 42px;
+					}
+				}
+				svg, h3{
+					vertical-align: middle;
+				}
+				svg{
+					margin-left: 25px;
+				}
+			}
+			.fb-page{
+				display: flex;
+    			justify-content: center;
+			}
+		}
+		.txt-magenta{
+			a{
+				@extend .bold;
+				color: inherit;
+				text-decoration: inherit;
+			}
+		}
+		ul{
+			li{
+				list-style: none;
+				span{
+					a{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.bottom-box{
+		padding: 15px 0 0;
+		@include mq($screen-md){
+			padding-bottom: 15px;
+		} 
+		.title-4{
+			@extend .txt-sz-14;
+			margin-bottom: 15px;
+			// @media (max-width: $screen-xs-max){
+			// 	@include font-size(1.4);
+			// 	line-height: 18px;
+			// }
+		}
+		li{
+			list-style: none;
+			display: inline-block;
+		}
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			& > div:first-of-type, & > div:nth-of-type(2){
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	.selos-seguranca{
+		img{
+			vertical-align: initial;
+			@media (max-width: $screen-xs-max){
+				width: 50px;
+				height: auto;
+			}
+		}
+		svg{
+			@media (max-width: $screen-xs-max){
+				width: 55px;
+				height: auto;
+			}
+		}
+		li{
+			padding: 5px;
+			@include mq($screen-sm){
+				padding: 0 10px;
+			}
+			&:first-of-type{
+				padding-left: 0;
+			}
+			&:last-of-type{
+				padding-right: 0;
+			}
+		}
+	}
+	.copyright{
+		padding: 10px 0 0;
+		@include mq($screen-md){
+			padding-bottom: 10px;
+		}
+		p{
+			@extend .bg-light-gray;
+			margin: 0;
+			padding: 10px 0;
+			@media (max-width: $screen-xs-max){
+				@include font-size(0.9);
+				line-height: 13px;
+			}
+			@include mq($screen-md){
+				background: none;
+			}
+		}
+	}
+	.poweredBy{
+		width: 100%;
+		display: flex;
+		pading: 10px 0;
+		background: #f9f9f9;
+		align-items: stretch;
+		justify-content: center;
+		li{
+			list-style: none;
+			align-items: center;
+			display: inline-flex;
+			a{
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+.shelf-style-1{
+	& > h2{ display: none;}
+	.slick-arrow{
+		@extend .bg-dark-yellow;
+		top: 50%;
+		border: 0;
+		padding: 7px;
+		position: absolute;
+		border-radius: 100%;
+		display: block !important;
+		transform: translateY(-50%);
+		svg{
+			width: 30px;
+			height: auto;
+			padding-top: 2px;
+    		padding-left: 4px;
+		}
+		&.slick-prev{
+			left: 15px;
+			transform: translateY(-50%) scaleX(-1);
+		}
+		&.slick-next{
+			right: 15px;
+		}
+	}
+	.shelfItem{
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		.discountHighLight, .highlight{
+			display: none;
+		}
+		a{
+			color: inherit;
+			text-decoration: inherit;
+			&.txt-white{
+				@extend .txt-white;
+			}
+		}
+		.productImage{
+			width: 100%;
+			display: block;
+			padding: 5px 0;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.productInfo{
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			h3{
+				align-self: flex-start;
+			}
+			.buyButton{
+				margin-top: 0;
+			}
+		}
+		.categoria{
+			padding: 5px 0;
+			a{
+				@extend .txt-dark-blue;
+			}
+		}
+		h3{
+			@extend .txt-cap;
+			padding: 5px 0;
+		}
+		.price{
+		    flex: 1;
+		    width: 100%;
+		    display: flex;
+		    padding: 5px 0;
+		    align-items: flex-end;
+		}
+		.listPrice, .bestPrice, .installment{
+			width: 100%;
+			display: block;
+			padding: 2px 0;
+		}
+		.installment{
+			@extend .txt-trans-none, .txt-st-normal;
+		}	
+		.buyButton{
+			@extend .txt-up;
+		}	
+	}
+}
+
+.prateleira{
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		li{
+			list-style: none;
+			border: 1px solid #fff;
+
+			&:hover{
+				border: 1px solid #ccc;
+			}
+		}
+	}
+}

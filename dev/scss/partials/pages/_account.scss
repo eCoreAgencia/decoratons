@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Minha Conta
+   ========================================================================== */
+body.login{
+	overflow: hidden;
+	main{
+		padding-top: 75%;
+		@include mq($screen-md){
+			padding-top: 25%;
+		}
+	}
+}
+.account {
+	main{
+	    width: 100%;
+	    float: left;
+		.container{
+			padding: 0 10px;
+			.row {
+				width: 100%;
+				margin: 0;
+		    }
+		   	.section-title{
+				padding: 15px 0;
+		   	}
+		}
+	}
+
+  	.profile-detail-display,
+	.address-display-block{
+	    @extend .col-xs-12, .txt-sz-14;
+	    margin-top: 20px;
+	    padding: 30px 25px;
+	    border: 1px solid #e6e6e6;
+
+	    @include mq($screen-md) {
+			width: 48%;
+			margin-top: 0;
+			padding: 75px;
+			margin-right: 2%;
+			min-height: 461px;
+	    }
+
+	    h4 {
+	     	@extend .txt-sz-32, .regular, .txt-up, .txt-dark-blue;
+			padding-left: 18px;
+			margin-bottom: 30px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid #fed718;
+	    }
+	    h5{
+			@extend .txt-sz-12, .regular, .txt-cap;
+			overflow: hidden;
+			padding-left: 18px;
+			@include mq($screen-md){ 
+				@include font-size(1.8);
+				line-height: 22px;
+			}
+	    }
+	    p{
+	      padding-left: 18px;
+	      text-transform: none;
+	    }
+	    
+	    .profile-detail-display-email {
+			@extend .txt-sz-14, .regular;
+			margin-bottom: 0;
+			padding-top: 10px;
+			padding-bottom: 20px;
+	    }
+
+	    .title,
+	    .data{
+			@extend .txt-sz-14;
+			border: none;
+			font-weight: normal !important;
+	    }
+
+	    .new-address-link{
+	     	margin-top: 0;
+	    }
+	    #edit-data-link, .new-address-link .address-update{
+			@extend .transition, .txt-white, .bg-dark-blue, .bold;
+			padding: 2px 23px;
+			margin-bottom: 22px;
+			display: inline-block;
+			&:hover{
+				@extend .bg-blue, .txt-dc-none;
+			}
+	    }
+  	}
+  .profile-detail-display-info,
+  .address-display-unit-info { line-height: 1.5; }
+
+  .edit-address-link {
+    color: #000;
+
+    a {
+      @include font-size(0.9);
+
+      &.delete {
+        font-weight: 400;
+        background: none;
+      }
+
+      @include mq($screen-sm) {
+        @include font-size(1.2);
+      }
+    }
+  }
+
+  [data-toggle="modal"] {
+    @extend .txt-sz-14, .txt-black, .txt-dc-none;
+    line-height: 30px;
+    &:hover{
+      @extend .txt-underline;
+    }
+  }
+
+  .data { font-weight: 300; }
+
+  .modal {
+    @include font-size(1.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    background: rgba(#000, .6);
+
+    form {
+      position: absolute;
+      width: 100%;
+      @include mq($screen-md){
+        top: 1%;
+        left: 50%;
+        max-width: 400px;
+        transform: translateX(-50%);
+      }
+    }
+
+    &-header {
+      height: 58px;
+      padding: 0 15px;
+      align-items: center;
+      background-color: #fff;
+      flex-direction: row-reverse;
+      border-bottom: 1px solid #fed718; 
+
+      h3 {
+      	@extend .txt-dark-blue, .txt-sz-16;
+        flex: 1;
+        margin: 0;
+        display: block;
+        text-align: left;
+        padding-top: 20px;
+        &:before, &:after{display:none;}
+      }
+
+      .close {
+        color: #000;
+        float: right;
+        width: 28px;
+        height: 28px;
+        margin-top: 8px;
+        padding: 0;
+        border: 0;
+        font-size: 40px;
+        cursor: pointer;
+        background: {
+          color: transparent;
+          repeat: no-repeat;
+          position: center;
+        }
+      }
+    }
+
+    &-body {
+      padding: 15px;
+      overflow: auto;
+      background-color: #fff;
+      -webkit-overflow-scrolling: touch;
+
+      .dropdown-icon{
+        display: none;
+      }
+
+      @include mq($screen-xs - 1, true) {
+        height: calc(100vh - 65px - 70px);
+      }
+
+      @include mq($screen-xs) {
+        height: 70vh;
+      }
+
+      .profile-detail-form-personal-data h5 { margin-top: 10px; }
+
+      h5 {
+        display: none;
+      }
+
+      .control-group {
+        font-size: 13px;
+        margin-bottom: 1em;
+
+        label { 
+        	@extend .txt-dark-blue;
+	        display: inline-block; 
+        }
+
+        select{
+          margin-top: 5px;
+        }
+
+        input {
+          background: #e6e6e6;
+          &:not([type="radio"]) {
+            font-size: 12px;
+            display: block;
+            width: 100%;
+            height: 30px;
+            padding: 0 10px;
+            border: none;
+            border-radius: 0;
+            margin-top: 5px;
+            transition-duration: .2s;
+            transition-timing-function: ease;
+            transition-property: padding, border-color;
+            appearance: none;
+
+            &:focus { border-color: #000; }
+
+            @include mq($screen-sm) {
+              height: 35px;
+            }
+          }
+        }
+      }
+
+      .form-personal-data-gender .controls label {
+        position: relative;
+        margin-top: .5em;
+        padding-right: 20px;
+      }
+
+      #business-toggle {
+        display: none;
+      }
+    }
+
+    &-footer {
+      flex-direction: row-reverse;
+      border: 0;
+      color: #000;
+      height: 58px;
+      padding: 15px;
+      text-align: center;
+      background-color: #fff;
+
+      .btn {
+        border: none;
+        margin: 0 7px;
+        max-width: none;
+        font-size: 13px;
+        cursor: pointer;
+        appearance: none;
+        padding: 8px 30px;
+        text-align: center;
+        display: inline-block;
+        text-transform: lowercase;
+        background-color: #e6e6e6;
+        &:hover{
+          background-color: #eb7733;
+        }
+      }
+
+      .btn-link {
+        color: #000;
+        margin: 0 7px;
+        cursor: pointer;
+        font-size: 13px;
+        appearance: none;
+        padding: 7px 20px;
+        display: inline-block;
+        background: transparent;
+        border: 1px solid #e6e6e6;
+        text-transform: lowercase;
+        &:hover{
+          color: #fff;
+          background-color: #eb7733;
+        }
+      }
+    }
+  }
+}
+
+// body.login{
+//   .vtexIdUI-providers-list{
+//     li:nth-of-type(2){
+//       display: none;
+//     }
+//   }
+// }

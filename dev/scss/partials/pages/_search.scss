@@ -1,0 +1,356 @@
+/* ==========================================================================
+   Página de Busca, Categorias e Departamentos
+   ========================================================================== */
+
+body.dep-cat-bus{
+	main{
+		padding: 0;
+		.resultado-busca-filtro{
+			.filterBy, .compare, .orderBy label, .orderBy{
+				display: none;
+			}
+		}
+		.searchResultsTime{
+			display: none;
+			@include mq($screen-md){
+				display: inline-block;
+			}
+			.resultado-busca-termo,.resultado-busca-tempo{
+				display: none;
+			}
+			.label{
+				@include font-size(0);
+				line-height: 0;
+			}
+		}
+		.shearchTitle{
+			position: relative;
+			margin-bottom: 35px;
+			border-bottom: 1px solid #fed718;
+			@include mq($screen-md){
+				margin-bottom: 0;
+			}
+			.titulo-sessao, .searchResultsTime, .sub, .orderBy{
+				display: inline-block;
+			}
+			.titulo-sessao{
+				@extend .txt-sz-24, .txt-dark-blue, .txt-up;
+				padding: 10px 0;
+				transform: translateY(3px);
+				border-bottom: 5px solid #fed718;
+			}
+			.filtrarProdutos{
+				@extend .bg-gray, .txt-dark-gray, .txt-sz-14, .hidden-md, .hidden-lg, .txt-up;
+			    left: 0;
+				border: 0;
+			    top: 120%;
+			    padding: 7px 15px;
+			    position: absolute;
+			}
+			.searchResultsTime{
+				display: none;
+				padding: 10px;
+				@include mq($screen-md){
+					top: 0;
+					right: 150px;
+					height: 100%;
+					display: flex;
+					position: absolute;
+					align-items: center;
+				}
+				.value{
+					@extend .txt-dark-blue;
+				} 
+				.label{
+					&:before{
+						@extend .txt-sz-14, .txt-dark-gray;
+						content: 'Itens encontrados: ';
+					}
+				}
+			}
+			.sub{
+				right: 0;
+				top: 100%;
+				height: 100%;
+				display: flex;
+				position: absolute;
+				align-items: center;
+				@include mq($screen-md){
+					top: 0;
+				}
+			}
+		}
+		.orderBy{
+			position: relative;
+			select{
+				@extend .txt-sz-14;
+				cursor: pointer;
+				appearance: none;
+				padding: 5px 5px;
+			}
+			&:before{
+				@extend .bg-blue;
+				top: 50%;
+				right: 3px;
+				content: '';
+				width: 24px;
+				height: 24px;
+				display: block;
+				position: absolute;
+				pointer-events: none;
+				transform: translateY(-50%);
+			}
+			&:after{
+			    top: 50%;
+			    content: '';
+			    right: 10px;
+			    position: absolute;
+				pointer-events: none;
+			    border-top: 5px solid #fff;
+			    transform: translateY(-50%);
+			    border-left: 5px solid transparent;
+			    border-right: 5px solid transparent;
+			}
+		}
+		.main{
+			.resultado-busca-numero{
+				display: flex;
+				.label{
+					order: 2;
+				}
+				.value{
+					@extend .txt-dark-yellow;
+				}
+			}
+			.searchResultsTime{
+				padding: 15px 10px;
+				.label{
+					&:before{
+						@extend .txt-sz-14, .txt-dark-gray;
+						padding-left: 5px;
+						content: 'produto(s) encontrado(s)';
+					}
+				}
+			}
+		}
+		.prateleira{
+			padding: 10px 0;
+			li{
+				@extend .col-xs-6;
+				max-width: 250px;
+				@include mq($screen-sm){
+					width: 100%;
+				}
+			}
+			.shelfItem{
+				@extend .transition;
+				padding: 7px;
+				@include mq($screen-md){
+					border: 1px solid transparent;
+					&:hover{
+						border: 1px solid #09547d;
+					}
+				}
+			}
+		}
+		.pager.top{
+			display: none;
+		}
+		.pager.bottom{
+			width: 100%;
+			padding: 15px 10px;
+			border: 1px solid #bfbfbf;
+			@include mq($screen-md){
+				border: 0;
+				width: auto;
+				float: right;
+			}
+			ul{
+				text-align: center;
+			}
+			li{
+				@extend .transition;
+				cursor: pointer;
+				list-style: none;
+				display: inline-block;
+				&:hover{
+					@extend .txt-underline;
+				}
+				&.first, &.last{
+					display: none;
+				}
+				&.page-number{
+					@extend .txt-dark-gray;
+					padding: 0 10px;
+					&.pgCurrent{
+						@extend .txt-dark-yellow;
+					}
+				}
+				&.previous{
+					@extend .txt-dark-yellow;
+					float: left;
+					padding-right: 15px;
+					&:before{
+						content: '<';
+						padding-right: 5px;
+					}
+				}
+				&.next{
+					@extend .txt-dark-yellow;
+					float: right;
+					padding-left: 15px;
+					&:after{
+						content: '>';
+						padding-left: 5px;
+					}
+				}
+			}
+			.page-number ~ .page-number{
+				border-left: 1px solid #666666;
+			}
+		}
+		section{
+			&.mainShelf{
+				padding: 7px;
+				@include mq($screen-md){
+					float: right;
+				}
+			}
+			&.sidebar{
+				@extend .transition;
+			    top: 0;
+			    left: 0;
+			    opacity: 0;
+			    z-index: 9;
+			    padding: 0;
+			    height: 100%;
+			    display: block;
+			    position: fixed;
+			    max-width: 350px;
+			    background: #fff;
+			    transform: translateX(-100%);
+			    box-shadow: 0 0 5px -1px #000;
+				@include mq($screen-md){
+					opacity: 1;
+					padding: 7px;
+					max-width: 100%;
+					transform: none;
+					box-shadow: none;
+					position: relative;
+				}
+				.menuClose{
+					@extend .bg-yellow, .txt-sz-14, .txt-dark-blue, .bold, .txt-up;
+		    		border: 0;
+		    		outline: 0;
+					width: 100%;
+		    		display: flex;
+					padding: 10px 15px;
+		    		align-items: center;
+		    		svg{
+		    			width: 20px;
+		    			height: 20px;
+		    			path{
+		    				fill: #147eb8;
+		    			}
+		    		}
+					span{
+						flex: 1;
+					}
+				}
+				&.slideActive{
+					opacity: 1;
+					transform: translateX(0);
+				}
+				.search-single-navigator, .search-multiple-navigator{
+					padding: 10px;
+					@include mq($screen-md){
+						padding: 0;
+					}
+				}
+				h5{
+					@extend .txt-sz-24, .txt-dark-blue, .ff-permanentMarker;
+					&:not(:first-of-type){
+						padding-top: 15px;
+					}
+					&:before{
+						@extend .ff-openSans;
+						content: 'Filtro de ';
+						display: inline;
+					}
+				}
+				.HideMarca, .Marca, .productClusterSearchableIds, h3, .menu-navegue, .Campos, .Tamanho{
+					display: none;
+				}
+				li{
+					list-style: none;
+				}
+				ul{
+				    padding: 10px 0 15px;
+    				@include mq($screen-md){
+    					border-bottom: 1px dashed #939393;
+    				}
+					&.Cor{
+						li{
+							display: inline-block;
+						}
+						a{
+							@include font-size(0);
+							margin: 5px;
+							width: 50px;
+							height: 50px;
+							line-height: 0;
+							display: block;
+							border: 1px solid transparent;
+							@include mq($screen-md){
+								width: 30px;
+								height: 30px;
+							}
+							&[title="Bege"]{background-color: #fefae6}
+							&[title="Roxo"]{background-color: #9a0698}
+							&[title="Rosa"]{background-color: #ffcccc}
+							&[title="Cinza"]{background-color: #d1d1d1}
+							&[title="Verde"]{background-color: #a9cbbb}
+							&[title="Pêsego"]{background-color: #fdca89}
+							&[title="Marrom"]{background-color: #835e42}
+							&[title="Amarelo"]{background-color: #ffff33}
+							&[title="Laranja"]{background-color: #fe7900}
+							&[title="Vermelho"]{background-color: #ea1d22}
+							&[title="Branco"]{
+								border-color: #666;
+								background-color: #fff;
+							}
+						}
+					}
+					&.Tamanho{
+						li{
+							display: inline-block;
+						}
+						a{
+							@extend .txt-sz-16, .txt-dark-gray, .txt-dc-none;
+							margin: 5px;
+							width: 50px;
+							height: 50px;
+							display: block;
+						    padding: 13px 0;
+							text-align: center;
+							border: 1px solid #666;
+							&:hover{
+								@extend .txt-underline;
+							}
+						}
+					}
+				}
+			}
+			&.banner-section-1{
+				padding: 7px;
+				a{
+					padding: 7px;
+				}
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+	<head>
+		<title><vtex.cmc:searchTitle /> | Decoratons</title>
+		<vtex:metaTags/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<vtex:template id="decoratons-commonStyles" />
+		<link rel="stylesheet" type="text/css" href="/arquivos/vtex-smartResearch.css" />
+	</head>
+	<body>
+        <vtex:template id="decoratons-header" />
+        <main>
+        	<div class="container">
+          		<section class="mainShelf col-xs-12 col-md-9">
+          			<div class="shearchTitle"><h2 class="titulo-sessao">Ops, não encontramos nada em sua busca!</h2> <a href="#" class="pull-right" onclick="window.history.back();"><i class="fa fa-chevron-left"></i> Voltar</a></div>
+          			<p class="searchSubTitle txt-center txt-sz-20">Alguns produtos em que você deve estar interessado:</p>
+		            <div class="queridinhos-da-semana col-xs-12">
+		            	<h2 class="section-title  txt-center txt-sz-30 txt-dark-blue regular">Queridinhos <strong class="ff-permanentMarker">da Semana</strong></h2>
+		                <div class="shelf slider"><vtex.cmc:queridinhosDaSemana /></div>
+		            </div>
+		            <div class="mais-populares col-xs-12">
+		            	<h2 class="section-title  txt-center txt-sz-30 txt-dark-blue regular">Os Mais <strong class="ff-permanentMarker">Populares</strong></h2>
+		                <div class="shelf slider"><vtex.cmc:produtosPopulares /></div>
+		            </div>
+		        </section>
+          		<section class="banner-section-1 col-xs-12 col-md-3">
+          			<vtex.cmc:categoryBannerSecI />
+          		</section>                
+        	</div>
+        </main>
+        <vtex:template id="decoratons-footer" />
+		<vtex:template id="decoratons-commonScripts" />
+	</body>
+</html>

@@ -1,0 +1,270 @@
+/* ==========================================================================
+   Institucional
+   ========================================================================== */
+
+body.institucional {
+	& > .container{
+		display: flex;
+		padding: 50px 0;
+		flex-wrap: wrap;
+		nav{
+			@extend .col-xs-12, .col-md-2;
+			// display: inline-block;
+			display: none;
+			a{
+				@extend .txt-sz-16, .txt-dc-none, .txt-dark-gray, .transition;
+				padding: 5px;
+				display: block;
+				&:hover{
+					padding-left: 10px;
+				}
+			}
+		}	
+		main{
+			flex: 1;
+			padding: 0;
+			width: 100%;
+			display: inline-block;
+			h1{
+				@extend .txt-dark-blue, .txt-sz-24, .txt-up, .txt-left;
+				padding-bottom: 20px;
+				@include mq($screen-sm){
+					@include font-size(4.0);
+					line-height: 44px;
+				}
+			}
+			article{
+				display: flex;
+			}
+			section{
+				padding: 0 15px;
+				display: inline-block;
+				@include mq($screen-md){
+					padding: 0 15px;
+				}
+				&.left-img, &.right-img{
+					@extend .col-xs-12, .txt-center;
+					@include mq($screen-md){
+						width: auto;
+						padding: 0 15px;
+						max-width: 41.6666666667%;
+					}
+					img{
+						max-width: 100%;
+						display: inline-block;
+					}
+				}
+				&.text{
+					flex: 1;
+					p{
+						@extend .txt-sz-14, .txt-black;
+						margin: 0;
+						padding: 8px 0;
+						@include mq($screen-sm){
+							@include font-size(1.6);
+							line-height: 26px;
+						}
+					}	
+				}
+			}
+			form{
+				width: 100%;
+				margin: 0 auto;
+				display: block;
+				max-width: 750px;
+				&[name="Fale-Conosco"]{
+					fieldset{
+						@extend .col-xs-12;
+						padding: 7px;
+						&:not(.mensagem){
+							@extend .col-sm-4;
+						}
+					}
+				}
+				label{
+					@extend .txt-dark-blue, .txt-sz-18, .bold;
+					display: block;
+					padding: 2px 0;
+				}
+				select{
+					cursor: pointer;
+				}
+				input, textarea, select{
+					@extend .txt-sz-14, .txt-dark-gray, .bd-solid, .bd-clr-ligth-gray, .transition;
+					width: 100%;
+					margin: 2px 0;
+					max-width: 100%;
+					border-width: 1px;
+					padding: 5px 10px;
+					&:-webkit-autofill {
+					    -webkit-box-shadow: 0 0 0 30px white inset;
+					}
+				}
+				textarea{
+					resize: none;
+					min-height: 150px;
+					max-height: 150px;
+					width: 100% !important;
+				}
+				.newsletter-button-ok{
+					@extend .bg-dark-blue, .transition,.txt-white, .txt-sz-18, .txt-up;
+					border: 0;
+					display: block;
+					margin: 0 auto;
+					padding: 10px 20px;
+					&:hover{
+						@extend .bg-blue;
+					}
+				}
+				.section-slider{
+					overflow: hidden;
+					white-space: nowrap;
+					.formSection{
+						@extend .transition;
+						opacity: 0;
+						width: 100%;
+						float: left;
+						overflow: hidden;
+						list-style: none;
+						position: absolute;
+						white-space: normal;
+						display: inline-block;
+						transform: translateX(100%);
+						&.active{
+							opacity: 1;
+							position: relative;
+							max-height: initial;
+							transform: translateX(0);
+						}
+						&.prev{
+							transform: translateX(-100%);
+						}
+					}
+					.formSection-title{
+						@extend .txt-sz-24, .bold, .txt-up, .txt-dark-blue, .col-xs-12;
+						padding: 15px 7px;
+					}
+					.formSection-sub-title{
+						@extend .txt-sz-16, .txt-black, .col-xs-12;
+						padding: 10px 10px;
+						ul{
+						    padding: 10px 0 10px 25px;
+							li{
+								padding: 5px 0;
+								list-style: none;
+							}
+						}
+					}
+					fieldset{
+						width: 100%;
+						display: block;
+						padding: 15px 0;
+					}
+					div{
+						label.required{
+							@extend .transition;
+							&:after{
+								@extend .regular;
+								color: red;
+								content: '*';
+								padding-left: 10px;
+							}
+						}
+						&.empty{
+							input, textarea, select{
+								border-color: red;
+							}
+						}
+					}
+					.termAgreement{
+						label:not(:first-of-type){
+							padding: 10px;
+							cursor: pointer;
+							display: inline-block;
+							input{
+								width: auto;
+								margin: 5px;
+								vertical-align: middle;
+							}
+						}
+					}
+				}
+				.menu{
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					flex-direction: row-reverse;
+					.progress-bar{
+						width: 100%;
+						height: 10px;
+						max-width: 200px;
+						overflow: hidden;
+						user-select: none;
+						border-radius: 25px;
+						background-color: #ededee;
+						&:before{
+							@extend .transition;
+							content: '';
+							height: 100%;
+							display: block;
+							border-radius: 25px;
+							background-color: #147eb8;
+						}
+						&[data-value="1"]{
+							&:before{
+								width: 25%;
+							}
+						}
+						&[data-value="2"]{
+							&:before{
+								width: 50%;
+							}
+						}
+						&[data-value="3"]{
+							&:before{
+								width: 75%;
+							}
+						}
+						&[data-value="4"]{
+							&:before{
+								width: 100%;
+							}
+						}
+					}
+					.progresso{
+						order: 2;
+						width: auto;
+						min-width: 200px;
+						display: inline-block;
+						margin: 5px auto 5px 5px;
+					}
+					button{
+						@extend .txt-up, .bold, .txt-sz-14, .txt-dark-gray;
+						border: 0;
+						outline: 0;
+						margin: 5px;
+						cursor: pointer;
+						line-height: 14px;
+						padding: 10px 15px;
+						letter-spacing: 1px;
+						display: inline-block;
+						&.prev{
+							order: 1;
+						}
+						&.next{
+							@extend .txt-white, .bg-dark-blue;
+							order: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.fale-conosco, &.parcerias{
+		main{
+			h1{
+				@extend .txt-center;
+			}
+		}
+	}
+}

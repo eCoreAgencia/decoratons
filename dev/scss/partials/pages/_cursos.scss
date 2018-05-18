@@ -1,0 +1,30 @@
+body.cursos{
+	main{
+		.cursos{
+			@include mq($screen-sm){
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row-reverse;
+			}
+			.curso-box{
+			    .header{
+					img{
+						@include mq($screen-sm){
+							margin: 0;
+						}
+					}
+			        .date{
+			        }
+			    }
+			}
+			.more-courses{
+				padding: 0;
+				border: 1px solid #e0e0e0;
+			}
+			.paginador{
+				display: none;
+				margin-top: 25px;
+			}
+		}
+	}
+}

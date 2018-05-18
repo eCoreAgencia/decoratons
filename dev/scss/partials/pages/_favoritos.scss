@@ -1,0 +1,18 @@
+body.favoritos{
+	.favList{
+		padding: 15px 0;
+		min-height: 480px;
+		.favorito{
+			width: 100%;
+			padding: 7px;
+			max-width: 280px;
+			position: relative;
+			.removeFavorite{
+				@extend .CloseButton;
+				top: 22px;
+				right: 15px;
+				position: absolute;
+			}
+		}
+	}
+}

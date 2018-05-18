@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Breadcrumb
+   ========================================================================== */
+
+.bread-crumb {
+	padding: 20px 0;
+	overflow: hidden;
+    margin-bottom: 50px;
+	text-transform: none;
+	border-bottom: 1px solid #cfcfcf;
+
+	@include mq($screen-md) {
+		padding-left: 0;
+	}
+
+	ul {
+        @media screen and (max-width: 480px) {
+            padding-left: 20px;
+        }
+
+		li {
+			position: relative;
+			margin-right: 10px;
+			padding-right: 10px;
+			list-style-type: none;
+			display: inline-block;
+
+			&:after {
+				@include font-size(1.4);
+				top: 2px;
+				right: -4px;
+				color: #000;
+				content: '>';
+				display: block;
+				position: absolute;
+			}
+			
+			a {
+				@extend .transition;
+				@include font-size(1.4);
+				color: #000;
+				padding-top: 2px;
+				display: inline-block;
+				text-decoration: none;
+
+				&:hover {
+					padding-top: 0;
+					font-size: 16px;
+					padding-left: 10px;
+					text-decoration: underline;
+				}
+			}
+
+			&:last-child {
+				&:after {
+					content: '';
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,113 @@
+/* Font Families */
+
+.ff-openSans{font-family:'Open Sans', sans-serif}
+.ff-permanentMarker{font-family: 'Permanent Marker', cursive;}
+
+/* Weights */
+
+.thin{font-weight: 100}
+.x-light{font-weight: 200}
+.light{font-weight: 300}
+.regular{font-weight: 400}
+.medium{font-weight: 500}
+.semi-bold{font-weight: 600}
+.bold{font-weight: 700}
+.x-bold{font-weight: 800}
+
+/* Style */
+.txt-st-normal{font-style: normal}
+
+/* Decorations */
+
+.txt-dc-none{text-decoration: none}
+.txt-underline{text-decoration: underline}
+.txt-ln-through{text-decoration: line-through}
+
+/* Colors */
+
+.txt-white{color: #fff}
+.txt-black{color: #000000}
+.txt-magenta{color: #eb068a}
+
+.txt-yellow{color: #fef125}
+.txt-dark-yellow{color: #fed718}
+
+.txt-light-blue{color: #09adec}
+.txt-dark-blue{color: #147eb8}
+.txt-darkest-blue{color: #09547d}
+
+.txt-gray{color: #757575}
+.txt-gray-nine{color: #999999}
+.txt-light-gray{color: #dddddd}
+.txt-dark-gray{color: #666666}
+
+/* Sizes */
+.txt-sz-0{
+	@include font-size(0);
+	line-height: 0;
+}
+.txt-sz-10{
+	@include font-size(1.0);
+	line-height: 14px;
+}
+.txt-sz-12{
+	@include font-size(1.2);
+	line-height: 16px;
+}
+.txt-sz-14{
+	@include font-size(1.4);
+	line-height: 18px;
+}
+.txt-sz-16{
+	@include font-size(1.6);
+	line-height: 20px;
+}
+.txt-sz-18{
+	@include font-size(1.8);
+	line-height: 22px;
+}
+.txt-sz-20{
+	@include font-size(2.0);
+	line-height: 24px;
+}
+.txt-sz-24{
+	@include font-size(2.3);
+	line-height: 27px;
+}
+.txt-sz-24{
+	@include font-size(2.4);
+	line-height: 28px;
+}
+.txt-sz-28{
+	@include font-size(2.8);
+	line-height: 32px;
+}
+.txt-sz-30{
+	@include font-size(3.0);
+	line-height: 34px;
+}
+
+.txt-sz-31{
+	@include font-size(3.1);
+	line-height: 35px;
+}
+
+.txt-sz-32{
+	@include font-size(3.2);
+	line-height: 36px;
+}
+
+.txt-sz-40{
+	@include font-size(4.0);
+	line-height: 44px;
+}
+/* Alignment */
+.txt-left{text-align: left}
+.txt-right{text-align: right}
+.txt-center{text-align: center}
+.txt-justify{text-align: justify}
+
+.txt-up{text-transform: uppercase}
+.txt-lo{text-transform: lowercase}
+.txt-cap{text-transform: capitalize}
+.txt-trans-none{text-transform: none}

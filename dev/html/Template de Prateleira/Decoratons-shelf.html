@@ -1,0 +1,34 @@
+#set($id = $product.Id)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+
+<div class="shelfItem">
+	<a class="productImage" title="$escapedName" href="$uri">$product.GetImageTag(30)</a>
+	<div class="productInfo">
+		<h3 class="regular txt-dark-gray txt-sz-16"><a title="$escapedName" href="$uri">$product.SkuName</a></h3>
+		#if ($product.IsInStock)
+			<p class="price">
+				<a title="$escapedName" href="$uri">
+					#if ($product.HasBestPrice)
+						<span class="listPrice txt-sz-14 txt-light-gray txt-ln-through">$product.ListPrice</span>
+					#end
+					<span class="bestPrice txt-sz-30 txt-dark-blue bold">$product.BestPrice</span>
+					#if ($product.NumbersOfInstallment > 1)
+						<em class="txt-dark-gray txt-sz-14 installment">
+							ou ${product.NumbersOfInstallment}X de $product.InstallmentValue
+						</em>
+					#end
+				</a>
+			</p>
+			<a class="buyButton bg-dark-blue txt-white" title="$escapedName" href="$uri"> 
+				Eu quero
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 451.846 451.847"><path d="M345.441 248.292L151.154 442.573c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744L278.318 225.92 106.409 54.017c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.287 194.284c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373z" fill="#FFF"/></svg>
+			</a>
+		#else
+			<p class="outOfStock">Produto Esgotado</p> 
+		#end
+		<div class="discountHighLight">$product.DiscountHightLight</div>
+		<a title="$escapedName" class="highlight" href="$uri">$product.HightLight</a>
+	</div>
+	<span class="categoria col-xs-12 txt-sz-14 txt-dark-blue txt-underline"><a href="$product.CategoryLink" class="bold">+ $product.CategoryName</a></span>
+</div>

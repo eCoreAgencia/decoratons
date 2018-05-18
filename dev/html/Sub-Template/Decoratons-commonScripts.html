@@ -1,0 +1,12 @@
+<script type="text/javascript" src="/arquivos/jquery.mask.js"></script>
+<script type="text/javascript" src="/arquivos/slick-v1.8.js"></script>
+<script type="text/javascript" src="/arquivos/decoratons-v3.js"></script>
+<div class="popup-wrapper hidden">
+	<vtex.cmc:popupCalculadora />
+</div>
+<script type="text/javascript">
+	$(window).load(function(){
+		Popupinator.setWrapper($('.popup-wrapper'));
+		Popupinator.popups('.popup');
+	});
+</script>

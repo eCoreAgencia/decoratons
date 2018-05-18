@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header{
+	z-index: 2;
+	width: 100%;
+	float: left;
+	.top-box{
+		@extend .txt-sz-10;
+		padding: 10px 0;
+		background-color: #fed718;
+		ul{
+			display: flex;
+			align-items: stretch;
+			justify-content: flex-end;
+			li{
+				@extend .txt-dark-gray, .txt-up;
+				list-style: none;
+				margin-left: 25px;
+				align-items: center;
+				display: inline-flex;
+				a{
+					color: inherit;
+					text-decoration: none;
+				}
+				svg{
+					margin-right: 5px;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				span{
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+	.js-open-mobile-menu{
+		@extend .bg-blue;
+		border: 0;
+		outline: 0;
+		padding: 10px 15px;
+		align-self: stretch;
+		display: inline-block;
+	}
+	.search-toggle{
+		border: 0;
+		background: none;
+	}
+	.middle-box{
+		@extend .txt-sz-14;
+		padding: 0;
+	    clear: both;
+	    float: left;
+	    width: 100%;
+	    background-color: #feea1b;
+	    & > .container{
+    	    display: flex;
+    		align-items: center;
+	    }
+	    .logo{
+    	    z-index: 99999;
+    	    a{
+		    	display: block;
+		    	img{
+		    		max-width: 100%;
+		    		pointer-events: none;
+		    		transform: translateY(25%);
+		    	}
+	    	}
+	    }
+	    .calculator{
+	    	text-align: center;
+	    }
+	}
+}

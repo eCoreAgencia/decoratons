@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title>Loja Shumi | Soluções Brother para Arte Têxtil</title>
+        <vtex:metaTags/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <vtex:template id="decoratons-commonStyles" />
+    </head>
+    <body>
+        <vtex:template id="decoratons-header" />
+        <main>
+            <section class="banners-top">
+                <div class="slider slide-wrap">
+                    <div class="slide">
+                        <vtex:contentPlaceHolder id="banners-slide" />
+                    </div>
+                </div>
+            </section><!-- banners-top END -->
+            <section class="sub-cats col-xs-12 col-sm-12 col-md-12">
+                <div class="container">
+                    <vtex:contentPlaceHolder id = "Sub-cats" />
+                </div>
+            </section>
+            <section class="shelf">
+                <div class="container">
+                    <vtex:contentPlaceHolder id="Page-title" />  
+                    <section class="mainShelf col-xs-12 col-md-12 col-md-12">
+                        <vtex.cmc:searchResult layout="6f535a08-69df-461d-87cd-705c153997fb" itemCount="16" columnCount="16" />
+                    </section>
+                </div>
+            </section>
+            <section class="outros-servicos">
+                <div class="container row">
+                    <div class="minibanners-services col-md-12 col-xs-12 col-sm-12">
+                        <vtex:template id="Shumino-Outros-Servicos" />
+                    </div>
+                </div>
+            </section>
+            <section class="instagram">
+                <div class="container row">
+                    <h3 class="tlt-shelf">Instagram</h3>
+                    <span>Inspiração via Instagram! Já está nos seguindo?</span>
+                    <vtex.cmc:instagram />
+                </div>
+            </section>
+            <section class="blog facebook col-xs-12 col-sm-12 col-md-12">
+                <div class="container row">
+                    <h3 class="tlt-shelf">Facebook Shumi-no-Ie</h3>
+                    <span>Mostre que você tem interesse por esta página curtindo-a.</span>
+                    <vtex.cmc:facebook />
+                    <div class="vejaMais col-xs-12 col-sm-12 col-md-12">
+                        <a href="https://www.facebook.com/decoratons">Visitar a página da Shumi-no-ie no facebook</a>
+                    </div>
+                </div>
+            </section>
+            <!-- section class="blog shuminoblog col-xs-12 col-sm-12 col-md-12">
+                <div class="container row">
+                    <h3 class="tlt-shelf">Blog Shumi-no-Ie</h3>
+                    <span>Produtos que vão de domésticos à profissionais se encaixando a cada uma de suas necessidades</span>
+                    <div class="post-contents col-xs-12"></div>
+                    <div class="vejaMais col-xs-12 col-sm-12 col-md-12">
+                        <a class="vejaMais" href="/blog/">Postagens anteriores</a>
+                    </div>
+                </div>
+            </section -->
+        </main>
+        <vtex:template id="decoratons-footer" />
+        <vtex:template id="decoratons-commonScripts" />
+        <script type="text/javascript" src="/arquivos/shumi-slick.js"></script>
+        <script type="text/javascript" src="/arquivos/cursos-v3.js"></script>
+    </body>
+</html>

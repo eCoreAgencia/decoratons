@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Title
+   ========================================================================== */
+
+h3.tlt-shelf {
+	@extend .container;
+    @include font-size (3.2);
+    $ccShelfcolor: #eb7733;
+    color: #000;
+    display: flex;
+    font-weight: normal;
+    margin: 30px auto 15px;
+    $ccTltMargin: 6px;
+    &:after,
+    &:before{
+    	content: " ";
+		flex-grow: 1;
+    	font-size: 12px;
+    	margin-bottom: 8px;
+    	display: inline-block;
+    	border-bottom: 1px solid;
+    	border-color: $ccShelfcolor;
+    }
+    &:before{margin-right: $ccTltMargin;}
+    &:after{margin-left: $ccTltMargin;}
+    &+span{
+		@include font-size (1.6);
+		display: block;
+		text-align: center;
+		margin-bottom: 30px;
+		color: $ccShelfcolor;
+		text-transform: none;
+    }
+}
+
+body.blackFriday{
+    h3.tlt-shelf {
+        color: #fff;
+    }
+}
+
+.title-4{
+	@extend .txt-dc-none, .bd-clr-ligth-gray, .txt-trans-none,.bd-solid;
+	padding: 10px 0;
+	border-bottom-width: 1px;
+}

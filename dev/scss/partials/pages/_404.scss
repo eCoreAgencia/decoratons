@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Erro 404
+   ========================================================================== */
+
+body.busca-vazia{
+	main{
+		padding: 25px 0;
+		.searchSubTitle{
+			padding: 15px 0;
+		}
+		.shearchTitle{
+			margin: 0;
+			text-align: center;
+			@include mq($screen-md){
+				text-align: left;
+			}
+			a{
+				@extend .transition, .bg-dark-blue, .txt-white, .txt-dc-none;
+			    right: 0;
+			    top: 50%;
+			    display: none;
+			    padding: 5px 15px;
+			    position: absolute;
+			    transform: translateY(-50%);
+			    @include mq($screen-md){
+			    	display: block;
+			    }
+			    &:hover{
+					@extend .bg-blue;
+			    }
+			}
+		}
+		.mainShelf{
+			ul{
+				width: 90%;
+				margin: 0 auto;
+				li{
+					margin: 0;
+					border: 0;
+					height: auto;
+					padding: 0px 11px;
+					position: relative;
+					vertical-align: top;
+					display: inline-block;
+				}
+				&.slick-slider{
+					display: block;
+					position: initial;
+					.slick-track{
+						display: -webkit-flex;
+						display: -moz-flex;
+						display: -ms-flex;
+						display: -o-flex;
+						display: flex;
+						flex-wrap: wrap;
+						align-items: stretch;
+						justify-content: center;
+					}
+				}
+			}
+			.slick-next, .slick-prev{
+				padding: 0;
+				width: 25px;
+				height: 25px;
+				display: flex !important;
+				user-select: none;
+				align-items: center;
+				justify-content: center;
+				svg{
+					width: 15px;
+					height: 15px;
+					padding: 0 0 0 2px;
+				}
+			}
+		}
+	}
+}

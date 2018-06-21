@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <vtex:template id="decoratons-commonStyles" />
-        <link rel="stylesheet" type="text/css" href="https://ericluciano.com/ecore/decoratons/test.css" />
     </head>
     <body>          
         <vtex:template id="decoratons-header" />
@@ -17,7 +16,10 @@
             <section class="product-box">
             	<div class="container">
             		<div class="ProductImage col-xs-12 col-md-7">
-	                    <vtex.cmc:ProductImage zoom="off" />
+                        <!-- Mounting With API -->
+                        <ul class="thumbnails"></ul>
+						<div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails"></div>
+						
 	                    <div id="prod-detalhamento" class="productSpecification" data-spec="Detalhamento"></div>
 	                </div><!-- product-box END -->
 	                <div class="ProductInfo col-xs-12 col-md-5">
@@ -38,8 +40,9 @@
 			            			<div id="prod-dimensoes" class="productSpecification" data-parent="true" data-spec="Dimensões"></div>
 			            		</div>
 	                			<div class="hidden-xs hidden-sm hidden-md hidden-lg"><vtex.cmc:stockKeepingUnitMeasures/></div>
-	                			<ul class="skus-dimensoes"></ul>
-	                			<vtex.cmc:skusDimensoes/>
+	                			<ul class="skus-dimensoes">
+	                				<vtex.cmc:skusDimensoes/>
+	                			</ul>
 	                		</div>
 	                	</div>
 	                	<div class="price-section col-xs-12">
@@ -61,26 +64,16 @@
 	                		</div>
 	                	</div>
 	                	<div class="buy-box col-xs-12">
-	                		<div class="col-xs-12 col-sm-6"><vtex.cmc:stockKeepingUnitAmountAndUnitSelection /></div>	             
-	                		<div class="col-xs-12 col-sm-6"><vtex.cmc:BuyButton /></div>
+	                		<div class="col-xs-6"><vtex.cmc:stockKeepingUnitAmountAndUnitSelection /></div>	             
+	                		<div class="col-xs-6"><vtex.cmc:BuyButton /></div>
 	                	</div>
 	                	<div class="frete-quantidade col-xs-12">
 	                		<div class="col-xs-12">
-	                		    <div class="carrinho-frete">
-	                		        <a class="btn-add-carrinho col-xs-12 col-sm-6" target="_top" href="">
-	                		        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" width="22" height="22"><path d="M214.685 402.828c-24.829 0-45.029 20.2-45.029 45.029 0 24.829 20.2 45.029 45.029 45.029s45.029-20.2 45.029-45.029c-.001-24.829-20.201-45.029-45.029-45.029zm0 64.914c-10.966 0-19.887-8.922-19.887-19.887 0-10.966 8.922-19.887 19.887-19.887s19.887 8.922 19.887 19.887c0 10.967-8.922 19.887-19.887 19.887zM372.63 402.828c-24.829 0-45.029 20.2-45.029 45.029 0 24.829 20.2 45.029 45.029 45.029s45.029-20.2 45.029-45.029c-.001-24.829-20.201-45.029-45.029-45.029zm0 64.914c-10.966 0-19.887-8.922-19.887-19.887 0-10.966 8.922-19.887 19.887-19.887 10.966 0 19.887 8.922 19.887 19.887 0 10.967-8.922 19.887-19.887 19.887zM383.716 165.755H203.567c-6.943 0-12.571 5.628-12.571 12.571s5.629 12.571 12.571 12.571h180.149c6.943 0 12.571-5.628 12.571-12.571 0-6.944-5.628-12.571-12.571-12.571zM373.911 231.035H213.373c-6.943 0-12.571 5.628-12.571 12.571s5.628 12.571 12.571 12.571H373.91c6.943 0 12.571-5.628 12.571-12.571 0-6.942-5.628-12.571-12.57-12.571z" fill="#969696"></path><path d="M506.341 109.744a25.04 25.04 0 0 0-19.489-9.258H95.278L87.37 62.097a25.173 25.173 0 0 0-14.614-17.989l-55.177-23.95c-6.37-2.767-13.773.156-16.536 6.524-2.766 6.37.157 13.774 6.524 16.537L62.745 67.17l60.826 295.261c2.396 11.628 12.752 20.068 24.625 20.068h301.166c6.943 0 12.571-5.628 12.571-12.571s-5.628-12.571-12.571-12.571H148.197l-7.399-35.916H451.69c11.872 0 22.229-8.44 24.624-20.068l35.163-170.675a25.043 25.043 0 0 0-5.136-20.954zM451.69 296.301H135.619l-35.161-170.674 386.393.001-35.161 170.673z" fill="#969696"></path></svg>
-	                		        <span class="txt-add-cart">Adicionar ao carrinho</span>
-	                		        </a>
-	                		        
-	                		        <div class="section-title txt-dark-gray txt-up bold btn-frete col-xs-12 col-sm-6">
-	                				<svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 612 612"><path d="M21.474 377.522V117.138c0-14.469 11.729-26.199 26.199-26.199h260.25c14.469 0 26.198 11.73 26.198 26.199v260.385a8.732 8.732 0 0 1-8.733 8.733H30.207a8.733 8.733 0 0 1-8.733-8.734zm210.16 89.202c0 30.01-24.329 54.338-54.338 54.338s-54.338-24.328-54.338-54.338c0-30.011 24.329-54.338 54.338-54.338s54.338 24.327 54.338 54.338zm-27.17 0c0-15.005-12.164-27.169-27.169-27.169s-27.17 12.164-27.17 27.169 12.165 27.17 27.17 27.17 27.169-12.165 27.169-27.17zm-73.969-54.339H8.733A8.733 8.733 0 0 0 0 421.118v26.495a8.733 8.733 0 0 0 8.733 8.733h97.598c2.548-17.484 11.373-32.928 24.164-43.961zm385.443 54.339c0 30.01-24.329 54.338-54.338 54.338-30.01 0-54.338-24.328-54.338-54.338 0-30.011 24.328-54.338 54.338-54.338 30.009-.001 54.338 24.327 54.338 54.338zm-27.168 0c0-15.005-12.165-27.169-27.17-27.169-15.006 0-27.169 12.164-27.169 27.169s12.164 27.17 27.169 27.17 27.17-12.165 27.17-27.17zM612 421.118v26.495a8.733 8.733 0 0 1-8.733 8.733h-70.704c-5.057-34.683-34.906-61.427-70.961-61.427-36.062 0-65.912 26.745-70.969 61.427H248.261c-2.549-17.483-11.373-32.928-24.164-43.961h134.994V162.594c0-9.646 7.82-17.466 17.466-17.466h82.445a69.86 69.86 0 0 1 57.9 30.77l53.15 78.721a69.865 69.865 0 0 1 11.962 39.094v118.672h21.253a8.733 8.733 0 0 1 8.733 8.733zm-88.592-164.483l-42.501-60.393a8.734 8.734 0 0 0-7.142-3.707H407.47a8.734 8.734 0 0 0-8.733 8.733v60.393a8.732 8.732 0 0 0 8.733 8.733h108.798c7.074 0 11.212-7.973 7.14-13.759z" fill="#fff"/></svg>
-	                				    <span class="txt-frete">Calcule o seu frete</span>
-	                			    </div>    
-	                			    
-	                		    </div>
-	                			<div class="shippingView">
-	                			    <vtex.cmc:shippingValue/>
+	                			<div class="section-title txt-dark-gray txt-up bold">
+	                				<svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 612 612"><path d="M21.474 377.522V117.138c0-14.469 11.729-26.199 26.199-26.199h260.25c14.469 0 26.198 11.73 26.198 26.199v260.385a8.732 8.732 0 0 1-8.733 8.733H30.207a8.733 8.733 0 0 1-8.733-8.734zm210.16 89.202c0 30.01-24.329 54.338-54.338 54.338s-54.338-24.328-54.338-54.338c0-30.011 24.329-54.338 54.338-54.338s54.338 24.327 54.338 54.338zm-27.17 0c0-15.005-12.164-27.169-27.169-27.169s-27.17 12.164-27.17 27.169 12.165 27.17 27.17 27.17 27.169-12.165 27.169-27.17zm-73.969-54.339H8.733A8.733 8.733 0 0 0 0 421.118v26.495a8.733 8.733 0 0 0 8.733 8.733h97.598c2.548-17.484 11.373-32.928 24.164-43.961zm385.443 54.339c0 30.01-24.329 54.338-54.338 54.338-30.01 0-54.338-24.328-54.338-54.338 0-30.011 24.328-54.338 54.338-54.338 30.009-.001 54.338 24.327 54.338 54.338zm-27.168 0c0-15.005-12.165-27.169-27.17-27.169-15.006 0-27.169 12.164-27.169 27.169s12.164 27.17 27.169 27.17 27.17-12.165 27.17-27.17zM612 421.118v26.495a8.733 8.733 0 0 1-8.733 8.733h-70.704c-5.057-34.683-34.906-61.427-70.961-61.427-36.062 0-65.912 26.745-70.969 61.427H248.261c-2.549-17.483-11.373-32.928-24.164-43.961h134.994V162.594c0-9.646 7.82-17.466 17.466-17.466h82.445a69.86 69.86 0 0 1 57.9 30.77l53.15 78.721a69.865 69.865 0 0 1 11.962 39.094v118.672h21.253a8.733 8.733 0 0 1 8.733 8.733zm-88.592-164.483l-42.501-60.393a8.734 8.734 0 0 0-7.142-3.707H407.47a8.734 8.734 0 0 0-8.733 8.733v60.393a8.732 8.732 0 0 0 8.733 8.733h108.798c7.074 0 11.212-7.973 7.14-13.759z" fill="#666"/></svg>
+	                				Calcule o seu frete:
 	                			</div>
+	                			<vtex.cmc:shippingValue/>
 	                		</div>	
 	                	</div>
 	                </div>
@@ -117,16 +110,9 @@
             </section>
         </main>
         <vtex:template id="decoratons-footer" />
-        <vtex:template id="decoratons-commonScripts" />
+		<vtex:template id="decoratons-commonScripts" />
+		<script type="text/javascript" src="/arquivos/easyzoom-v1.js"></script>
         <script type="text/javascript">
-            $(function(){
-                $(".btn-frete").on('click', function(){ $(".shippingView").toggleClass('active'); });
-                
-            });
-			$(window).load(function(){
-				ShippingValue();
-				$('.buy-box button[name="favorite"]').favoriteCurrentButton();
-			});
 			$('.product-box .ProductInfo .Availability').each(function(){
 				var prontaEntrega = $('.product-box .ProductInfo .flag.pronta-entrega');
 				if(prontaEntrega.length){
@@ -136,12 +122,13 @@
 					$(this).remove();
 				}
 			});
-			// $('.sku-selector-container .Tamanho .specification').on('hover', function(){
-			// 	$('.skus-dimensoes').addClass('active');
-			// });
-			// $('.sku-selector-container .Tamanho .specification').on('mouseout', function(){
-			// 	$('.skus-dimensoes').removeClass('active');
-			// });
+			$('.sku-selector-container .Tamanho .specification').on('hover', function(){
+			 	$('.skus-dimensoes').addClass('active');
+			 });
+			 $('.sku-selector-container .Tamanho .specification').on('mouseout', function(){
+			 	$('.skus-dimensoes').removeClass('active');
+			});
+
 			$('button[name="formas-pagamento"]').on('click', function(){
 				$(this).siblings('.formas-de-pagamento').toggleClass('active');
 			});

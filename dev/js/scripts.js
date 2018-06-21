@@ -14,7 +14,7 @@
 
 // </script>
 
-// Polyfill Evento Customizado 
+// Polyfill Evento Customizado
 	(function () {
 	  if ( typeof window.CustomEvent === "function" ) return false;
 
@@ -29,16 +29,16 @@
 
 	  window.CustomEvent = CustomEvent;
 	})();
-// Polyfill Evento Customizado 
+// Polyfill Evento Customizado
 
-// Minicart 
+// Minicart
 	(function($) {
 		'use strict';
 
 		var settings = {
 			effect: 'overlay'
 		};
-		
+
 		var cart = null;
 
 		var helper = {
@@ -125,6 +125,31 @@
 					});
 				}
 			},
+			addItemNoShowCart: function(el) {
+				var urlTest = ["javascript",":","alert('Por favor, selecione o modelo desejado.');"].join('');
+				var url = $(el).attr('href');
+
+				if(url == urlTest){
+					alert('Por favor, selecione o modelo desejado.');
+					return false;
+				} else {
+
+					// var cart = "/checkout/cart/add?sku=" + url.split('sku')[1].split('&')[0].split('=')[1] + "&seller=1&redirect=true&sc=2";
+					var cart = url;
+
+					$.ajax({
+						url: cart.replace("https://www.kroton.com.br", "").replace("true", "false"),
+						type: 'GET',
+						crossDomain: true,
+						dataType: 'html',
+						success: function(){
+							helper.fillCart();
+							helper.closeCart();
+
+						}
+					});
+				}
+			},
 			removeItem : function(index){
 	            vtexjs.checkout.getOrderForm().then(function (orderForm) {
 	                var item = orderForm.items[index];
@@ -180,7 +205,7 @@
 					if($qty <= 1) {
 						$(this).parent().parent().find('.result input').attr('value', '1');
 					}else{
-						$(this).parent().parent().find('.result input').attr('value', $qty - 1);	
+						$(this).parent().parent().find('.result input').attr('value', $qty - 1);
 					}
 				});
 
@@ -193,7 +218,7 @@
 				$('.content-select-sku > ul > li').on('click', function(event) {
 					$('.content-select-sku > ul > li').removeClass('active');
 					$(this).addClass('active');
-				});	
+				});
 			}
 		};
 
@@ -226,9 +251,22 @@
 				event.preventDefault();
 			});
 
+			$('.btn-add-carrinho').on('click', function(event){
+				event.preventDefault();
+				$(this).attr('href', $('.buy-button').attr('href'));
+				helper.addItemNoShowCart($(this));
+
+				$("html, body").animate({scrollTop: 0}, 300);
+				setTimeout(function(){
+					helper.closeCart();
+				},1200);
+
+			});
+
 			$('.openCart').on('click', function(event){
 				helper.openCart();
 				event.preventDefault();
+
 			});
 
 			$('.sta-cart-close, .sta-cart-overlay').on('click', function(){
@@ -243,7 +281,7 @@
 			$('.sta-cart-resume a').on('click', function(){
 				if($(this).hasClass('disabled')){
 					return false;
-				} else { 
+				} else {
 					return true;
 				}
 			});
@@ -271,6 +309,7 @@
 	$(function() {
 	    $("body").vtexcart({
 	        buyButton: $(".buy-button"),
+					addCartButton: $(".btn-add-carrinho"),
 	        wrapper: $(".container"),
 	        effect: "overlay",
 	        cartButton: $(".sta-cart")
@@ -278,335 +317,20 @@
 	    $('header #mini-cart').click(function(){
 	    	$('.sta-cart-overlay').show();
 	    	$('.sta-cart-container').animate({right: 0},300);
-	    });
+		});
+		
+		$('header #mini-cart').mouseenter(function(){
+			$('.sta-cart-overlay').show();
+			$('.sta-cart-container').animate({right: 0},300);
+		});
+		
+		$('.sta-cart-container').mouseleave(function(){
+			$('.sta-cart-overlay').hide();
+			$('.sta-cart-container').animate({right: -500},300);
+		})
+
 	});
-// Minicart 
-
-// Favoritos
-	// (function (window, document, $) {
-	//     'use strict';
-	//     vtexjs.checkout.getOrderForm().done(function(orderForm) {
-	// 	    var favoriteProduct = new CustomEvent("Favorites.favoriteProduct");
-	// 	    var notFavoriteProduct = new CustomEvent("Favorites.notFavoriteProduct");
-	// 	    var productFavorited = new CustomEvent("Favorites.productFavorited");
-	// 	    var productUnfavorited = new CustomEvent("Favorites.productUnfavorited");
-
-	// 	    function Favorites(){
-	// 	    	var config = {
-	// 	    		ac: 'PF', // entidade
-	// 	    		an: 'decoratons', // loja
-	// 	    		maxFav: '2',
-	// 				thumbFav: {
-	// 					width: '100',
-	// 					height: '100'
-	// 				},
-	// 	    	}
-	// 	    	var clientEmail = vtexjs.checkout.orderForm.clientProfileData.email;
-	// 	    	var pId = document.getElementById('___rc-p-id');
-	// 	    	var currentId = (pId != null)? pId.value : null;
-	// 	    	self = this;
-	// 	    	function formatPrice(input,dp){
-	// 				input = String(input.toFixed(2));
-	// 				var thou = (dp == '.')? ',': '.';
-	// 				var r = input.replace(/\D/g,"");
-	// 			    r = r.replace(/^0/,"");
-	// 			    if(r.length > 5){
-	// 			    	r = r.replace(/\B(?=(.{2}$)+(?!\d))|([.])/g,dp).replace(/(\d)(?=(\d{3})+(?!\d))/g,"$1"+thou);
-	// 			    }else if(r.length > 2){
-	// 			    	r = r.replace(/(\d{1})(\d{2})$/,"$1"+dp+"$2");
-	// 			    }else if(r.length > 1){
-	// 					r = r.replace(/(\d{2})$/,"00"+dp+"$1");
-	// 				}else {
-	// 			        r = r.replace(/(\d{1})$/, "00"+dp+"0$1");
-	// 			    }
-	// 			    return 'R$ '+r;
-	// 			}
-	// 			function scapedName(name){
-	// 				console.log('name', name);
-	// 				return (name.replace(/[% &]/g,'-'));
-	// 			}
-	// 			this.addItem = function(productId, success, error){
-	// 				var _pId = productId;
-	// 				error = error || null;
-	// 				success = success || null;
-	// 				productId = productId || null;
-	// 				self.getFavorites(null, function(data){
-	// 					console.log(data.lenght < config.maxFav, data.map(function(o){return o.productId}).indexOf(_pId));
-	// 					if(data.length < config.maxFav && data.map(function(o){return o.productId}).indexOf(_pId) < 0){
-	// 						$.ajax({
-	// 							url: '/'+config.an+'/dataentities/'+config.ac+'/documents',
-	// 							data: JSON.stringify({
-	// 								email: clientEmail,
-	// 								userEmail: clientEmail,
-	// 								productId: productId,
-	// 							}),
-	// 							type: 'POST',
-	// 							headers: {
-	// 								'Content-Type': 'application/json',
-	// 								Accept: 'application/vnd.vtex.ds.v10+json'
-	// 							},
-	// 							success: function(data){
-	// 								console.log('Sucesso', data);
-	// 								$(window).trigger('Favorites.productFavorited');
-	// 								if (success) success(data);
-	// 							},
-	// 							error: function(data){
-	// 								console.log('error', data);
-	// 								if (error) error(data);
-	// 							}
-	// 						})
-	// 					}else{
-	// 						alert('Você já atingiu o limite de produtos favoritos.\nPor favor, retire alguns e tente novamente!');
-	// 					}
-	// 				});
-	// 			}
-	// 			this.addCurrent = function(success, error){
-	// 				error = error || null;
-	// 				success = success || null;
-	// 				self.addItem(currentId, function(){
-	// 					$(window).trigger('Favorites.favoriteProduct');
-	// 					if (success) success();
-	// 				}, error);
-	// 			}
-	// 			this.getFavorites = function(productId, success, error){
-	// 				error = error || null;
-	// 				success = success || null;
-	// 				productId = productId || null;
-	// 				console.log('productId', productId);
-	// 				$.ajax({
-	// 					url: '/'+config.an+'/dataentities/'+config.ac+'/search?_where(email='+clientEmail+')'+((productId)?'&productId='+productId: '')+'&_fields=id,productId',
-	// 					type:'GET',
-	// 					headers: {
-	// 						'Content-Type': 'application/json',
-	// 						'REST-Range': 'resources=0-99',
-	// 						Accept: 'application/vnd.vtex.ds.v10+json'
-	// 					},
-	// 					success: function(data){
-	// 						console.log('Sucesso', data);
-	// 						window.Favoritos.documents = data;
-	// 						if(success) success(data);
-	// 					},
-	// 					error: function(data){
-	// 						console.log('error', data);
-	// 						if (error) error(data);
-	// 					}
-	// 				})
-	// 			}
-	// 			this.getItems = function(productId, success, error){
-	// 				error = error || null;
-	// 				success = success || null;
-	// 				productId = productId || null;
-	// 				console.log('get Items', productId);
-	// 				self.getFavorites(productId,function(data){
-	// 					if(data.length){
-	// 						var ids = [];
-	// 						var favlist = data;
-	// 						$.each(data, function(i, item){ids.push(item.productId);});
-	// 						console.log('favorites', data)
-	// 						self.getProducts(ids, function(products){
-	// 							var items = [];
-	// 							console.log('Products', products);
-	// 							$.each(products, function(i, item){
-	// 								var bestPrice = item.items[0].sellers[0].commertialOffer.Price;
-	// 								var listPrice = item.items[0].sellers[0].commertialOffer.ListPrice;
-	// 								var availableQuantity = 0;
-	// 								$.each(item.items, function(i, sku){
-	// 									availableQuantity += sku.sellers[0].commertialOffer.AvailableQuantity;
-	// 								});
-	// 								var discountHighlight = '';
-	// 								$.each(item.items[0].sellers[0].commertialOffer.DiscountHighLight, function(i, d){
-	// 									$.each(d, function(){
-	// 										discountHighlight += '<p class="flag '+scapedName(this)+'">'+d+'</p>'	
-	// 									});
-	// 								});
-	// 								var productHighlight = '';
-	// 								$.each(item.clusterHighlights, function(i, d){
-	// 									productHighlight += '<p class="flag '+scapedName(d)+'">'+d+'</p>'	
-	// 								});
-	// 								items.push({
-	// 									link: item.link,
-	// 									brand: item.brand,
-	// 									linkText: item.linkText,
-	// 									productId: item.productId,
-	// 									categories: item.categories,
-	// 									decription: item.description,
-	// 									productName: item.productName,
-	// 									clusters: item.clusterHighlights,
-	// 									isInStock: availableQuantity > 0,
-	// 									productHighlight: productHighlight,
-	// 									discountHighlight: discountHighlight,
-	// 									availableQuantity: availableQuantity,
-	// 									hasBestPrice: (listPrice > bestPrice),
-	// 									bestPrice: formatPrice(bestPrice, ','),
-	// 									listPrice: formatPrice(listPrice, ','),
-	// 									favId: favlist[favlist.map(function(o){return o.productId}).indexOf(item.productId)].id,
-	// 									productImage: item.items[0].images[0].imageTag.replace('~', '').replace(/#width#/g, config.thumbFav.width).replace(/#height#/g, config.thumbFav.height),
-	// 								});
-	// 							});
-	// 							window.Favoritos.favoritos = items;
-	// 							if (success) success(items);
-	// 						});
-	// 					}else{
-	// 						if (success) success(data);
-	// 					}
-	// 				});
-	// 			}
-	// 			this.removeItem = function(id, success, error){
-	// 				error = error || null;
-	// 				success = success || null;
-	// 				console.log('id', id);
-	// 				$.ajax({
-	// 					url: '/'+config.an+'/dataentities/'+config.ac+'/documents/'+id,
-	// 					type: 'DELETE',
-	// 					headers: {
-	// 						'Content-Type': 'application/json',
-	// 						Accept: 'application/vnd.vtex.ds.v10+json'
-	// 					},
-	// 				}).done(function(){
-	// 					console.log('Removed');
-	// 					$(window).trigger('Favorites.productUnfavorited');
-	// 					if (success) success();
-	// 				});
-	// 			}
-	// 			this.removeByProductId= function(id, success, error){
-	// 				error = error || null;
-	// 				success = success || null;
-	// 				self.getItems(id, function(data){
-	// 					console.log('data', data);
-	// 					self.removeItem(data[0].favId, success);
-	// 				});
-	// 			}
-	// 			this.removeCurrent = function(success, error){
-	// 				error = error || null;
-	// 				success = success || null;
-	// 				self.removeByProductId(currentId, function(){
-	// 					$(window).trigger('Favorites.notFavoriteProduct');
-	// 					if (success) success();
-	// 				}, error);
-	// 			}
-	// 			this.getProducts = function(ids, success, error){
-	// 				ids = ids || null;
-	// 				error = error || null;
-	// 				success = success || null;
-	// 				if(ids){
-	// 					var filter = '';
-	// 					$.each(ids, function(i, item){
-	// 						filter += (i)? '&fq=productId:' + item : 'fq=productId:'+ item;
-	// 					});
-	// 					$.ajax({
-	// 						url: '/api/catalog_system/pub/products/search?'+filter,
-	// 						type: 'GET',
-	// 						headers: {
-	// 							'Content-Type': 'application/json',
-	// 							Accept: 'application/vnd.vtex.ds.v10+json'
-	// 						},
-	// 						success: function(data){
-	// 							console.log('Sucesso', data);
-	// 							if (success) success(data);
-	// 						},
-	// 						error: function(data){
-	// 							console.log('error', data);
-	// 							if (error) error(data);
-	// 						}
-	// 					});
-	// 				}else{
-	// 					console.log('Nenhum id informado!');
-	// 				}
-	// 			}
-	// 			this.favList = function(){
-	// 				self.getItems(null, function(){
-	// 					var list = '<'+config.favList.wrapper+'>';
-	// 					$.each(Favoritos.favoritos, function(i, item){
-	// 						var li = config.favList.item;
-	// 						$.each(item, function(i, prop){
-	// 							li = li.replace(RegExp('#'+i+'#', 'g'), prop);
-	// 						});
-	// 						list += li;
-	// 					});
-	// 					list += '</'+config.favList.wrapper+'>';
-	// 					window.Favoritos.list = list;
-	// 				});
-	// 			}
-	// 			this.isFavorite = function(id, callback){
-	// 				id = id || null;
-	// 				callback = callback || null;
-	// 				self.getItems(id,function(data){
-	// 					console.log('isFavorite', data);
-	// 					(data.length)? $(window).trigger('Favorites.favoriteProduct') : $(window).trigger('Favorites.notFavoriteProduct');
-	// 				});
-	// 			}
-	// 			this.isCurrentFavorite = function(callback){
-	// 				self.isFavorite(currentId, callback);
-	// 			}
-	// 			this.renderFavList = function(templateId,className, parent){
-	// 				var template = Handlebars.compile(
-	// 					'<div class="'+className+'"><ul>{{#each favorito}}'+
-	// 						'<li class="favorito" data-id="{{favId}}" data-prod-id="{{productId}}">'+
-	// 							'<button class="removeFavorite" data-favid="{{favId}}"></button>'+
-	// 							document.getElementById(templateId).innerHTML+
-	// 						'</li>'+
-	// 					' {{/each}}</ul></div>'
-	// 				);
-	// 				$(parent).html(template({
-	// 					favorito: Favoritos.favoritos
-	// 				}));
-	// 				$(parent).find('.removeFavorite').on('click', function(){
-	// 					var $this = $(this);
-	// 					self.removeItem(
-	// 						$this.attr('data-favid'),
-	// 						function(d){
-	// 							console.log('s', d);
-	// 							$this.parent().fadeOut(300, function() { $(this).remove(); });
-	// 						},
-	// 						function(d){
-	// 							console.log('e', d);
-	// 							alert('Um erro ocorreu. Por favor, tente novamente!');
-	// 						})
-	// 				});
-	// 			}
-	// 			this.renderFavPage = function(_templateId, _className, _parent){
-	// 				_parent = _parent || null;
-	// 				_className = _className || null;
-	// 				_templateId = _templateId || null;
-	// 				self.getItems(null, function(){
-	// 					self.renderFavList(_templateId, _className, _parent);
-	// 				});
-	// 			}
-	// 	    }
-	// 	    window.dispatchEvent(favoriteProduct);
-	// 	    window.dispatchEvent(notFavoriteProduct);
-	// 	    window.dispatchEvent(productFavorited);
-	// 	    window.dispatchEvent(productUnfavorited);
-	// 		window.Favoritos = new Favorites();
-	// 		$.fn.favoriteCurrentButton = function(){
-	// 			console.log(this);
-	// 			var $this = $(this);
-	// 			console.log('$this', $this);
-	// 			$(window).on('Favorites.favoriteProduct', $this,function(){
-	// 				$this.addClass('isFavorite');
-	// 				$this[0].onclick = function(){
-	// 					console.log('clicked');
-	// 					Favoritos.removeCurrent(function(){alert('Produto removido dos favoritos!')})
-	// 				};
-	// 				console.log('$this.onClick', $this.onclick);
-	// 			});
-	// 			$(window).on('Favorites.notFavoriteProduct', $this,function(){
-	// 				$this.removeClass('isFavorite');
-	// 				$this[0].onclick =  function(){
-	// 					console.log('clicked');
-	// 					if(vtexjs.checkout.orderForm.loggedIn){
-	// 						Favoritos.addCurrent(function(){alert('Produto adicionado aos favoritos!')});
-	// 					}else{
-	// 						alert('É preciso entrar para adicionar aos favoritos!');
-	// 					}
-	// 				};
-	// 				console.log('$this.onClick', $this.onclick);
-	// 			});
-	// 			Favoritos.isCurrentFavorite();
-	// 		}
-	// 	});
-	// }(window, document, jQuery));
-// Favoritos
+// Minicart
 
 // Popup
 	(function(window, document, $){
@@ -861,7 +585,7 @@
 							    }
 							});
 					    }
-					});                 
+					});
 				});
 			}
 	    }
@@ -898,7 +622,6 @@
 		}
 	}(window, document, jQuery));
 // Tickets
-
 (function (window, document, $) {
     'use strict';
 
@@ -1064,7 +787,7 @@ $(function() {
 			var target = $(this).attr('href');
 			try{
 				var targetOffset = ($(target).offset().top) - 250;
-			}	  
+			}
 			catch(err){}
 			$('html, body').animate({ scrollTop: targetOffset}, 300);
 		});
@@ -1151,7 +874,7 @@ $(function() {
 						}
 						var wrapper = 'div';
 						var content = value[0];
-						if($(this).is('#prod-detalhamento')){							
+						if($(this).is('#prod-detalhamento')){
 							wrapper= config.listSpec.wrapper;
 							content = '';
 							$.each(value, function(i, item){
@@ -1168,6 +891,53 @@ $(function() {
 			});
 		});
 	// Campo Produto
+
+	
+	// Pag Produto //
+		if($('body.produto').length > 0){
+			$("#___rc-p-id").each(function(index) {
+				var id = $(this).attr("value");
+				var data = "/api/catalog_system/pub/products/search/?fq=productId:"+id+"";
+
+				$.getJSON(data, function(data) {
+					$.each(data, function(key, val) {
+						var elements = val.items[0].images;
+
+						$(elements).each(function(data, val){
+							// Take Image Thumbs //
+								var myLabel = val.imageLabel;
+								var myImageID = val.imageId;
+								var myImageName = val.imageText;
+								$('<li class="'+myLabel+'"><a href="/arquivos/ids/'+myImageID+'-1000-1000/'+myImageName+'.jpg" data-standard="/arquivos/ids/'+myImageID+'-550-550/'+myImageName+'.jpg"><img src="/arquivos/ids/'+myImageID+'-100-100/'+myImageName+'.jpg" /></a></li>').appendTo('ul.thumbnails');
+							// Take Image Thumbs //
+
+							var myFirst = $('.thumbnails li').first();
+							myFirst.addClass('first-thumb');
+
+							var firstThumbStand = $('.thumbnails li.first-thumb a').attr('data-standard');
+							var firstThumbLink = $('.thumbnails li.first-thumb a').attr('href');
+							var firstThumbEx = $('<a href="'+firstThumbLink+'"><img src="'+firstThumbStand+'"/></a>');
+							firstThumbEx.appendTo('.easyzoom');
+							$('.easyzoom a:first-of-type').nextAll().remove();
+
+							// Instantiate EasyZoom instances
+							var $easyzoom = $('.easyzoom').easyZoom();
+
+							// Setup thumbnails example
+							var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
+							$('.thumbnails').on('click', 'a', function(e) {
+								var $this = $(this);
+								e.preventDefault();
+								// Use EasyZoom's `swap` method
+								api1.swap($this.data('standard'), $this.attr('href'));
+							});
+						});
+					});
+				});
+			});
+	}
+	// Pag Produto //
+	
 
 	// BreadCrumb Ajuste Texto //
 		try {
@@ -1373,7 +1143,7 @@ $(function() {
 				} );
 			}
 		// Alteração sku //
-		
+
 	// Desconto Boleto //
 
 	// Usuário deslogado //
@@ -1387,7 +1157,7 @@ $(function() {
 		    });
 		});
 	// Usuário deslogado //
-	
+
 	// Frete Grátis //
 		$('.prateleira li').each(function(){
 			if($(this).find('.best-price').length){
@@ -1411,9 +1181,9 @@ $(function() {
 
 		$('.prateleira').find('span[data-category^="Máquinas de bordar"], span[data-category^="Bordado"], span[data-category^="Costura"]').each(function(){
 		    if($(this).find('span.flag-frete p.flag.frete-gratis').length){
-		        $(this).find('span.flag-frete p.flag.frete-gratis').text('FRETE GRÁTIS para todo o Brasil');    
+		        $(this).find('span.flag-frete p.flag.frete-gratis').text('FRETE GRÁTIS para todo o Brasil');
 		    }else{
-		        $(this).find('span.flag-frete').append('<p class="flag frete-gratis">FRETE GRÁTIS para todo o Brasil</p>');    
+		        $(this).find('span.flag-frete').append('<p class="flag frete-gratis">FRETE GRÁTIS para todo o Brasil</p>');
 		    }
 		});
 	// Frete Grátis //
@@ -1447,7 +1217,7 @@ $(function() {
 
 				$(".box-clipping:nth-child(3n+1)").addClass("colum-edit");
 				$(".box-clipping:nth-child(3n+2)").addClass("no-margin pull-text-left");
-				$(".box-clipping:nth-child(3n+3)").addClass("no-margin pull-text-right");				
+				$(".box-clipping:nth-child(3n+3)").addClass("no-margin pull-text-right");
 
 				// Buy Button Text //
 					$('.buy-button').text('Comprar');
@@ -1457,14 +1227,14 @@ $(function() {
 				// Slide Toggle Product Description //
 					$('.active-desc').click(function(){
 						$(this).next().slideToggle();
-					});	
+					});
 				// Slide Toggle Product Description //
 
 
 				// Relacionados Vazio //
 					if($('.shelfRelacionados li').length == 0){
 						$('.shelfRelacionados').remove();
-					}	
+					}
 				// Relacionados Vazio //
 
 			});
@@ -1542,7 +1312,7 @@ $(function() {
 						    var spec = val.especificacao_tecnica;
 
 						    var where = $('.product-info .info');
-						    
+
 						    where.find('.faq').append(faq);
 						    where.find('.vids').append(vids);
 						    where.find('.spec').append(spec);
@@ -1602,11 +1372,11 @@ $(function() {
 				});
 			} catch(e) {}
 	    }
-	    
+
 	    // Produto esgotado //
 
 	// Produto esgotado //
-			
+
     // Scripts Pagina de Produto //
 
 
@@ -1657,7 +1427,7 @@ $(function() {
             $('body').removeClass('modal-active');
         });
     // Close Modal //
-    
+
     // Render newsletter //
     	$(function(){
   			if(!(localStorage.getItem("shumi-newsletter-popup"))){
@@ -1675,7 +1445,7 @@ $(function() {
 		});
     // Render newsletter //
 
-    
+
 
 
 
@@ -1789,9 +1559,7 @@ $(window).load(function(){
 			window.location.href = window.location.href.split('/login?')[0];
 		});
     // Cancelar login //
-    
-    $('.fulltext-search-box').val('Pesquise o modelo ou cor desejada');
-
+	
 });
 // Fale conosco //
 	function FaleConosco(){

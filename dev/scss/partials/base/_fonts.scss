@@ -111,3 +111,14 @@
 .txt-lo{text-transform: lowercase}
 .txt-cap{text-transform: capitalize}
 .txt-trans-none{text-transform: none}
+
+.txt-frete, .txt-add-cart {
+    font-size: 0.750em !important;
+}
+
+.txt-add-cart{
+    color:#969696;
+    font-weight: 600;
+    padding-left: 10px;
+    text-transform: uppercase;
+}

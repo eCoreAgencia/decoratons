@@ -314,19 +314,17 @@
 	        effect: "overlay",
 	        cartButton: $(".sta-cart")
 	    })
+
 	    $('header #mini-cart').click(function(){
-	    	$('.sta-cart-overlay').show();
 	    	$('.sta-cart-container').animate({right: 0},300);
 		});
 		
 		$('header #mini-cart').mouseenter(function(){
-			$('.sta-cart-overlay').show();
-			$('.sta-cart-container').animate({right: 0},300);
+			$('.sta-cart-container').addClass('active');
 		});
 		
 		$('.sta-cart-container').mouseleave(function(){
-			$('.sta-cart-overlay').hide();
-			$('.sta-cart-container').animate({right: -500},300);
+			$('.sta-cart-container').removeClass('active');
 		})
 
 	});
@@ -895,6 +893,21 @@ $(function() {
 	
 	// Pag Produto //
 		if($('body.produto').length > 0){
+
+			// Resolvind breaklines //
+				var test2 = $('.sku-section .dimensoes-obs #prod-dimensoes').text();
+				var result3 = test2.replace(/\)/g,')<br/>');
+				$('.sku-section .dimensoes-obs #prod-dimensoes').html(result3);
+
+				var test = $('.atributos .dimensoes #prod-dimensoes').text();
+				var result = test.replace(/\)/g,')<br/>');
+				$('.atributos .dimensoes #prod-dimensoes').html(result);
+
+				var test1 = $('#prod-precaucoes').text();
+				var result2 = test1.replace(/;/g,';<br/>');
+				$('#prod-precaucoes').html(result2);
+			// Resolvind breaklines //
+
 			$("#___rc-p-id").each(function(index) {
 				var id = $(this).attr("value");
 				var data = "/api/catalog_system/pub/products/search/?fq=productId:"+id+"";
@@ -935,7 +948,7 @@ $(function() {
 					});
 				});
 			});
-	}
+		}
 	// Pag Produto //
 	
 

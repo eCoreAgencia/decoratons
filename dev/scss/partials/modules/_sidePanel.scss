@@ -170,27 +170,29 @@
 			    }
 	    		.submenu{
 	    			@extend .transition;
-					left: 0;
-					right: 0;
+	    			height: 0;
 					padding: 0;
 					display: none;
 					padding-top: 0;
 					min-height: 100%;
 					background-color: #FFFFFF;
 					border-top: 1px solid #ededee;
+
 					@include mq($screen-md){
+						left: 50%;
 						opacity: 0;
+						height: auto;
+					    width: 1200px;
 						padding: 15px;
 					    margin: 0 auto;
 					    display: block;
-					    transition: .7s;
-					    max-width: 1200px;
 						position: absolute;
+					    margin-left: -600px;
 						pointer-events: none;
 						border: 1px solid #BFBFBF;
-						transform: translateX(-100%);
 					    box-shadow: 0px 0px 7px -2px #000;
 					}
+
 		    		&.slideActive{
 		    			opacity: 1;
 		    			height: auto;
@@ -198,12 +200,14 @@
 		    			position: relative;
 		    			pointer-events: all;
 		    		}
+
     				h4{
     					@include font-size(1.8);
     					color: #ec7732;
     					font-weight: 800;
     					padding-left: 10px;
     					padding-bottom: 10px;
+
     					@include mq($screen-md){
 							padding-left: 0;
     					}

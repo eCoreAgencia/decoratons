@@ -58,6 +58,7 @@
 	                				<span class="txt-dark-gray txt-sz-14 txt-up txt-left bold">Formas de Pagamento</span>
 	                			</button>
 	                			<div class="formas-de-pagamento">
+	                				<span class="bt-close-pgto">Fechar</span>
 	                				<vtex:contentPlaceHolder id="Formas de Pagamento"/>
 	                				<vtex.cmc:OtherPaymentMethod/>
 	                			</div>
@@ -132,6 +133,11 @@
 			$('button[name="formas-pagamento"]').on('click', function(){
 				$(this).siblings('.formas-de-pagamento').toggleClass('active');
 			});
+
+			$('.bt-close-pgto').on('click', function(event){
+				$('.formas-de-pagamento').removeClass('active');
+			});
+			
 			$(window).on('skuSelected.vtex', function(){
 			    ($('.plugin-preco .skuBestPrice').length)? $('.buy-box').removeClass('sku-unavailable'): $('.buy-box').addClass('sku-unavailable');
 			});

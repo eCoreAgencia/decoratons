@@ -83,6 +83,10 @@ footer {
 						color: inherit;
 						text-transform: none;
 						text-decoration: inherit;
+
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 			}
@@ -126,6 +130,10 @@ footer {
 						}
 						a{
 							@extend .txt-magenta;
+
+							&:hover {
+								text-decoration: underline;
+							}
 						}
 						&:last-of-type{
 							a{
@@ -171,7 +179,7 @@ footer {
 				border: 1px solid #dcdcdc;
 			}
 			button{
-				@extend .txt-sz-14, .bg-magenta, .txt-lo, .txt-white, .bd-clr-dark-magenta;
+				@extend .txt-sz-14, .transition, .bg-magenta, .txt-lo, .txt-white, .bd-clr-dark-magenta;
 				outline: 0;
 				border-width: 0;
 				margin-left: 5px;
@@ -179,6 +187,11 @@ footer {
 				display: inline-block;
 				padding: 10px 15px 6px;
 				border-bottom-width: 6px;
+
+				&:hover {
+					@extend .transition;
+					background-color: #660036;
+				}
 			}
 		}
 		span{

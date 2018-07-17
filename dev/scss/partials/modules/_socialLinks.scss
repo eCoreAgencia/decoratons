@@ -3,18 +3,54 @@
 	margin-top: -15px;
 	justify-content: center;
 	transform: translateY(50%);
+
 	li{
 		@extend .bg-white;
 		padding: 6px;
 		list-style: none;
 		border-radius: 100%;
 		display: inline-block;
+
 		a{
 			@extend .bg-light-gray;
+			@extend .transition;
 			padding: 6px;
 			display: block;
 			line-height: 0;
 			border-radius: 100%;
+		}
+
+		&:nth-child(1) {
+			&:hover {
+				a {
+					@extend .transition;
+					background-color: #334F8D;
+				}
+			}
+		}
+		&:nth-child(2) {
+			&:hover {
+				a {
+					@extend .transition;
+					background-color: #47749A;
+				}
+			}
+		}
+		&:nth-child(3) {
+			&:hover {
+				a {
+					@extend .transition;
+					background-color: #C41D23;
+				}
+			}
+		}
+		&:nth-child(4) {
+			&:hover {
+				a {
+					@extend .transition;
+					background-color: #D84132;
+				}
+			}
 		}
 	}
 }

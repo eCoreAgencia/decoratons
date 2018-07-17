@@ -86,6 +86,11 @@
 		}	
 		.buyButton{
 			@extend .txt-up;
+
+			&:hover {
+				@extend .transition;
+				background-color: #44B819;
+			}
 		}	
 	}
 }

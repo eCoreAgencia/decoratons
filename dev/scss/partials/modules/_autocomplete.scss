@@ -10,7 +10,6 @@
 }
 
 .ui-autocomplete {
-	@extend .transition;
     padding: 0;
     right: 4px;
     width: 100% !important;
@@ -18,15 +17,10 @@
     border: 1px solid #e8e8e8;
     position: fixed !important;
     z-index: 9999999999 !important;
+    
     @include mq($screen-md){	
     	max-width: 410px !important;
     }
- //    @media (max-width: ($screen-md - 1)){
- //    	left: auto !important;
- //    }
-	// @include mq($screen-md){
-	// 	top: 121px !important;
-	// }
 
     .ui-menu-item {
     	@extend .transition;
@@ -57,10 +51,3 @@
 	    }
 	}
 }
-// body.top-height-active{
-// 	.ui-autocomplete{
-// 		@include mq($screen-md){
-// 			top: 51px !important;
-// 		}
-// 	}
-// }

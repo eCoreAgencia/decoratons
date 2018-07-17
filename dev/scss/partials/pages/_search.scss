@@ -137,7 +137,7 @@ body.dep-cat-bus{
 			padding: 10px 0;
 			li{
 				@extend .col-xs-6;
-				max-width: 250px;
+				max-width: 230px;
 				@include mq($screen-sm){
 					width: 100%;
 				}
@@ -223,6 +223,7 @@ body.dep-cat-bus{
 			    opacity: 0;
 			    z-index: 9;
 			    padding: 0;
+			    z-index: 1;
 			    height: 100%;
 			    display: block;
 			    position: fixed;
@@ -267,6 +268,13 @@ body.dep-cat-bus{
 						padding: 0;
 					}
 				}
+				h4 {
+					margin-bottom: 10px;
+					a {
+						@extend .txt-sz-24, .txt-dark-blue, .ff-permanentMarker;
+						text-decoration: none;
+					}
+				}
 				h5{
 					@extend .txt-sz-24, .txt-dark-blue, .ff-permanentMarker;
 					&:not(:first-of-type){
@@ -285,22 +293,32 @@ body.dep-cat-bus{
 					list-style: none;
 				}
 				ul{
+					display: none;
 				    padding: 10px 0 15px;
     				@include mq($screen-md){
     					border-bottom: 1px dashed #939393;
     				}
 					&.Cor{
+						display: block;
+
 						li{
 							display: inline-block;
 						}
 						a{
 							@include font-size(0);
+							@extend .transition;
 							margin: 5px;
 							width: 50px;
 							height: 50px;
 							line-height: 0;
 							display: block;
-							border: 1px solid transparent;
+							border: 1px solid #eaeaea;
+
+							&:hover {
+								@extend .transition;
+								border: 1px solid #666;
+							}
+
 							@include mq($screen-md){
 								width: 30px;
 								height: 30px;
@@ -315,10 +333,42 @@ body.dep-cat-bus{
 							&[title="Amarelo"]{background-color: #ffff33}
 							&[title="Laranja"]{background-color: #fe7900}
 							&[title="Vermelho"]{background-color: #ea1d22}
-							&[title="Branco"]{
-								border-color: #666;
-								background-color: #fff;
+							&[title="Pêssego"]{background-color: #ffdab9;}
+							&[title="Creme"]{background-color: #fffdd0;}
+							&[title="Nude"]{background-color: #9a8262;}
+							&[title="Avelã"]{background-color: #c09f86;}
+							&[title="Azul Claro"]{background-color: #add8e6;}
+							&[title="Azul Cobalto"]{background-color: #333c87;}
+							&[title="Azul Royal"]{background-color: #4169e1;}
+							&[title="Azul Marinho"]{background-color: #120a8f;}
+							&[title="Verde Musgo"]{background-color: #ADDFAD;}
+							&[title="Vinho"]{background-color: #722f37;}
+							&[title="Palha"]{background-color: #ebdec6;}
+							&[title="Champanhe"]{background-color: #F7E7CE;}
+							&[title="Chocolate"]{background-color: #d2691e;}
+							&[title="Café"]{background-color: #4b3621;}
+							&[title="Turquesa"]{background-color: #40e0d0;}
+							&[title="Verde Claro"]{background-color: #90ee90;}
+							&[title="Azul Acinzentado"]{background-color: #084d6e;}
+							&[title="Rosa Claro"]{background-color: #ffb6c1;}
+							&[title="Rosa Queimado"]{background-color: #d0a993;}
+							&[title="Coral"]{background-color: #ff7f50;}
+							&[title="Grafite"]{background-color: #474a51;}
+							&[title="Verde Claro"]{background-color: #90ee90;}
+							&[title="Lilás"]{background-color: #c8a2c8;}
+							&[title="Ameixa"]{background-color: #dda0dd;}
+							&[title="Preto"]{background-color: #000;}
+							&[title="Amarelo Claro"]{background-color: #ffffe0;}
+							&[title="Colorido"]{
+								/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d902ff+0,ffe035+20,78b726+34,000000+62,4904a3+79,ff6060+100 */
+								background: #d902ff; /* Old browsers */
+								background: -moz-linear-gradient(left, #d902ff 0%, #ffe035 20%, #78b726 34%, #000000 62%, #4904a3 79%, #ff6060 100%); /* FF3.6-15 */
+								background: -webkit-linear-gradient(left, #d902ff 0%,#ffe035 20%,#78b726 34%,#000000 62%,#4904a3 79%,#ff6060 100%); /* Chrome10-25,Safari5.1-6 */
+								background: linear-gradient(to right, #d902ff 0%,#ffe035 20%,#78b726 34%,#000000 62%,#4904a3 79%,#ff6060 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d902ff', endColorstr='#ff6060',GradientType=1 ); /* IE6-9 */
 							}
+							&[title="Mostarda"]{background-color: #ffdb58;}
+							&[title="Branco"]{background-color: #fff;}
 						}
 					}
 					&.Tamanho{

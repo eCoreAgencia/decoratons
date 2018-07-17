@@ -203,7 +203,7 @@ ul.menu-subscribe{
 }
 
 .AbrirCalculadora{
-	@extend .bg-dark-yellow, .txt-dark-blue, .txt-left, .txt-up;
+	@extend .bg-dark-yellow, .txt-dark-blue, .txt-left, .transition, .txt-up;
 	@include font-size(0.9);
 	border: 0;
 	max-width: 100%;
@@ -214,6 +214,11 @@ ul.menu-subscribe{
 	@include mq($screen-sm){
 		@include font-size(1.4);
 		line-height: 18px;
+
+		&:hover {
+			color: #FED118;
+			background-color: #35809A;
+		}
 	}
 	strong{
 		width: 100%;
@@ -236,6 +241,15 @@ ul.menu-subscribe{
 		vertical-align: middle;
 		@include mq($screen-sm){
 			width: 30px;
+		}
+	}
+
+	&:hover {
+		svg {
+			path,
+			circle {
+				fill: #FED118;
+			}
 		}
 	}
 }

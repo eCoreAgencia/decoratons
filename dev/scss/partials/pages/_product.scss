@@ -675,16 +675,21 @@ body.produto{
    			}
 
 	   		.buy-in-page-button, .buy-button{
-	   			@extend .bg-dark-blue, .txt-white, .bold, .txt-dc-none, .txt-up, .bold;
+	   			@extend .bg-dark-blue, .txt-white, .bold, .txt-dc-none, .transition, .txt-up, .bold;
 	   			@include font-size(0);
 	   			padding: 13px 25px;
 	   			text-align: center;
 	   			margin: 5px 0px;
-               background-color: #4DC01A !important;
+          background-color: #4DC01A !important;
+
+          &:hover {
+            @extend .transition;
+            background-color: #258400 !important;
+          }
 
 	   			&:before{
 	   				@extend .txt-sz-14;
-                  @include font-size(1.8);
+            @include font-size(1.8);
 	   				content: 'Comprar';
 	   			}
 	   		}

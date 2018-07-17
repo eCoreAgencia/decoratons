@@ -213,6 +213,7 @@ body.orders,
 }
 
 .ff-permanentMarker,
+body.dep-cat-bus main section.sidebar h4 a,
 body.dep-cat-bus main section.sidebar h5 {
 	font-family: 'Permanent Marker', cursive;
 }
@@ -411,6 +412,7 @@ body.produto main .notifyme .notifyme-title,
 body.dep-cat-bus main .shearchTitle .titulo-sessao,
 body.dep-cat-bus main .shearchTitle .searchResultsTime .value,
 body.dep-cat-bus main section.sidebar .menuClose,
+body.dep-cat-bus main section.sidebar h4 a,
 body.dep-cat-bus main section.sidebar h5,
 .account .profile-detail-display h4,
 .account .address-display-block h4,
@@ -595,6 +597,7 @@ body.produto main .notifyme .notifyme-title {
 
 .txt-sz-24,
 body.dep-cat-bus main .shearchTitle .titulo-sessao,
+body.dep-cat-bus main section.sidebar h4 a,
 body.dep-cat-bus main section.sidebar h5,
 body.institucional > .container main h1,
 body.institucional > h3.tlt-shelf main h1,
@@ -606,6 +609,7 @@ body.institucional > h3.tlt-shelf main form .section-slider .formSection-title {
 
 .txt-sz-24,
 body.dep-cat-bus main .shearchTitle .titulo-sessao,
+body.dep-cat-bus main section.sidebar h4 a,
 body.dep-cat-bus main section.sidebar h5,
 body.institucional > .container main h1,
 body.institucional > h3.tlt-shelf main h1,
@@ -1338,15 +1342,23 @@ body.institucional > h3.tlt-shelf main form select {
 .btn span,
 .btn:hover,
 .btn:hover span,
+.socialLinks li a,
+.socialLinks li:nth-child(1):hover a,
+.socialLinks li:nth-child(2):hover a,
+.socialLinks li:nth-child(3):hover a,
+.socialLinks li:nth-child(4):hover a,
+footer .mid-box .newsletter button,
+footer .mid-box .newsletter button:hover,
 .menu-toggle span,
+.AbrirCalculadora,
 button[name="favorite"] svg:last-of-type,
+.shelf-style-1 .shelfItem .buyButton:hover,
 .search-box,
 section.newsletter .news-box,
 section.newsletter .news-box form,
 section.newsletter .news-box form button,
 section.newsletter .news-box form button:hover,
 .calculadora-popup label span:before,
-.ui-autocomplete,
 .ui-autocomplete .ui-menu-item,
 header,
 header.menu-persistente .container .row,
@@ -1381,9 +1393,15 @@ body.produto main .quantitySelector button,
 body.produto main .sku-selector-container li label,
 body.produto main .skus-dimensoes,
 body.produto main .buy-box,
+body.produto main .buy-box .buy-in-page-button,
+body.produto main .buy-box .buy-button,
+body.produto main .buy-box .buy-in-page-button:hover,
+body.produto main .buy-box .buy-button:hover,
 body.dep-cat-bus main .prateleira .shelfItem,
 body.dep-cat-bus main .pager.bottom li,
 body.dep-cat-bus main section.sidebar,
+body.dep-cat-bus main section.sidebar ul.Cor a,
+body.dep-cat-bus main section.sidebar ul.Cor a:hover,
 .account .profile-detail-display #edit-data-link,
 .account .profile-detail-display .new-address-link .address-update,
 .account .address-display-block #edit-data-link,
@@ -1524,6 +1542,22 @@ body.top-height-active {
 	border-radius: 100%;
 }
 
+.socialLinks li:nth-child(1):hover a {
+	background-color: #334F8D;
+}
+
+.socialLinks li:nth-child(2):hover a {
+	background-color: #47749A;
+}
+
+.socialLinks li:nth-child(3):hover a {
+	background-color: #C41D23;
+}
+
+.socialLinks li:nth-child(4):hover a {
+	background-color: #D84132;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -1560,6 +1594,14 @@ header .top-box ul li {
 header .top-box ul li a {
 	color: inherit;
 	text-decoration: none;
+}
+
+header .top-box ul li a:hover {
+	text-decoration: underline;
+}
+
+header .top-box ul li a:hover span {
+	text-decoration: underline;
 }
 
 header .top-box ul li svg {
@@ -1721,6 +1763,11 @@ footer .mid-box h3.tlt-shelf > div:first-of-type li a {
 	text-decoration: inherit;
 }
 
+footer .mid-box .container > div:first-of-type li a:hover,
+footer .mid-box h3.tlt-shelf > div:first-of-type li a:hover {
+	text-decoration: underline;
+}
+
 footer .mid-box .container > div:last-of-type ul li,
 footer .mid-box h3.tlt-shelf > div:last-of-type ul li {
 	font-size: 0px;
@@ -1752,6 +1799,11 @@ footer .mid-box h3.tlt-shelf > div:last-of-type ul li svg {
 	height: auto;
 	fill: #ef328a;
 	margin-right: 5px;
+}
+
+footer .mid-box .container > div:last-of-type ul li a:hover,
+footer .mid-box h3.tlt-shelf > div:last-of-type ul li a:hover {
+	text-decoration: underline;
 }
 
 footer .mid-box .newsletter {
@@ -1804,6 +1856,10 @@ footer .mid-box .newsletter button {
 	display: inline-block;
 	padding: 10px 15px 6px;
 	border-bottom-width: 6px;
+}
+
+footer .mid-box .newsletter button:hover {
+	background-color: #660036;
 }
 
 footer .mid-box span {
@@ -2181,6 +2237,11 @@ ul.menu-subscribe li.gift a {
 	vertical-align: middle;
 }
 
+.AbrirCalculadora:hover svg path,
+.AbrirCalculadora:hover svg circle {
+	fill: #FED118;
+}
+
 .CloseButton,
 body.favoritos .favList .favorito .removeFavorite {
 	border: 0;
@@ -2380,6 +2441,10 @@ button[name="favorite"].isFavorite svg:last-of-type {
 	padding: 2px 0;
 }
 
+.shelf-style-1 .shelfItem .buyButton:hover {
+	background-color: #44B819;
+}
+
 .prateleira ul {
 	display: -ms-flexbox;
 	display: flex;
@@ -2453,26 +2518,27 @@ button[name="favorite"].isFavorite svg:last-of-type {
 /* ------------------------------------------------------------ *	#Resumo do carrinho
 \* ------------------------------------------------------------ */
 
-.sta-cart-overlay {
-	position: fixed;
-	display: none;
-	width: 100%;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	z-index: 999999999;
-	background: rgba(0, 0, 0, 0.6);
+.sta-cart-overlay,
+.sta-cart-close {
+	display: none !important;
 }
 
 .sta-cart-container {
+	display: none;
 	border-bottom: 2px solid #147eb8;
 	width: auto;
-	min-width: 250px;
+	width: 250px;
 	position: fixed;
-	top: 118px;
-	right: -355px;
+	top: 123px;
+	left: 50%;
+	right: auto !important;
+	margin-left: 345px;
 	z-index: 9999999999;
 	background: #fff;
+}
+
+.sta-cart-container.active {
+	display: block;
 }
 
 .sta-cart-title {
@@ -2545,7 +2611,7 @@ button[name="favorite"].isFavorite svg:last-of-type {
 
 .sta-cart-items .sta-cart-pdt-image {
 	position: relative;
-	width: 100px;
+	width: 60px;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -2573,16 +2639,16 @@ button[name="favorite"].isFavorite svg:last-of-type {
 
 .sta-cart-items .sta-cart-pdt-info {
 	position: relative;
-	width: 205px;
+	width: 160px;
 	display: inline-block;
 	vertical-align: top;
 	font-family: Georgia, Times, serif;
 }
 
 .sta-cart-items .sta-cart-pdt-info h4 {
-	width: 160px;
+	width: 148px;
 	color: #000;
-	font-size: 13px;
+	font-size: 11px;
 	font-weight: 500;
 	line-height: 17px;
 	font-family: 'Open Sans', sans-serif;
@@ -3458,8 +3524,7 @@ header.ha-hide {
 }
 
 .menu-header ul .menu-item.has-sub .submenu {
-	left: 0;
-	right: 0;
+	height: 0;
 	padding: 0;
 	display: none;
 	padding-top: 0;
@@ -5079,6 +5144,11 @@ body.produto main .buy-box .buy-button {
 	background-color: #4DC01A !important;
 }
 
+body.produto main .buy-box .buy-in-page-button:hover,
+body.produto main .buy-box .buy-button:hover {
+	background-color: #258400 !important;
+}
+
 body.produto main .buy-box .buy-in-page-button:before,
 body.produto main .buy-box .buy-button:before {
 	font-size: 18px;
@@ -5288,7 +5358,7 @@ body.dep-cat-bus main .prateleira {
 }
 
 body.dep-cat-bus main .prateleira li {
-	max-width: 250px;
+	max-width: 230px;
 }
 
 body.dep-cat-bus main .prateleira .shelfItem {
@@ -5358,6 +5428,7 @@ body.dep-cat-bus main section.sidebar {
 	opacity: 0;
 	z-index: 9;
 	padding: 0;
+	z-index: 1;
 	height: 100%;
 	display: block;
 	position: fixed;
@@ -5404,6 +5475,14 @@ body.dep-cat-bus main section.sidebar .search-multiple-navigator {
 	padding: 10px;
 }
 
+body.dep-cat-bus main section.sidebar h4 {
+	margin-bottom: 10px;
+}
+
+body.dep-cat-bus main section.sidebar h4 a {
+	text-decoration: none;
+}
+
 body.dep-cat-bus main section.sidebar h5:not(:first-of-type) {
 	padding-top: 15px;
 }
@@ -5428,7 +5507,12 @@ body.dep-cat-bus main section.sidebar li {
 }
 
 body.dep-cat-bus main section.sidebar ul {
+	display: none;
 	padding: 10px 0 15px;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor {
+	display: block;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor li {
@@ -5442,7 +5526,11 @@ body.dep-cat-bus main section.sidebar ul.Cor a {
 	height: 50px;
 	line-height: 0;
 	display: block;
-	border: 1px solid transparent;
+	border: 1px solid #eaeaea;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a:hover {
+	border: 1px solid #666;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Bege"] {
@@ -5485,8 +5573,121 @@ body.dep-cat-bus main section.sidebar ul.Cor a[title="Vermelho"] {
 	background-color: #ea1d22;
 }
 
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Pêssego"] {
+	background-color: #ffdab9;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Creme"] {
+	background-color: #fffdd0;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Nude"] {
+	background-color: #9a8262;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Avelã"] {
+	background-color: #c09f86;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Claro"] {
+	background-color: #add8e6;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Cobalto"] {
+	background-color: #333c87;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Royal"] {
+	background-color: #4169e1;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Marinho"] {
+	background-color: #120a8f;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Musgo"] {
+	background-color: #ADDFAD;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Vinho"] {
+	background-color: #722f37;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Palha"] {
+	background-color: #ebdec6;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Champanhe"] {
+	background-color: #F7E7CE;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Chocolate"] {
+	background-color: #d2691e;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Café"] {
+	background-color: #4b3621;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Turquesa"] {
+	background-color: #40e0d0;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Claro"] {
+	background-color: #90ee90;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Acinzentado"] {
+	background-color: #084d6e;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa Claro"] {
+	background-color: #ffb6c1;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa Queimado"] {
+	background-color: #d0a993;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Coral"] {
+	background-color: #ff7f50;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Grafite"] {
+	background-color: #474a51;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Claro"] {
+	background-color: #90ee90;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Lilás"] {
+	background-color: #c8a2c8;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Ameixa"] {
+	background-color: #dda0dd;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Preto"] {
+	background-color: #000;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Amarelo Claro"] {
+	background-color: #ffffe0;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Colorido"] { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d902ff+0,ffe035+20,78b726+34,000000+62,4904a3+79,ff6060+100 */
+	background: #d902ff; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #d902ff 0%, #ffe035 20%, #78b726 34%, #000000 62%, #4904a3 79%, #ff6060 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d902ff', endColorstr='#ff6060',GradientType=1 ); /* IE6-9 */
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Mostarda"] {
+	background-color: #ffdb58;
+}
+
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Branco"] {
-	border-color: #666;
 	background-color: #fff;
 }
 
@@ -8627,6 +8828,11 @@ footer .selos-seguranca li {
 	line-height: 18px;
 }
 
+.AbrirCalculadora:hover {
+	color: #FED118;
+	background-color: #35809A;
+}
+
 .AbrirCalculadora svg {
 	width: 30px;
 }
@@ -9418,17 +9624,17 @@ footer .copyright p {
 }
 
 .menu-header ul .menu-item.has-sub .submenu {
+	left: 50%;
 	opacity: 0;
+	height: auto;
+	width: 1200px;
 	padding: 15px;
 	margin: 0 auto;
 	display: block;
-	transition: .7s;
-	max-width: 1200px;
 	position: absolute;
+	margin-left: -600px;
 	pointer-events: none;
 	border: 1px solid #BFBFBF;
-	-ms-transform: translateX(-100%);
-	    transform: translateX(-100%);
 	box-shadow: 0px 0px 7px -2px #000;
 }
 

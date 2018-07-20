@@ -55,13 +55,10 @@
 					$(cart).find('ul').html('');
 
 					if(items.length > 0){
-						$('.sta-cart-resume a').removeClass('disabled');
-
 						for(i = 0; i < items.length; i++){
 							$(cart).find('ul').append('<li> <div class="sta-cart-pdt-image"><img src="'+items[i].imageUrl+'" /><span class="sta-cart-pdt-qtd-item">' + items[i].quantity + '</span></div> <div class="sta-cart-pdt-info"> <h4>'+items[i].name+'</h4> <button class="remove-item" data-index="'+i+'"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><polygon fill="#000" points="88.711,86.588 52.121,50 88.709,13.412 86.588,11.291 50,47.878 13.41,11.291 11.289,13.412   47.878,50 11.289,86.588 13.41,88.709 50,52.12 86.59,88.709 "/></svg><span>remover</span></button> <div class="sta-cart-pdt-qtd"></div> <p>R$: ' + helper.toReal(items[i].listPrice) + '</p> </div> </li>');
 						}
 					}else{
-						$('.sta-cart-resume a').addClass('disabled');
 						helper.closeCart();
 					}
 				});
@@ -76,7 +73,8 @@
 				return false;
 			} else {
 
-				var cart = "/checkout/cart/add?sku=" + url.split('sku')[1].split('&')[0].split('=')[1] + "&seller=1&redirect=true&sc=2";
+				// var cart = "/checkout/cart/add?sku=" + url.split('sku')[1].split('&')[0].split('=')[1] + "&seller=1&redirect=true&sc=2";
+				var cart = url;
 
 				$.ajax({
 					url: cart.replace("https://www.kroton.com.br", "").replace("true", "false"),
@@ -101,7 +99,9 @@
 		},
 		toReal : function(val){
 			val = val / 100;
-			val = val.toFixed(2).toString().replace('.',',');		
+			val = val.toFixed(2).toString().replace('.',',');
+			val = val.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+
 			return val;
 		},
 		selectSku: function(){
@@ -163,7 +163,7 @@
 	$.fn.vtexcart = function(parameters) {
 		var el = this;
 		settings = $.extend(settings, parameters);
-		var cartHtml = '<div class="sta-cart-overlay"></div><div class="sta-cart-container"> <div class="sta-cart-title"> <button class="sta-cart-close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><polygon fill="#000" points="88.711,86.588 52.121,50 88.709,13.412 86.588,11.291 50,47.878 13.41,11.291 11.289,13.412   47.878,50 11.289,86.588 13.41,88.709 50,52.12 86.59,88.709 "/></svg></button> <h3>Minha Compra<span class="qtd-cart"></span></h3> </div> <div class="sta-cart-items"> <ul></ul> </div> <div class="sta-cart-resume"> <span class="sta-cart-sub">Subtotal<strong>R$ 0,00</strong></span> <span class="sta-cart-freight">Frete<strong style="display:none">0</strong><button>Calcular</button><input type="text" /></span> <span class="sta-cart-total">Total: <strong>R$ 0,00</strong></span> <a href="/checkout/#/cart"><span>Finalizar Pedido</span></a> </div> </div>';
+		var cartHtml = '<div class="sta-cart-overlay"></div><div class="sta-cart-container"> <div class="sta-cart-title"> <button class="sta-cart-close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><polygon fill="#000" points="88.711,86.588 52.121,50 88.709,13.412 86.588,11.291 50,47.878 13.41,11.291 11.289,13.412   47.878,50 11.289,86.588 13.41,88.709 50,52.12 86.59,88.709 "/></svg></button> <h3>Meu Carrinho<span class="qtd-cart"></span></h3> </div> <div class="sta-cart-items"> <ul></ul> </div> <div class="sta-cart-resume"> <span class="sta-cart-sub">Subtotal<strong>R$ 0,00</strong></span> <span class="sta-cart-freight">Frete<strong style="display:none">0</strong><button>Calcular</button><input type="text" /></span> <span class="sta-cart-total">Total: <strong>R$ 0,00</strong></span> <a href="/checkout/#/cart"><span>Finalizar Pedido</span></a> </div> </div>';
 		var miniCartHtml = '<a href="#" class="openCart link-cart"><span></span></a>';
 
 		$(el).append(cartHtml);
@@ -203,14 +203,6 @@
 			helper.removeItem(index);
 		});
 
-		$('.sta-cart-resume a').on('click', function(){
-			if($(this).hasClass('disabled')){
-				return false;
-			} else { 
-				return true;
-			}
-		});
-
 		$('.sta-cart-freight button').click(function(){
 			$(this).hide();
 			$('.sta-cart-freight input').show();
@@ -240,6 +232,6 @@ $(function() {
     })
     $('header #mini-cart').click(function(){
     	$('.sta-cart-overlay').show();
-    	$('.sta-cart-container').animate({right: 0},300);
+    	$('.sta-cart-container').animate({right: 28},300);
     });
 });

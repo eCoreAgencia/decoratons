@@ -39,7 +39,6 @@ $('body.produto').each(function(){
 					});
 				}
 				$(this).replaceWith('<'+wrapper+' id="'+this.id+'" class="'+this.className+' '+spec+'">'+content+'</'+wrapper+'>');
-				console.log('14');
 			});
 		},
 		error: function(error){

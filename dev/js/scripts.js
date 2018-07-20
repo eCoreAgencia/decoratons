@@ -89,13 +89,10 @@
 						$(cart).find('ul').html('');
 
 						if(items.length > 0){
-							$('.sta-cart-resume a').removeClass('disabled');
-
 							for(i = 0; i < items.length; i++){
 								$(cart).find('ul').append('<li> <div class="sta-cart-pdt-image"><img src="'+items[i].imageUrl+'" /><span class="sta-cart-pdt-qtd-item">' + items[i].quantity + '</span></div> <div class="sta-cart-pdt-info"> <h4>'+items[i].name+'</h4> <button class="remove-item" data-index="'+i+'"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><polygon fill="#000" points="88.711,86.588 52.121,50 88.709,13.412 86.588,11.291 50,47.878 13.41,11.291 11.289,13.412   47.878,50 11.289,86.588 13.41,88.709 50,52.12 86.59,88.709 "/></svg><span>remover</span></button> <div class="sta-cart-pdt-qtd"></div> <p>R$: ' + helper.toReal(items[i].listPrice) + '</p> </div> </li>');
 							}
 						}else{
-							$('.sta-cart-resume a').addClass('disabled');
 							helper.closeCart();
 						}
 					});
@@ -225,7 +222,7 @@
 		$.fn.vtexcart = function(parameters) {
 			var el = this;
 			settings = $.extend(settings, parameters);
-			var cartHtml = '<div class="sta-cart-overlay"></div><div class="sta-cart-container"> <div class="sta-cart-title"> <button class="sta-cart-close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><polygon fill="#000" points="88.711,86.588 52.121,50 88.709,13.412 86.588,11.291 50,47.878 13.41,11.291 11.289,13.412   47.878,50 11.289,86.588 13.41,88.709 50,52.12 86.59,88.709 "/></svg></button> <h3>Minha Compra<span class="qtd-cart"></span></h3> </div> <div class="sta-cart-items"> <ul></ul> </div> <div class="sta-cart-resume"> <span class="sta-cart-sub">Subtotal<strong>R$ 0,00</strong></span> <span class="sta-cart-freight">Frete<strong style="display:none">0</strong><button>Calcular</button><input type="text" /></span> <span class="sta-cart-total">Total: <strong>R$ 0,00</strong></span> <a href="/checkout/#/cart"><span>Finalizar Pedido</span></a> </div> </div>';
+			var cartHtml = '<div class="sta-cart-overlay"></div><div class="sta-cart-container"> <div class="sta-cart-title"> <button class="sta-cart-close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><polygon fill="#000" points="88.711,86.588 52.121,50 88.709,13.412 86.588,11.291 50,47.878 13.41,11.291 11.289,13.412   47.878,50 11.289,86.588 13.41,88.709 50,52.12 86.59,88.709 "/></svg></button> <h3>Minha Compra<span class="qtd-cart"></span></h3> </div> <div class="sta-cart-items"> <ul></ul> </div> <div class="sta-cart-resume"> <span class="sta-cart-sub">Subtotal<strong>R$ 0,00</strong></span> <span class="sta-cart-freight">Frete<strong style="display:none">0</strong><button>Calcular</button><input type="text" /></span> <span class="sta-cart-total">Total: <strong>R$ 0,00</strong></span> <button class="bt-comprar" datahref="/checkout/#/cart"><span>Finalizar Pedido</span></button> </div> </div>';
 			var miniCartHtml = '<a href="#" class="openCart link-cart"><span></span></a>';
 
 			$(el).append(cartHtml);
@@ -276,14 +273,6 @@
 			$('.sta-cart-container').on('click','.remove-item', function(){
 				var index = $(this).data('index');
 				helper.removeItem(index);
-			});
-
-			$('.sta-cart-resume a').on('click', function(){
-				if($(this).hasClass('disabled')){
-					return false;
-				} else {
-					return true;
-				}
 			});
 
 			$('.sta-cart-freight button').click(function(){
@@ -894,20 +883,6 @@ $(function() {
 	// Pag Produto //
 		if($('body.produto').length > 0){
 
-			// Resolvind breaklines //
-				var test2 = $('.sku-section .dimensoes-obs #prod-dimensoes').text();
-				var result3 = test2.replace(/\)/g,')<br/>');
-				$('.sku-section .dimensoes-obs #prod-dimensoes').html(result3);
-
-				var test = $('.atributos .dimensoes #prod-dimensoes').text();
-				var result = test.replace(/\)/g,')<br/>');
-				$('.atributos .dimensoes #prod-dimensoes').html(result);
-
-				var test1 = $('#prod-precaucoes').text();
-				var result2 = test1.replace(/;/g,';<br/>');
-				$('#prod-precaucoes').html(result2);
-			// Resolvind breaklines //
-
 			$("#___rc-p-id").each(function(index) {
 				var id = $(this).attr("value");
 				var data = "/api/catalog_system/pub/products/search/?fq=productId:"+id+"";
@@ -950,7 +925,26 @@ $(function() {
 			});
 		}
 	// Pag Produto //
-	
+
+		// Resolvind breaklines //
+			$(document).ajaxComplete(function(){
+				var test2 = $('.sku-section #prod-dimensoes').text();
+				var result3 = test2.replace(/;/g,';<br/>');
+				$('.sku-section #prod-dimensoes').html(result3);
+
+				var test6 = $('.dimensoes #prod-dimensoes').text();
+				var result6 = test6.replace(/;/g,';<br/>');
+				$('.dimensoes #prod-dimensoes').html(result6);
+
+				var test1 = $('#prod-precaucoes').text();
+				var result2 = test1.replace(/;/g,';<br/>');
+				$('#prod-precaucoes').html(result2);
+
+				var test5 = $('#prod-vantagens').text();
+				var result5 = test5.replace(/;/g,';<br/>');
+				$('#prod-vantagens').html(result5);
+			});
+		// Resolvind breaklines //=
 
 	// BreadCrumb Ajuste Texto //
 		try {
@@ -1660,3 +1654,18 @@ $(window).load(function(){
 		});
 	});
 // Instagram //
+
+$(document).ajaxStop(function(){
+	$('button.bt-comprar').click(function(){
+		var myLink = $(this).attr('datahref');
+		window.location.href = myLink;
+	});
+});
+
+
+$(document).ajaxComplete(function(){
+	$('button.bt-comprar').click(function(){
+		var myLink = $(this).attr('datahref');
+		window.location.href = myLink;
+	});
+});

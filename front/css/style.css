@@ -2709,7 +2709,7 @@ button[name="favorite"].isFavorite svg:last-of-type {
 	font-weight: 600;
 }
 
-.sta-cart-resume a {
+.sta-cart-resume button {
 	display: block;
 	position: absolute;
 	width: 100%;
@@ -2724,12 +2724,12 @@ button[name="favorite"].isFavorite svg:last-of-type {
 	transition: .3s;
 }
 
-.sta-cart-resume a span {
+.sta-cart-resume button span {
 	position: relative;
 	padding: 0 0 0 40px;
 }
 
-.sta-cart-resume a span:before {
+.sta-cart-resume button span:before {
 	content: "";
 	position: absolute;
 	width: 32px;
@@ -2771,16 +2771,16 @@ button[name="favorite"].isFavorite svg:last-of-type {
 	margin-left: 12px;
 }
 
-.sta-cart-resume a {
+.sta-cart-resume button {
 	background: #147eb8;
 }
 
-.sta-cart-resume a:hover {
+.sta-cart-resume button:hover {
 	color: #fff;
 	background: #2EA42F;
 }
 
-.sta-cart-resume a.disabled {
+.sta-cart-resume button.disabled {
 	background: #147eb8;
 }
 
@@ -4512,6 +4512,26 @@ body.home section.boxes .lancamentos h2 {
    Página de Produto
    ========================================================================== */
 
+body.produto .dimensoes-obs span {
+	display: block;
+	margin-bottom: 10px;
+}
+
+body.produto .bt-close-pgto {
+	font-size: 10px;
+	top: -15px;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	right: -15px;
+	cursor: pointer;
+	line-height: 30px;
+	border-radius: 50%;
+	position: absolute;
+	text-align: center;
+	background-color: #000;
+}
+
 body.produto main {
 	padding: 25px 0;
 	padding-top: 0;
@@ -4963,7 +4983,24 @@ body.produto main .sku-selector-container li label {
 	    justify-content: center;
 }
 
+body.produto main .dimensions-info {
+	margin-top: 10px;
+}
+
+body.produto main .dimensions-info h3,
+body.produto main .dimensions-info dd:nth-child(4),
+body.produto main .dimensions-info dd:nth-child(5),
+body.produto main .dimensions-info .dtSkuCompleteName {
+	display: none;
+}
+
+body.produto main .dimensions-info dd {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
 body.produto main .skus-dimensoes {
+	display: none;
 	margin-right: 10px;
 }
 

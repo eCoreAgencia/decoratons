@@ -22,6 +22,29 @@ body.produto{
             }
         }
     }
+
+    .dimensoes-obs {
+      span {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    .bt-close-pgto {
+      @include font-size(1);
+      top: -15px;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      right: -15px;
+      cursor: pointer;
+      line-height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      text-align: center;
+      background-color: #000;
+    }
+
    	main{
    		padding: 25px 0;
    		padding-top:0;
@@ -482,13 +505,29 @@ body.produto{
 				}
 			}
    		}
+
+      .dimensions-info {
+
+        margin-top: 10px;
+
+        h3,
+        dd:nth-child(4),
+        dd:nth-child(5),
+        .dtSkuCompleteName {
+          display: none;
+        }
+
+        dd {
+          @include font-size(1.2);
+          margin-bottom: 10px;
+        }
+      }
+
    		.skus-dimensoes{
+        display: none;
+
    			@extend .transition;
             margin-right: 10px;
-			// display: flex;
-			// flex-wrap: wrap;
-			// pointer-events: none;
-			// justify-content: space-around;
 			@include mq($screen-md){
 				// height: 0;
 				// opacity: 1;

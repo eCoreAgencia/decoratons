@@ -1,3 +1,4 @@
+// Popup
 (function(window, document, $){
 	'use strict';
 	function Popup(){
@@ -5,7 +6,6 @@
 		var popups = new Object();
 		this.needScrolling = function(el){
 			if (el[0].scrollHeight > el[0].clientHeight ) {
-			  	console.log("this element is overflowing !!");
 				el.css({'overflow-y': 'scroll'});
 			}else{
 				el.css({'overflow-y': 'hidden'});
@@ -33,7 +33,6 @@
 			var elementChange    = new MutationObserver (function(){
 			   if (popups[name].hasClass('active')) self.needScrolling(popups[name]);
 			});
-			console.log('shit', el);
 			elementChange.observe($(el)[0], {childList: true, subtree: true});
 		}
 		this.open = function(name){
@@ -43,7 +42,6 @@
 			self.needScrolling(popups[name]);
 		}
 		this.close = function(name){
-			console.log(popups);
 			popups[name].fadeOut().removeClass('active');
 			popups[name].prev().removeClass('inactive');
 			if(!$(popups['children']+'.inactive').length) popups['wrapper'].fadeOut();
@@ -55,3 +53,4 @@
 	}
 	window.Popupinator = new Popup();
 }(window, document, jQuery));
+// Popup

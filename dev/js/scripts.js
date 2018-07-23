@@ -1,19 +1,5 @@
 // $.getScript('http://io.vtex.com.br/vtex.js/2.2.0/vtex.min.js');
 
-
-// <script type="text/javascript">
-// 	var _st_account = 1027;
-// 	(function () {
-// 		var ss = document.createElement('script');
-// 		ss.type = 'text/javascript';
-// 		ss.async = true;
-// 		ss.src = '//app.shoptarget.com.br/js/tracking.js';
-// 		var sc = document.getElementsByTagName('script')[0];
-// 		sc.parentNode.insertBefore(ss, sc);
-// 	})();
-
-// </script>
-
 // Polyfill Evento Customizado
 	(function () {
 	  if ( typeof window.CustomEvent === "function" ) return false;
@@ -327,7 +313,6 @@
 			var popups = new Object();
 			this.needScrolling = function(el){
 				if (el[0].scrollHeight > el[0].clientHeight ) {
-				  	console.log("this element is overflowing !!");
 					el.css({'overflow-y': 'scroll'});
 				}else{
 					el.css({'overflow-y': 'hidden'});
@@ -355,7 +340,6 @@
 				var elementChange    = new MutationObserver (function(){
 				   if (popups[name].hasClass('active')) self.needScrolling(popups[name]);
 				});
-				console.log('shit', el);
 				elementChange.observe($(el)[0], {childList: true, subtree: true});
 			}
 			this.open = function(name){
@@ -365,7 +349,6 @@
 				self.needScrolling(popups[name]);
 			}
 			this.close = function(name){
-				console.log(popups);
 				popups[name].fadeOut().removeClass('active');
 				popups[name].prev().removeClass('inactive');
 				if(!$(popups['children']+'.inactive').length) popups['wrapper'].fadeOut();
@@ -609,6 +592,7 @@
 		}
 	}(window, document, jQuery));
 // Tickets
+
 (function (window, document, $) {
     'use strict';
 
@@ -848,7 +832,7 @@ $(function() {
 							"Produto Lavável": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329.983 329.983" width="512" height="512"><g fill="#147eb8"><path d="M175.426 1.282a7.498 7.498 0 0 0-6.183 3.255c-4.089 5.955-100.145 146.668-100.145 217.837 0 58.629 47.698 106.327 106.327 106.327s106.326-47.698 106.326-106.327c0-71.169-96.055-211.882-100.144-217.837a7.496 7.496 0 0 0-6.181-3.255zm0 312.419c-50.358 0-91.327-40.969-91.327-91.327 0-56.606 69.872-167.393 91.327-200.073 21.455 32.68 91.326 143.466 91.326 200.073 0 50.358-40.969 91.327-91.326 91.327z"/><path d="M167.927 286.199a7.5 7.5 0 0 0 7.5 7.5c39.33 0 71.328-31.996 71.328-71.323 0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5c0 31.057-25.269 56.323-56.328 56.323a7.5 7.5 0 0 0-7.5 7.5zM322.483 31.658h-14.574V17.083c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v14.575h-14.575c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h14.575v14.575c0 4.142 3.357 7.5 7.5 7.5s7.5-3.358 7.5-7.5V46.658h14.574c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5zM51.65 257.492H37.075v-14.575c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v14.575H7.5c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h14.575v14.575c0 4.142 3.357 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-14.575H51.65c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"/></g></svg>',
 						}
 					}
-					$('.productSpecification').each(function(){
+					/*$('.productSpecification').each(function(){
 						var spec = $(this).attr('data-spec');
 						var value = data[0][spec] || null;
 						if(!value){
@@ -869,8 +853,7 @@ $(function() {
 							});
 						}
 						$(this).replaceWith('<'+wrapper+' id="'+this.id+'" class="'+this.className+' '+spec+'">'+content+'</'+wrapper+'>');
-						console.log('14');
-					});
+					}); */
 				},
 				error: function(error){
 					console.log('error', error);
@@ -879,72 +862,6 @@ $(function() {
 		});
 	// Campo Produto
 
-	
-	// Pag Produto //
-		if($('body.produto').length > 0){
-
-			$("#___rc-p-id").each(function(index) {
-				var id = $(this).attr("value");
-				var data = "/api/catalog_system/pub/products/search/?fq=productId:"+id+"";
-
-				$.getJSON(data, function(data) {
-					$.each(data, function(key, val) {
-						var elements = val.items[0].images;
-
-						$(elements).each(function(data, val){
-							// Take Image Thumbs //
-								var myLabel = val.imageLabel;
-								var myImageID = val.imageId;
-								var myImageName = val.imageText;
-								$('<li class="'+myLabel+'"><a href="/arquivos/ids/'+myImageID+'-1000-1000/'+myImageName+'.jpg" data-standard="/arquivos/ids/'+myImageID+'-550-550/'+myImageName+'.jpg"><img src="/arquivos/ids/'+myImageID+'-100-100/'+myImageName+'.jpg" /></a></li>').appendTo('ul.thumbnails');
-							// Take Image Thumbs //
-
-							var myFirst = $('.thumbnails li').first();
-							myFirst.addClass('first-thumb');
-
-							var firstThumbStand = $('.thumbnails li.first-thumb a').attr('data-standard');
-							var firstThumbLink = $('.thumbnails li.first-thumb a').attr('href');
-							var firstThumbEx = $('<a href="'+firstThumbLink+'"><img src="'+firstThumbStand+'"/></a>');
-							firstThumbEx.appendTo('.easyzoom');
-							$('.easyzoom a:first-of-type').nextAll().remove();
-
-							// Instantiate EasyZoom instances
-							var $easyzoom = $('.easyzoom').easyZoom();
-
-							// Setup thumbnails example
-							var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
-							$('.thumbnails').on('click', 'a', function(e) {
-								var $this = $(this);
-								e.preventDefault();
-								// Use EasyZoom's `swap` method
-								api1.swap($this.data('standard'), $this.attr('href'));
-							});
-						});
-					});
-				});
-			});
-		}
-	// Pag Produto //
-
-		// Resolvind breaklines //
-			$(document).ajaxComplete(function(){
-				var test2 = $('.sku-section #prod-dimensoes').text();
-				var result3 = test2.replace(/;/g,';<br/>');
-				$('.sku-section #prod-dimensoes').html(result3);
-
-				var test6 = $('.dimensoes #prod-dimensoes').text();
-				var result6 = test6.replace(/;/g,';<br/>');
-				$('.dimensoes #prod-dimensoes').html(result6);
-
-				var test1 = $('#prod-precaucoes').text();
-				var result2 = test1.replace(/;/g,';<br/>');
-				$('#prod-precaucoes').html(result2);
-
-				var test5 = $('#prod-vantagens').text();
-				var result5 = test5.replace(/;/g,';<br/>');
-				$('#prod-vantagens').html(result5);
-			});
-		// Resolvind breaklines //=
 
 	// BreadCrumb Ajuste Texto //
 		try {
@@ -1126,30 +1043,6 @@ $(function() {
 				$(this).find('.price').append('<span class="preco-boleto">ou R$ '+total+' no boleto</span>');
 			}
 		});
-		$('body.produto .buy-box').each(function(){
-			if($(this).find('.skuBestPrice').length){
-				var desconto = $(this).find('p[class^="flag desconto-no-boleto"]').text();
-				var preco = $(this).find('.skuBestPrice').text().replace(' ','').split('$')[1];
-				var total = calcDesc(preco, desconto);
-				$(this).find('p.descricao-preco').append('<em class="preco-boleto">ou R$ '+total+' no boleto</em>');
-			}
-		});
-		// Alteração sku //
-			if($('body.produto .buy-box .skuBestPrice').length){
-				var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-				var elementChange    = new MutationObserver (function(){
-				    $('.buy-box').each(function(){
-				        var desconto = $(this).find('p[class^="flag desconto-no-boleto"]').text();
-				        var preco = $(this).find('.skuBestPrice').text().replace(' ','').split('$')[1];
-				        var total = calcDesc(preco, desconto);
-				        $(this).find('p.descricao-preco').append('<em class="preco-boleto">ou R$ '+total+' no boleto</em>');
-				    });
-				});
-				$(".buy-box .productName").each ( function () {
-				    elementChange.observe (this, {childList: true, characterData: true, attributes: true, subtree: true });
-				} );
-			}
-		// Alteração sku //
 
 	// Desconto Boleto //
 
@@ -1174,24 +1067,6 @@ $(function() {
 					$(this).find('.flag-frete').append('<p class="flag frete-gratis">Frete grátis SP</p>');
 				}
 			}
-		});
-
-		$('body.produto .buy-box').each(function(){
-			if($(this).find('.skuBestPrice').length){
-				var preco = $(this).find('.skuBestPrice').text().replace(' ','').split('$')[1];
-				preco = preco.replace('.','').replace(',','.');
-				if(preco > 200){
-					$(this).find('.productReference').after('<p class="flag frete-gratis">Frete grátis SP</p>');
-				}
-			}
-		});
-
-		$('.prateleira').find('span[data-category^="Máquinas de bordar"], span[data-category^="Bordado"], span[data-category^="Costura"]').each(function(){
-		    if($(this).find('span.flag-frete p.flag.frete-gratis').length){
-		        $(this).find('span.flag-frete p.flag.frete-gratis').text('FRETE GRÁTIS para todo o Brasil');
-		    }else{
-		        $(this).find('span.flag-frete').append('<p class="flag frete-gratis">FRETE GRÁTIS para todo o Brasil</p>');
-		    }
 		});
 	// Frete Grátis //
 
@@ -1269,85 +1144,10 @@ $(function() {
 				$('body').removeClass('top-height-active');
 			}
 		});
-
-		// if($('body.scanncut').length > 0){
-		// 	$(window).scroll(function() {
-		// 		var scroll = $(window).scrollTop();
-		// 		if (scroll >= 350) {
-		// 			$('nav.menu').addClass('menu-persistente');
-		// 		} else {
-		// 			$('nav.menu').removeClass('menu-persistente');
-		// 		}
-		// 	});
-		// }
-
-		// if($('body.impressora-textil').length > 0){
-		// 	$(window).scroll(function() {
-		// 		var scroll = $(window).scrollTop();
-		// 		if (scroll >= 350) {
-		// 			$('nav.menu').addClass('menu-persistente');
-		// 		} else {
-		// 			$('nav.menu').removeClass('menu-persistente');
-		// 		}
-		// 	});
-		// }
-
     // Menu Persistente END //
 
     // Scripts Pagina de Produto //
-    	// Campos Produto //
-			$('.product-info menu button[name=productDescription]').addClass('active');
-			$('.product-info .info article.productDescription').addClass('active');
-	    	$('.product-info menu button').click(function(){
-				$('.product-info menu button').removeClass('active');
-				$(this).addClass('active');
-				var prodCampo = $(this).attr('name');
-				$('.product-info .info .active').removeClass('active');
-				$('.product-info .info article.'+prodCampo).addClass('active');
-			});
-			$(window).load(function(){
-				$("#___rc-p-id").each(function(index) {
-					var id = $(this).attr("value");
-					var data = "/api/catalog_system/pub/products/search/?fq=productId:"+id+"";
-
-					$.getJSON(data, function(data) {
-						$.each(data, function(key, val) {
-						    var faq = val.faq;
-						    var vids = val.videos;
-						    var down = val.download;
-						    var acss = val.acessorios;
-						    var spec = val.especificacao_tecnica;
-
-						    var where = $('.product-info .info');
-
-						    where.find('.faq').append(faq);
-						    where.find('.vids').append(vids);
-						    where.find('.spec').append(spec);
-						    where.find('.download').append(down);
-						    where.find('.acessorios').append(acss);
-
-						    var hasStock = 0;
-						    for(i=0; i < val.items.length; i++){
-						    	hasStock += val.items[i].sellers[0].commertialOffer.AvailableQuantity;
-						    }
-						    if(!hasStock){
-						    	$('.choose-skus .skuList input[type=radio]:first-of-type').simulateClick();
-						    }
-						    $('.product-info .info article').each(function(){
-					        	if(!($(this).children().length)){
-					        		var buttonName = $(this).attr('class').split()[0];
-					        		$('.product-info .menu button[name="'+buttonName+'"]').remove();
-					        	}
-					        });
-						});
-					});
-				});
-			});
-
-			$('li.specification').click(function(){
-				$('.dimensoes-obs').slideToggle();
-			});
-	    // Campos Produto //
+		
 	    if (pagProduto.length > 0) {
 			try {
 				$document.ready(function() {
@@ -1417,43 +1217,19 @@ $(function() {
 		}
 	// Submenu mobile //
 
-        // Scripts Modal //
-    // Open Modal //
-    // Open Modal //
-        // Open Modal //
-
-        // Close Modal //
-        $('.close-modal, .bg_modal').click(function() {
-            $('.modal-opacity').fadeOut(600);
-            $('body').removeClass('modal-active');
-            $('.modal-content').remove();
-        });
-        $(document).keyup(function(ev) {
-            if (ev.keyCode == 27)
-            $('.modal-opacity').fadeOut(600);
-            $('body').removeClass('modal-active');
-        });
-    // Close Modal //
-
-    // Render newsletter //
-    	$(function(){
-  			if(!(localStorage.getItem("shumi-newsletter-popup"))){
-				$('body.home').each(function(){
-					var newsLetter = '<div class="newsletter-popup-wrapper"><div class="newsletter-popup"><h2>Newsletter</h2><h3>Bem-vindo!</h3><p>Inscreva-se na nossa lista e saiba de tudo em primeira mão!</p><form action="" method="POST" class="form-newsletter" data-module="newsletter"><input type="hidden" name="newsInternalPart" value="newsletter" /><input type="hidden" name="newsInternalPage" value="_" /><input type="hidden" name="newsInternalCampaign" value="newsletter:opt-in" /><fieldset class="nome"><input type="text" name="newsletterClientName" id="cl_nome" class="nome newsletter-client-nome" placeholder="Digite seu nome" data-validation="required" data-msg-required="Preencha o seu nome"/></fieldset><fieldset class="email"><input type="text" name="newsletterClientEmail" id="cl_email" class="email" placeholder="Digite seu e-mail" data-validation="required email" data-msg-required="Preencha o seu email" data-msg-email="O e-mail que você inseriu está incorreto" /></fieldset><button type="submit" class="newsletter-button-ok submit">Cadastrar</button></form><button id="newsletter-close">X</button></div></div>'
-					$(this).append(newsLetter);
-				});
-			}
-			// Newsletter close //
-				$('.newsletter-popup #newsletter-close').click(function(){
-					$('.newsletter-popup-wrapper').hide();
-					localStorage.setItem("shumi-newsletter-popup", "true");
-				});
-			// Newsletter close //
+	// Modal //
+		$('.close-modal, .bg_modal').click(function() {
+			$('.modal-opacity').fadeOut(600);
+			$('body').removeClass('modal-active');
+			$('.modal-content').remove();
 		});
-    // Render newsletter //
-
-
-
+		
+		$(document).keyup(function(ev) {
+			if (ev.keyCode == 27)
+			$('.modal-opacity').fadeOut(600);
+			$('body').removeClass('modal-active');
+		});
+	// Modal //
 
 
 	// Scripts Modal //
@@ -1518,96 +1294,14 @@ $(function() {
 			}
 		});
 	// App instagram //
-
-	// Counter BlackFriday //
-		$('body.blackFriday').find('.countDownCounter').each(function(){
-			function calcDis(){
-				var distance = dateTime - Date.now();
-				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		        if (days < 10) days = '0'+days;
-		        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		        if (hours < 10) hours = '0'+hours;
-		        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		        if (minutes < 10) minutes = '0'+minutes;
-		        return [days,hours,minutes];
-			}
-			function renderCounter(_this, now){
-				var component = '<img class="fundo" src="/arquivos/contador_shumi01.png"/><div class="wrapper"><div class="days"><em class="DD">'+now[0]+'</em><span>Dia';
-				if (now[0] > 1) component += 's';
-				component += '</span></div><div class="hours"><em class="HH">'+now[1]+'</em><span>Horas</span></div><div class="minutes"><em class="mm">'+now[2]+'</em><span>Minutos</span></div></div>';
-				$(_this).html(component);
-			}
-			var _this = $(this);
-			var dateTime = new Date($(this).attr('data-endTime'));
-			var now = calcDis();
-			renderCounter(_this, now);
-			setInterval(function(){
-				var now = calcDis();
-				renderCounter(_this, now);
-			}, 60000);
-		});
-	// Counter BlackFriday //
-
 });
 $(window).load(function(){
-
-	//	Miniatura slider //
-	if(window.matchMedia('(min-width: 768px)').matches){
-    	$('.banners-top .slider .slick-dots li').each(function(){
-			var slideNum = parseInt($(this).find('button').text())-1;
-			var url = $('.banners-top .slider .slick-track .slick-slide[data-slick-index='+slideNum+']').find('img').attr('src');
-			$(this).find('button').css('background-image', ('url("'+url+'")'));
-		});
-    }
-    //	Miniatura slider //
-
 	// Cancelar login //
     	$('#vtexIdUI-auth-selector .modal-header .close').click(function(){
 			window.location.href = window.location.href.split('/login?')[0];
 		});
-    // Cancelar login //
-	
+    // Cancelar login //	
 });
-// Fale conosco //
-	function FaleConosco(){
-	    var jsonSaveDadosUser = {
-	        "nome": $("#cl_nome").val(),
-	        "email": $("#cl_email").val(),
-	        "tel": $("#cl_tel").val(),
-	        "type": $("#cl_type").val(),
-	        "description": $("#cl_description").val()
-	    };
-
-	    var storename = 'shumi';
-	    var dataEntity = 'FL';
-
-	    var urlSaveDadosUser = '//api.vtexcrm.com.br/'+storename+'/dataentities/'+dataEntity+'/documents/';
-
-	    $.ajax({
-	        headers: {
-	            'Accept': 'application/vnd.vtex.ds.v10+json',
-	            'Content-Type': 'application/json',
-	        },
-	        data: JSON.stringify(jsonSaveDadosUser),
-	        type: 'PATCH',
-	        url: urlSaveDadosUser,
-	        success: function (data) {
-	          console.log(data);
-	          $("div#messageSuccess").removeClass("hide");
-	          $("#cl_nome").val("");
-	          $("#cl_email").val("");
-	          $("#cl_tel").val("");
-	          $("#cl_type").val("");
-	          $("#cl_description").val("");
-	          alert("Mensagem Enviada com sucesso!");
-	        },
-	        error: function (data) {
-	          console.log(data);
-	          alert("Houve um erro ao enviar a mensagem. Tente novamente mais tarde");
-	        }
-	    });
-	}
-// Fale conosco //
 
 // Compre Junto //
 	$(window).load(function(){

@@ -1,10 +1,11 @@
+// Minicart
 (function($) {
 	'use strict';
 
 	var settings = {
 		effect: 'overlay'
 	};
-	
+
 	var cart = null;
 
 	var helper = {
@@ -88,14 +89,39 @@
 				});
 			}
 		},
+		addItemNoShowCart: function(el) {
+			var urlTest = ["javascript",":","alert('Por favor, selecione o modelo desejado.');"].join('');
+			var url = $(el).attr('href');
+
+			if(url == urlTest){
+				alert('Por favor, selecione o modelo desejado.');
+				return false;
+			} else {
+
+				// var cart = "/checkout/cart/add?sku=" + url.split('sku')[1].split('&')[0].split('=')[1] + "&seller=1&redirect=true&sc=2";
+				var cart = url;
+
+				$.ajax({
+					url: cart.replace("https://www.kroton.com.br", "").replace("true", "false"),
+					type: 'GET',
+					crossDomain: true,
+					dataType: 'html',
+					success: function(){
+						helper.fillCart();
+						helper.closeCart();
+
+					}
+				});
+			}
+		},
 		removeItem : function(index){
-            vtexjs.checkout.getOrderForm().then(function (orderForm) {
-                var item = orderForm.items[index];
-                item.index = index;
-                return vtexjs.checkout.removeItems([item]);
-            }).done(function (orderForm) {
-                helper.fillCart();
-            });
+			vtexjs.checkout.getOrderForm().then(function (orderForm) {
+				var item = orderForm.items[index];
+				item.index = index;
+				return vtexjs.checkout.removeItems([item]);
+			}).done(function (orderForm) {
+				helper.fillCart();
+			});
 		},
 		toReal : function(val){
 			val = val / 100;
@@ -143,7 +169,7 @@
 				if($qty <= 1) {
 					$(this).parent().parent().find('.result input').attr('value', '1');
 				}else{
-					$(this).parent().parent().find('.result input').attr('value', $qty - 1);	
+					$(this).parent().parent().find('.result input').attr('value', $qty - 1);
 				}
 			});
 
@@ -156,14 +182,14 @@
 			$('.content-select-sku > ul > li').on('click', function(event) {
 				$('.content-select-sku > ul > li').removeClass('active');
 				$(this).addClass('active');
-			});	
+			});
 		}
 	};
 
 	$.fn.vtexcart = function(parameters) {
 		var el = this;
 		settings = $.extend(settings, parameters);
-		var cartHtml = '<div class="sta-cart-overlay"></div><div class="sta-cart-container"> <div class="sta-cart-title"> <button class="sta-cart-close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><polygon fill="#000" points="88.711,86.588 52.121,50 88.709,13.412 86.588,11.291 50,47.878 13.41,11.291 11.289,13.412   47.878,50 11.289,86.588 13.41,88.709 50,52.12 86.59,88.709 "/></svg></button> <h3>Meu Carrinho<span class="qtd-cart"></span></h3> </div> <div class="sta-cart-items"> <ul></ul> </div> <div class="sta-cart-resume"> <span class="sta-cart-sub">Subtotal<strong>R$ 0,00</strong></span> <span class="sta-cart-freight">Frete<strong style="display:none">0</strong><button>Calcular</button><input type="text" /></span> <span class="sta-cart-total">Total: <strong>R$ 0,00</strong></span> <a href="/checkout/#/cart"><span>Finalizar Pedido</span></a> </div> </div>';
+		var cartHtml = '<div class="sta-cart-overlay"></div><div class="sta-cart-container"> <div class="sta-cart-title"> <button class="sta-cart-close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><polygon fill="#000" points="88.711,86.588 52.121,50 88.709,13.412 86.588,11.291 50,47.878 13.41,11.291 11.289,13.412   47.878,50 11.289,86.588 13.41,88.709 50,52.12 86.59,88.709 "/></svg></button> <h3>Minha Compra<span class="qtd-cart"></span></h3> </div> <div class="sta-cart-items"> <ul></ul> </div> <div class="sta-cart-resume"> <span class="sta-cart-sub">Subtotal<strong>R$ 0,00</strong></span> <span class="sta-cart-freight">Frete<strong style="display:none">0</strong><button>Calcular</button><input type="text" /></span> <span class="sta-cart-total">Total: <strong>R$ 0,00</strong></span> <button class="bt-comprar" datahref="/checkout/#/cart"><span>Finalizar Pedido</span></button> </div> </div>';
 		var miniCartHtml = '<a href="#" class="openCart link-cart"><span></span></a>';
 
 		$(el).append(cartHtml);
@@ -189,9 +215,22 @@
 			event.preventDefault();
 		});
 
+		$('.btn-add-carrinho').on('click', function(event){
+			event.preventDefault();
+			$(this).attr('href', $('.buy-button').attr('href'));
+			helper.addItemNoShowCart($(this));
+
+			$("html, body").animate({scrollTop: 0}, 300);
+			setTimeout(function(){
+				helper.closeCart();
+			},1200);
+
+		});
+
 		$('.openCart').on('click', function(event){
 			helper.openCart();
 			event.preventDefault();
+
 		});
 
 		$('.sta-cart-close, .sta-cart-overlay').on('click', function(){
@@ -224,14 +263,25 @@
 } (jQuery));
 
 $(function() {
-    $("body").vtexcart({
-        buyButton: $(".buy-button"),
-        wrapper: $(".container"),
-        effect: "overlay",
-        cartButton: $(".sta-cart")
-    })
-    $('header #mini-cart').click(function(){
-    	$('.sta-cart-overlay').show();
-    	$('.sta-cart-container').animate({right: 28},300);
-    });
+	$("body").vtexcart({
+		buyButton: $(".buy-button"),
+				addCartButton: $(".btn-add-carrinho"),
+		wrapper: $(".container"),
+		effect: "overlay",
+		cartButton: $(".sta-cart")
+	})
+
+	$('header #mini-cart').click(function(){
+		$('.sta-cart-container').animate({right: 0},300);
+	});
+	
+	$('header #mini-cart').mouseenter(function(){
+		$('.sta-cart-container').addClass('active');
+	});
+	
+	$('.sta-cart-container').mouseleave(function(){
+		$('.sta-cart-container').removeClass('active');
+	})
+
 });
+// Minicart

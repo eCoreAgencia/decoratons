@@ -4565,6 +4565,26 @@ body.produto main section.atributos {
 	background-color: #ddd;
 }
 
+body.produto main section.atributos table {
+	font-size: 12px;
+	width: 200px;
+	border: 1px solid #000;
+}
+
+body.produto main section.atributos table tr {
+	border-bottom: 1px solid #000;
+}
+
+body.produto main section.atributos table tr:first-of-type {
+	color: #fff;
+	background-color: #666;
+}
+
+body.produto main section.atributos table td {
+	padding: 10px;
+	border-left: 1px solid #000;
+}
+
 body.produto main section.atributos:before {
 	width: 0;
 	height: 0;
@@ -5000,7 +5020,6 @@ body.produto main .dimensions-info dd {
 }
 
 body.produto main .skus-dimensoes {
-	display: none;
 	margin-right: 10px;
 }
 
@@ -9805,6 +9824,10 @@ body.home section.boxes .lancamentos .buyButton {
 
 body.produto main section.breadcrumbs {
 	padding: 15px 0;
+}
+
+body.produto main section.atributos table {
+	width: 340px;
 }
 
 body.produto main .productDescription#prod-detalhamento,

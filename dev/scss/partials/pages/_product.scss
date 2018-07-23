@@ -81,7 +81,31 @@ body.produto{
    			&.atributos{
    				margin-top: 80px;
    				position: relative;
-               background-color: #ddd;
+			   background-color: #ddd;
+			   
+			   table {
+				   @include font-size(1.2);
+				   width: 200px;
+				   border: 1px solid #000;
+
+				   @include mq($screen-md){
+				       width: 340px;
+				   }
+
+				   tr {
+					   border-bottom: 1px solid #000;
+
+					   &:first-of-type {
+						   color: #fff;
+						   background-color: #666;
+					   }
+				   }
+
+				   td {
+						padding: 10px;
+					   border-left: 1px solid #000;
+				   }
+			   }
 
    				&:before{
    					width: 0;
@@ -524,8 +548,6 @@ body.produto{
       }
 
    		.skus-dimensoes{
-        display: none;
-
    			@extend .transition;
             margin-right: 10px;
 			@include mq($screen-md){

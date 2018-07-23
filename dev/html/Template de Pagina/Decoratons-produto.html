@@ -36,12 +36,10 @@
 	                		<div class="col-xs-12">
 	                			<vtex.cmc:skuSelection />
 	                			<div class="dimensoes dimensoes-obs">
-			            			<h2 class="txt-black txt-sz-24">Dimensões</h2>
 			            			<div id="prod-dimensoes" class="productSpecification" data-parent="true" data-spec="Dimensões"></div>
 			            		</div>
 	                			<div class="hidden-xs hidden-sm hidden-md hidden-lg"><vtex.cmc:stockKeepingUnitMeasures/></div>
 	                			<ul class="skus-dimensoes">
-	                				<vtex.cmc:skusDimensoes/>
 	                			</ul>
 	                		</div>
 	                	</div>
@@ -94,10 +92,10 @@
             			<h2 class="txt-black txt-sz-24">Vantagens</h2>
             			<div id="prod-vantagens" class="productSpecification" data-parent="true" data-spec="Vantagens"></div>
             		</div>
-            		<div class="col-xs-12 caracteristicas">
+            		<!--div class="col-xs-12 caracteristicas">
             			<h2 class="txt-black txt-sz-24">Características</h2>
             			<div id="prod-caracteristicas" class="productSpecification" data-parent="true" data-spec="Características"></div>
-            		</div>
+            		</div -->
             	</div>
             </section>
             <section class="precaucoes">
@@ -113,35 +111,6 @@
         <vtex:template id="decoratons-footer" />
 		<vtex:template id="decoratons-commonScripts" />
 		<script type="text/javascript" src="/arquivos/easyzoom-v1.js"></script>
-        <script type="text/javascript">
-			$('.product-box .ProductInfo .Availability').each(function(){
-				var prontaEntrega = $('.product-box .ProductInfo .flag.pronta-entrega');
-				if(prontaEntrega.length){
-					$(this).find('span').text(prontaEntrega.text());
-					prontaEntrega.remove();
-				}else{
-					$(this).remove();
-				}
-			});
-			$('.sku-selector-container .Tamanho .specification').on('hover', function(){
-			 	$('.skus-dimensoes').addClass('active');
-			 });
-			 $('.sku-selector-container .Tamanho .specification').on('mouseout', function(){
-			 	$('.skus-dimensoes').removeClass('active');
-			});
-
-			$('button[name="formas-pagamento"]').on('click', function(){
-				$(this).siblings('.formas-de-pagamento').toggleClass('active');
-			});
-
-			$('.bt-close-pgto').on('click', function(event){
-				$('.formas-de-pagamento').removeClass('active');
-			});
-			
-			$(window).on('skuSelected.vtex', function(){
-			    ($('.plugin-preco .skuBestPrice').length)? $('.buy-box').removeClass('sku-unavailable'): $('.buy-box').addClass('sku-unavailable');
-			});
-
-        </script>
+		<script type="text/javascript" src="/arquivos/product-v4.js"></script>
     </body>
 </html>

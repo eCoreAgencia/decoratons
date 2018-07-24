@@ -218,8 +218,8 @@ body.dep-cat-bus{
 			}
 			&.sidebar{
 				@extend .transition;
-			    top: 0;
 			    left: 0;
+			    top: 48px;
 			    opacity: 0;
 			    z-index: 9;
 			    padding: 0;
@@ -232,6 +232,7 @@ body.dep-cat-bus{
 			    transform: translateX(-100%);
 			    box-shadow: 0 0 5px -1px #000;
 				@include mq($screen-md){
+					top: 0;
 					opacity: 1;
 					padding: 7px;
 					max-width: 100%;

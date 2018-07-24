@@ -559,7 +559,6 @@ body.institucional > h3.tlt-shelf main form .menu button {
 .calculadora-popup button[type="submit"],
 .calculadora-popup a,
 body.produto main .quantitySelector input,
-body.produto main .skus-dimensoes li,
 body.produto main .frete-quantidade #txtCep,
 body.produto main .frete-quantidade .freight-values #divFreteInvalido,
 body.produto main .frete-quantidade .freight-values th,
@@ -626,7 +625,6 @@ body.institucional > h3.tlt-shelf main form .section-slider .formSection-title {
 
 .txt-sz-30,
 .Ambientes .Ambiente:hover h3,
-body.produto main .price-section .valor-por .skuBestPrice,
 body.produto main .quantitySelector button {
 	font-size: 30px;
 	line-height: 34px;
@@ -920,15 +918,12 @@ body.institucional > h3.tlt-shelf nav,
 .col-sm-3,
 section.blog.shuminoblog .post-contents .post-call,
 .col-md-3,
-body.scanncut main section.projetos .projetos-imgs figure,
 .col-lg-3,
 .col-xs-4,
 .col-sm-4,
 body.institucional > .container main form[name="Fale-Conosco"] fieldset:not(.mensagem),
 body.institucional > h3.tlt-shelf main form[name="Fale-Conosco"] fieldset:not(.mensagem),
-body.clube-shumi main section.conteudo ul.anteriores li,
 .col-md-4,
-body.clube-shumi main section.conteudo ul.anteriores li,
 .col-lg-4,
 .col-xs-5,
 .col-sm-5,
@@ -936,9 +931,7 @@ body.clube-shumi main section.conteudo ul.anteriores li,
 .col-lg-5,
 .col-xs-6,
 body.dep-cat-bus main .prateleira li,
-body.clube-shumi main section.conteudo ul.anteriores li,
 .col-sm-6,
-body.scanncut main section.projetos .projetos-imgs figure,
 .col-md-6,
 .col-lg-6,
 .col-xs-7,
@@ -985,7 +978,6 @@ body.institucional > .container main form .section-slider .formSection-title,
 body.institucional > h3.tlt-shelf main form .section-slider .formSection-title,
 body.institucional > .container main form .section-slider .formSection-sub-title,
 body.institucional > h3.tlt-shelf main form .section-slider .formSection-sub-title,
-body.scanncut main section.projetos .projetos-imgs figure,
 .col-sm-12,
 .col-md-12,
 .col-lg-12 {
@@ -1002,7 +994,6 @@ body.scanncut main section.projetos .projetos-imgs figure,
 .col-xs-5,
 .col-xs-6,
 body.dep-cat-bus main .prateleira li,
-body.clube-shumi main section.conteudo ul.anteriores li,
 .col-xs-7,
 .col-xs-8,
 .col-xs-9,
@@ -1028,8 +1019,7 @@ body.institucional > h3.tlt-shelf main form[name="Fale-Conosco"] fieldset,
 body.institucional > .container main form .section-slider .formSection-title,
 body.institucional > h3.tlt-shelf main form .section-slider .formSection-title,
 body.institucional > .container main form .section-slider .formSection-sub-title,
-body.institucional > h3.tlt-shelf main form .section-slider .formSection-sub-title,
-body.scanncut main section.projetos .projetos-imgs figure {
+body.institucional > h3.tlt-shelf main form .section-slider .formSection-sub-title {
 	float: left;
 }
 
@@ -1054,8 +1044,7 @@ body.scanncut main section.projetos .projetos-imgs figure {
 }
 
 .col-xs-6,
-body.dep-cat-bus main .prateleira li,
-body.clube-shumi main section.conteudo ul.anteriores li {
+body.dep-cat-bus main .prateleira li {
 	width: 50%;
 }
 
@@ -1099,8 +1088,7 @@ body.institucional > h3.tlt-shelf main form[name="Fale-Conosco"] fieldset,
 body.institucional > .container main form .section-slider .formSection-title,
 body.institucional > h3.tlt-shelf main form .section-slider .formSection-title,
 body.institucional > .container main form .section-slider .formSection-sub-title,
-body.institucional > h3.tlt-shelf main form .section-slider .formSection-sub-title,
-body.scanncut main section.projetos .projetos-imgs figure {
+body.institucional > h3.tlt-shelf main form .section-slider .formSection-sub-title {
 	width: 100%;
 }
 
@@ -1424,18 +1412,7 @@ body.institucional > h3.tlt-shelf main form .section-slider .formSection,
 body.institucional > .container main form .section-slider div label.required,
 body.institucional > h3.tlt-shelf main form .section-slider div label.required,
 body.institucional > .container main form .menu .progress-bar:before,
-body.institucional > h3.tlt-shelf main form .menu .progress-bar:before,
-body.videos main section.videos .container #yt-app #more-videos #load-more-wrapper #load-more-videos,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos #load-more-wrapper #load-more-videos,
-body.impressora-textil main section#bndes .container div .faca-seu-cartao,
-body.impressora-textil main section#bndes h3.tlt-shelf div .faca-seu-cartao,
-body.impressora-textil main section#contato .consultor form button[type=submit],
-body.scanncut header + nav.menu ul li a,
-body.scanncut header + nav.menu ul li a:hover,
-body.scanncut main .saiba-mais,
-body.scanncut main section.projetos .projetos-imgs figure a,
-body.scanncut main section.projetos .projetos-imgs figure a img,
-body.categoria.kirigami main {
+body.institucional > h3.tlt-shelf main form .menu .progress-bar:before {
 	transition-duration: .3s;
 	transition-timing-function: ease;
 }
@@ -1688,6 +1665,16 @@ footer .top-box .instaApp-feed {
 	display: none;
 }
 
+footer .bg-yellow,
+footer .menu-header ul .menuClose,
+.menu-header ul footer .menuClose,
+footer body.produto main .discountHighLight .flag,
+body.produto main .discountHighLight footer .flag,
+footer body.dep-cat-bus main section.sidebar .menuClose,
+body.dep-cat-bus main section.sidebar footer .menuClose {
+	text-align: center;
+}
+
 footer .mid-box {
 	padding: 45px 0;
 }
@@ -1742,6 +1729,7 @@ footer .mid-box h3.tlt-shelf > div:first-of-type > div:not(:first-of-type) {
 
 footer .mid-box .container > div:first-of-type ul,
 footer .mid-box h3.tlt-shelf > div:first-of-type ul {
+	width: 100%;
 	float: left;
 	padding-top: 10px;
 }
@@ -1804,6 +1792,15 @@ footer .mid-box h3.tlt-shelf > div:last-of-type ul li svg {
 footer .mid-box .container > div:last-of-type ul li a:hover,
 footer .mid-box h3.tlt-shelf > div:last-of-type ul li a:hover {
 	text-decoration: underline;
+}
+
+footer .mid-box ul.txt-magenta {
+	width: 100%;
+	text-align: center;
+}
+
+footer .mid-box ul.txt-magenta li {
+	display: block;
 }
 
 footer .mid-box .newsletter {
@@ -2242,8 +2239,7 @@ ul.menu-subscribe li.gift a {
 	fill: #FED118;
 }
 
-.CloseButton,
-body.favoritos .favList .favorito .removeFavorite {
+.CloseButton {
 	border: 0;
 	width: 20px;
 	height: 20px;
@@ -2251,9 +2247,7 @@ body.favoritos .favList .favorito .removeFavorite {
 }
 
 .CloseButton:before,
-body.favoritos .favList .favorito .removeFavorite:before,
-.CloseButton:after,
-body.favoritos .favList .favorito .removeFavorite:after {
+.CloseButton:after {
 	top: 50%;
 	left: 50%;
 	content: '';
@@ -2264,14 +2258,12 @@ body.favoritos .favList .favorito .removeFavorite:after {
 	    transform: translateY(-50%) translateX(-50%) rotate(45deg);
 }
 
-.CloseButton:before,
-body.favoritos .favList .favorito .removeFavorite:before {
+.CloseButton:before {
 	width: 100%;
 	height: 3px;
 }
 
-.CloseButton:after,
-body.favoritos .favList .favorito .removeFavorite:after {
+.CloseButton:after {
 	width: 3px;
 	height: 100%;
 }
@@ -3025,11 +3017,9 @@ section.newsletter .news-box form button:hover {
 	    transform: translateX(-50%);
 }
 
-.popup-wrapper .popup .CloseButton,
-.popup-wrapper .popup body.favoritos .favList .favorito .removeFavorite,
-body.favoritos .favList .favorito .popup-wrapper .popup .removeFavorite {
-	top: 20px;
-	right: 20px;
+.popup-wrapper .popup .CloseButton {
+	top: 10px;
+	right: 10px;
 	position: absolute;
 }
 
@@ -3165,6 +3155,17 @@ body.favoritos .favList .favorito .popup-wrapper .popup .removeFavorite {
 
 .calculadora-popup form button {
 	margin: 10px auto !important;
+}
+
+.calculadora-popup span.txt-gray,
+.calculadora-popup span.calc,
+.calculadora-popup span.options,
+.calculadora-popup body.produto main .price-section span.valor-de,
+body.produto main .price-section .calculadora-popup span.valor-de,
+.calculadora-popup body.produto main .price-section span.valor-dividido,
+body.produto main .price-section .calculadora-popup span.valor-dividido {
+	display: block;
+	line-height: 20px;
 }
 
 .calculadora-popup ul {
@@ -4512,6 +4513,10 @@ body.home section.boxes .lancamentos h2 {
    Página de Produto
    ========================================================================== */
 
+body.produto .thumbnails {
+	display: none;
+}
+
 body.produto .dimensoes-obs span {
 	display: block;
 	margin-bottom: 10px;
@@ -4801,6 +4806,10 @@ body.produto main .price-section > div {
 	position: initial;
 }
 
+body.produto main .price-section div {
+	margin: 0 !important;
+}
+
 body.produto main .price-section button[name="formas-pagamento"] {
 	border: 0;
 	z-index: 1;
@@ -4816,7 +4825,7 @@ body.produto main .price-section button[name="formas-pagamento"] {
 }
 
 body.produto main .price-section button[name="formas-pagamento"] i {
-	height: 37px;
+	height: 23px;
 	border-radius: 10px;
 	-ms-flex-align: center;
 	    align-items: center;
@@ -4825,8 +4834,8 @@ body.produto main .price-section button[name="formas-pagamento"] i {
 }
 
 body.produto main .price-section button[name="formas-pagamento"] i svg {
-	width: 55px;
-	height: 55px;
+	width: 35px;
+	height: 35px;
 	display: block;
 }
 
@@ -4891,6 +4900,10 @@ body.produto main .price-section .formas-de-pagamento .other-payment-method-cont
 
 body.produto main .price-section .valor-por {
 	font-size: 0px;
+}
+
+body.produto main .price-section .valor-por .skuBestPrice {
+	font-size: 28px;
 }
 
 body.produto main .price-section .valor-dividido:before {
@@ -5024,6 +5037,7 @@ body.produto main .skus-dimensoes {
 }
 
 body.produto main .skus-dimensoes li {
+	font-size: 14px;
 	list-style: none;
 	padding-top: 10px;
 	display: inline-block;
@@ -5109,6 +5123,7 @@ body.produto main .frete-quantidade #txtCep {
 	padding: 10px;
 	text-align: center;
 	display: inline-block;
+	border: 1px solid #ccc;
 }
 
 body.produto main .frete-quantidade #btnFreteSimulacao {
@@ -5479,8 +5494,8 @@ body.dep-cat-bus main section.mainShelf {
 }
 
 body.dep-cat-bus main section.sidebar {
-	top: 0;
 	left: 0;
+	top: 48px;
 	opacity: 0;
 	z-index: 9;
 	padding: 0;
@@ -6529,6 +6544,13 @@ body.institucional > h3.tlt-shelf nav a:hover {
 	padding-left: 10px;
 }
 
+body.institucional > .container .left-img,
+body.institucional > h3.tlt-shelf .left-img,
+body.institucional > .container .right-img,
+body.institucional > h3.tlt-shelf .right-img {
+	display: none;
+}
+
 body.institucional > .container main,
 body.institucional > h3.tlt-shelf main {
 	-ms-flex: 1;
@@ -6819,1408 +6841,6 @@ body.institucional > h3.tlt-shelf main form .menu button.next {
 	    order: 0;
 }
 
-body.clube-shumi main {
-	font-size: 12px;
-	padding-top: 0;
-}
-
-body.clube-shumi main h3 {
-	padding: 0 20px;
-	text-align: center;
-}
-
-body.clube-shumi main h3.tlt-shelf + span {
-	padding: 0 20px;
-	line-height: 20px;
-}
-
-body.clube-shumi main p {
-	line-height: 24px;
-}
-
-body.clube-shumi main section {
-	float: left;
-	width: 100%;
-}
-
-body.clube-shumi main section .menu-subscribe {
-	margin: 0 auto;
-}
-
-body.clube-shumi main section.banner-club {
-	overflow: hidden;
-	position: relative;
-}
-
-body.clube-shumi main section.banner-club .box-banner img {
-	width: 279%;
-	height: auto;
-	display: block;
-	margin-left: -48%;
-}
-
-body.clube-shumi main section.banner-club ul.menu-subscribe {
-	top: 56%;
-	left: 4%;
-	position: absolute;
-}
-
-body.clube-shumi main section.clube-shumi {
-	padding: 30px 0;
-	background: #eb7733;
-	color: #fff;
-}
-
-body.clube-shumi main section.clube-shumi h3 {
-	line-height: 40px;
-}
-
-body.clube-shumi main section.clube-shumi h3.tlt-shelf {
-	color: #fff;
-}
-
-body.clube-shumi main section.clube-shumi h3.tlt-shelf:after,
-body.clube-shumi main section.clube-shumi h3.tlt-shelf:before {
-	border-color: #fff;
-}
-
-body.clube-shumi main section.clube-shumi h3.tlt-shelf + span {
-	color: #fff;
-}
-
-body.clube-shumi main section.clube-shumi h3:not(.tlt-shelf) {
-	font-size: 32px;
-	width: 100%;
-	padding: 25px 0;
-}
-
-body.clube-shumi main section.clube-shumi .about p,
-body.clube-shumi main section.clube-shumi .reasons p {
-	text-align: justify;
-}
-
-body.clube-shumi main section.clube-shumi .about p,
-body.clube-shumi main section.clube-shumi .about ul:not(.menu-subscribe),
-body.clube-shumi main section.clube-shumi .reasons p,
-body.clube-shumi main section.clube-shumi .reasons ul:not(.menu-subscribe) {
-	font-size: 16px;
-	padding: 10px 5%;
-	text-transform: none;
-}
-
-body.clube-shumi main section.clube-shumi .about ul:not(.menu-subscribe),
-body.clube-shumi main section.clube-shumi .reasons ul:not(.menu-subscribe) {
-	padding-left: 15%;
-	line-height: 28px;
-	padding-bottom: 19px;
-}
-
-body.clube-shumi main section.clube-shumi .about ul:not(.menu-subscribe) li,
-body.clube-shumi main section.clube-shumi .reasons ul:not(.menu-subscribe) li {
-	padding: 10px 0;
-}
-
-body.clube-shumi main section.clube-shumi .about .menu-subscribe,
-body.clube-shumi main section.clube-shumi .reasons .menu-subscribe {
-	padding-top: 25px;
-}
-
-body.clube-shumi main section.clube-shumi .about .menu-subscribe .subscribe a,
-body.clube-shumi main section.clube-shumi .reasons .menu-subscribe .subscribe a {
-	color: #eb7733;
-	background: #fff;
-}
-
-body.clube-shumi main section.funcionamento {
-	padding: 45px 0;
-}
-
-body.clube-shumi main section.funcionamento .item {
-	padding: 0 45px;
-	text-align: center;
-}
-
-body.clube-shumi main section.funcionamento .item img,
-body.clube-shumi main section.funcionamento .item h4,
-body.clube-shumi main section.funcionamento .item p {
-	padding: 10px 0;
-}
-
-body.clube-shumi main section.funcionamento .item h4 {
-	font-size: 20px;
-}
-
-body.clube-shumi main section.funcionamento .item p {
-	font-size: 14px;
-	text-align: justify;
-	text-transform: none;
-}
-
-body.clube-shumi main section.conteudo {
-	background: #eb7733;
-	padding: 25px 0 50px;
-	color: #fff;
-	text-transform: none;
-}
-
-body.clube-shumi main section.conteudo a {
-	color: inherit;
-	text-decoration: none;
-}
-
-body.clube-shumi main section.conteudo h3.tlt-shelf {
-	color: #fff;
-}
-
-body.clube-shumi main section.conteudo h3.tlt-shelf:after,
-body.clube-shumi main section.conteudo h3.tlt-shelf:before {
-	border-color: #fff;
-}
-
-body.clube-shumi main section.conteudo h3.tlt-shelf + span {
-	color: #fff;
-}
-
-body.clube-shumi main section.conteudo span {
-	padding: 10px 0;
-	display: inline-block;
-}
-
-body.clube-shumi main section.conteudo .anterior {
-	padding: 20px 7px;
-	text-align: center;
-}
-
-body.clube-shumi main section.conteudo .anterior img {
-	width: 100%;
-	border: 7px solid #fff;
-}
-
-body.clube-shumi main section.conteudo .anterior span {
-	font-size: 18px;
-}
-
-body.clube-shumi main section.conteudo ul.itens {
-	font-size: 16px;
-	line-height: 25px;
-	padding-left: 25px;
-}
-
-body.clube-shumi main section.conteudo ul.anteriores {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	text-align: center;
-}
-
-body.clube-shumi main section.conteudo ul.anteriores li {
-	list-style: none;
-	padding-bottom: 10px;
-	display: inline-block;
-}
-
-body.clube-shumi main section.conteudo ul.anteriores li:first-child {
-	width: 100%;
-}
-
-body.clube-shumi main section.conteudo ul.anteriores li img {
-	width: 100%;
-	height: auto;
-}
-
-body.clube-shumi main section.conteudo ul.anteriores li span {
-	font-size: 16px;
-}
-
-body.clube-shumi main section.planos {
-	text-align: center;
-}
-
-body.clube-shumi main section.planos .item {
-	margin: 25px;
-	padding: 25px;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	text-align: center;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-ms-flex-direction: column;
-	    flex-direction: column;
-	border: 1px solid #e8e8e8;
-}
-
-body.clube-shumi main section.planos .item h4 {
-	font-size: 18px;
-	text-transform: none;
-	padding-bottom: 45px;
-}
-
-body.clube-shumi main section.planos .item h4 + .price {
-	padding-top: 24px;
-}
-
-body.clube-shumi main section.planos .item .off {
-	font-size: 14px;
-	color: #7b7b7b;
-	padding: 5px 0;
-	text-transform: none;
-}
-
-body.clube-shumi main section.planos .item .price {
-	font-size: 16px;
-	color: #eb7733;
-	font-weight: bold;
-}
-
-body.clube-shumi main section.outros-servicos .minibanners-services {
-	padding-bottom: 50px;
-}
-
-body.videos main {
-	overflow: hidden;
-}
-
-body.videos main h3.tlt-shelf:after,
-body.videos main h3.tlt-shelf:before {
-	border-color: #ff0000;
-}
-
-body.videos main h3.tlt-shelf + span {
-	font-size: 24px;
-	color: #ff0000;
-}
-
-body.videos main section.videos .container,
-body.videos main section.videos h3.tlt-shelf {
-	text-align: center;
-}
-
-body.videos main section.videos .container #yt-app,
-body.videos main section.videos h3.tlt-shelf #yt-app {
-	padding-top: 0;
-	padding-bottm: 0;
-}
-
-body.videos main section.videos .container #yt-app #more-videos ul,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos ul {
-	padding: 10px;
-	background: #f1f1f1;
-	-ms-flex-pack: center;
-	    justify-content: center;
-}
-
-body.videos main section.videos .container #yt-app #more-videos ul li,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos ul li {
-	margin: 6px;
-	padding: 12px;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	background: #fff;
-}
-
-body.videos main section.videos .container #yt-app #more-videos ul li h3,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos ul li h3 {
-	padding: 10px 0;
-}
-
-body.videos main section.videos .container #yt-app #more-videos ul li img,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos ul li img {
-	width: 100%;
-}
-
-body.videos main section.videos .container #yt-app #more-videos #load-more-wrapper,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos #load-more-wrapper {
-	padding: 15px 0;
-}
-
-body.videos main section.videos .container #yt-app #more-videos #load-more-wrapper #load-more-videos,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos #load-more-wrapper #load-more-videos {
-	font-size: 16px;
-	border: 0;
-	background: none;
-}
-
-body.videos.blackFriday main #api-facebook-include iframe {
-	background: #fff;
-}
-
-body.videos.blackFriday main section.shelf {
-	border-bottom: none;
-}
-
-body.impressora-textil header + nav.menu {
-	float: none;
-	clear: both;
-	border-bottom: 1px solid #cfcfcf;
-}
-
-body.impressora-textil header + nav.menu.menu-persistente {
-	top: 112px;
-	width: 100%;
-	z-index: 99;
-	position: fixed;
-	background-color: #fff;
-}
-
-body.impressora-textil header + nav.menu ul {
-	margin: 0 auto;
-	text-align: center;
-}
-
-body.impressora-textil header + nav.menu ul li {
-	padding: 0 5px;
-	margin: 0 !important;
-	border-color: #cfcfcf;
-}
-
-body.impressora-textil header + nav.menu ul li:first-child a {
-	border-left: 1px solid;
-}
-
-body.impressora-textil header + nav.menu ul li:nth-child(2) {
-	display: none;
-}
-
-body.impressora-textil main {
-	padding: 0;
-}
-
-body.impressora-textil main .row {
-	clear: both;
-}
-
-body.impressora-textil main .container,
-body.impressora-textil main h3.tlt-shelf {
-	padding: 0 15px;
-}
-
-body.impressora-textil main h2 {
-	font-size: 32px;
-	text-transform: none;
-}
-
-body.impressora-textil main h3 {
-	font-size: 16px;
-	padding: 10px 0 0;
-	line-height: 24px;
-	text-transform: none;
-}
-
-body.impressora-textil main h3:before {
-	content: '';
-	padding: 2px;
-	margin-top: 6px;
-	background: #000;
-	margin-right: 3px;
-	font-size: inherit;
-	border-radius: 100%;
-	vertical-align: top;
-	display: inline-block;
-}
-
-body.impressora-textil main p {
-	line-height: 24px;
-}
-
-body.impressora-textil main .mssg {
-	text-align: center;
-}
-
-body.impressora-textil main .mssg span {
-	font-size: 20px;
-	display: block;
-	padding: 10px 0;
-	text-transform: none;
-}
-
-body.impressora-textil main .mssg span em {
-	color: #35a1e2;
-	font-style: normal;
-}
-
-body.impressora-textil main section p {
-	font-size: 16px;
-	padding: 15px 0;
-	text-align: justify;
-	text-transform: none;
-}
-
-body.impressora-textil main section img {
-	padding: 0;
-}
-
-body.impressora-textil main section .item {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	padding-top: 25px;
-	-ms-flex-align: center;
-	    align-items: center;
-	padding-bottom: 25px;
-}
-
-body.impressora-textil main section .item div {
-	padding: 25px 0;
-}
-
-body.impressora-textil main section .item img {
-	padding: 0;
-	height: auto;
-}
-
-body.impressora-textil main section .item.text-first {
-	-ms-flex-direction: column-reverse;
-	    flex-direction: column-reverse;
-}
-
-body.impressora-textil main section.banners-top .video {
-	height: 0;
-	width: 100%;
-	position: relative;
-	padding-bottom: 56.25%;
-}
-
-body.impressora-textil main section.banners-top .video iframe {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
-
-body.impressora-textil main section.banners-top .video iframe .ytp-watermark {
-	display: none;
-}
-
-body.impressora-textil main section.banners-top .video .slide-content {
-	top: 50%;
-	left: 2%;
-	z-index: 1;
-	position: absolute;
-	-ms-transform: translateY(-50%);
-	    transform: translateY(-50%);
-}
-
-body.impressora-textil main section#impressora-gt-3 {
-	display: none;
-}
-
-body.impressora-textil main section#impressora-gt-3 img {
-	width: 100%;
-	height: auto;
-}
-
-body.impressora-textil main section#recursos .container,
-body.impressora-textil main section#recursos h3.tlt-shelf {
-	border-bottom: 1px solid #cdcdcd;
-}
-
-body.impressora-textil main section#recursos .banner {
-	display: none;
-}
-
-body.impressora-textil main section#recursos .pranchas {
-	padding-top: 50px;
-	text-align: center;
-	padding-bottom: 50px;
-}
-
-body.impressora-textil main section#recursos .pranchas img {
-	width: 60%;
-}
-
-body.impressora-textil main section#recursos .pranchas p {
-	text-align: center;
-}
-
-body.impressora-textil main section#tip-bar {
-	padding: 35px 0;
-	overflow: hidden;
-	background: #efefef;
-	background: linear-gradient(#f5f5f5, #efefef);
-}
-
-body.impressora-textil main section#tip-bar ul {
-	text-align: center;
-}
-
-body.impressora-textil main section#tip-bar ul li {
-	list-style: none;
-	padding: 25px 20px;
-	vertical-align: top;
-	display: inline-block;
-}
-
-body.impressora-textil main section#tip-bar ul li img {
-	height: 50px;
-	display: block;
-	margin: 0 auto 30px;
-}
-
-body.impressora-textil main section#tip-bar ul li span {
-	font-size: 16px;
-	text-transform: none;
-}
-
-body.impressora-textil main section#amostras {
-	padding: 50px 0;
-	text-align: center;
-}
-
-body.impressora-textil main section#amostras .slider {
-	max-width: 750px;
-	margin: 15px auto 0;
-}
-
-body.impressora-textil main section#amostras .slider .slick-list {
-	height: auto !important;
-}
-
-body.impressora-textil main section#amostras .slider .slick-dots {
-	bottom: 0;
-	padding: 15px 0;
-	position: relative;
-}
-
-body.impressora-textil main section#amostras .slider .slick-dots li button {
-	width: 12px;
-	height: 12px;
-	border-radius: 100%;
-	background: #797979;
-}
-
-body.impressora-textil main section#amostras .slider .slick-dots li[aria-hidden="false"] button,
-body.impressora-textil main section#amostras .slider .slick-dots li:hover button {
-	background: #191919;
-}
-
-body.impressora-textil main section#vantagens {
-	padding: 50px 0;
-	text-align: center;
-	background: #efefef;
-	background: linear-gradient(#f5f5f5, #efefef);
-}
-
-body.impressora-textil main section#vantagens ul {
-	padding-top: 25px;
-}
-
-body.impressora-textil main section#vantagens ul li {
-	width: 100%;
-	list-style: none;
-	padding: 25px 15px;
-	vertical-align: top;
-	display: inline-block;
-	box-sizing: border-box;
-}
-
-body.impressora-textil main section#vantagens ul li i {
-	display: block;
-	margin: 0 auto 15px;
-}
-
-body.impressora-textil main section#vantagens ul li img {
-	height: 100px;
-}
-
-body.impressora-textil main section#vantagens ul li span {
-	font-size: 16px;
-	text-transform: none;
-}
-
-body.impressora-textil main section#bndes .container,
-body.impressora-textil main section#bndes h3.tlt-shelf {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	overflow: hidden;
-	-ms-flex-align: center;
-	    align-items: center;
-}
-
-body.impressora-textil main section#bndes .container div,
-body.impressora-textil main section#bndes h3.tlt-shelf div {
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
-body.impressora-textil main section#bndes .container div p,
-body.impressora-textil main section#bndes h3.tlt-shelf div p {
-	margin-bottom: 25px;
-}
-
-body.impressora-textil main section#bndes .container div .faca-seu-cartao,
-body.impressora-textil main section#bndes h3.tlt-shelf div .faca-seu-cartao {
-	font-size: 16px;
-	color: #000;
-	max-width: none;
-	padding: 5px 35px;
-	border-radius: 25px;
-	text-transform: none;
-	text-decoration: none;
-	border: 1px solid #7f7f7f;
-}
-
-body.impressora-textil main section#bndes .container div .faca-seu-cartao:hover,
-body.impressora-textil main section#bndes h3.tlt-shelf div .faca-seu-cartao:hover {
-	color: #fff;
-	background: #7f7f7f;
-}
-
-body.impressora-textil main section#contato {
-	text-align: center;
-	border-top: 1px solid #cdcdcd;
-}
-
-body.impressora-textil main section#contato .consultor {
-	overflow: hidden;
-	background: #cbcbcb;
-	padding: 50px 0 15px;
-}
-
-body.impressora-textil main section#contato .consultor h3 {
-	font-weight: normal;
-}
-
-body.impressora-textil main section#contato .consultor h3:before {
-	display: none;
-}
-
-body.impressora-textil main section#contato .consultor form {
-	float: none;
-	margin: 0 auto;
-	padding: 25px 0;
-	max-width: 300px;
-}
-
-body.impressora-textil main section#contato .consultor form fieldset {
-	margin: 7px 0;
-}
-
-body.impressora-textil main section#contato .consultor form fieldset input,
-body.impressora-textil main section#contato .consultor form fieldset textarea {
-	font-size: 16px;
-	border: 0;
-	outline: 0;
-	width: 100%;
-	padding: 5px 10px;
-	border-radius: 25px;
-}
-
-body.impressora-textil main section#contato .consultor form fieldset textarea {
-	min-height: 75px;
-}
-
-body.impressora-textil main section#contato .consultor form button[type=submit] {
-	border: 0;
-	color: #fff;
-	background: #000;
-	padding: 5px 15px;
-	font-weight: bold;
-	border-radius: 25px;
-}
-
-body.impressora-textil main section#contato .consultor form button[type=submit]:hover {
-	background: #eb7733;
-}
-
-body.impressora-textil main section#contato .showroom {
-	position: relative;
-}
-
-body.impressora-textil main section#contato .showroom .hover {
-	top: 0;
-	width: 100%;
-	padding: 25px 0;
-	text-align: center;
-	position: absolute;
-	background-color: rgba(255, 255, 255, 0.8);
-}
-
-body.impressora-textil main section#contato .showroom .hover h3:before {
-	display: none;
-}
-
-body.impressora-textil main section#contato .showroom .hover ul {
-	padding-top: 15px;
-}
-
-body.impressora-textil main section#contato .showroom .hover ul li {
-	font-size: 16px;
-	text-transform: none;
-}
-
-body.impressora-textil main section#contato .showroom iframe {
-	height: 600px;
-}
-
-body.impressora-textil main section#especificacoes {
-	font-size: 16px;
-	padding: 50px 0;
-	background: #f2f2f2;
-	text-transform: none;
-}
-
-body.impressora-textil main section#especificacoes table {
-	width: 85%;
-	margin: 25px auto;
-	max-width: 1250px;
-}
-
-body.impressora-textil main section#especificacoes table thead {
-	font-size: 22px;
-	text-align: left;
-}
-
-body.impressora-textil main section#especificacoes table thead th {
-	padding-bottom: 5px;
-}
-
-body.impressora-textil main section#especificacoes table tbody tr {
-	border-top: 1px solid #d5d5d5;
-}
-
-body.impressora-textil main section#especificacoes table tbody tr td {
-	width: 100%;
-	display: block;
-	padding: 10px 0;
-}
-
-body.impressora-textil main section#especificacoes table tbody tr td:first-child {
-	color: #35a1e2;
-}
-
-body.impressora-textil main section#especificacoes table tbody tr td ul li {
-	list-style: none;
-}
-
-body.impressora-textil main section#especificacoes table tbody tr td ul li:before {
-	content: '-';
-	padding-right: 5px;
-	vertical-align: top;
-}
-
-body.impressora-textil.blackFriday main h2,
-body.impressora-textil.blackFriday main h3,
-body.impressora-textil.blackFriday main p {
-	color: #fff;
-}
-
-body.impressora-textil.blackFriday main section#recursos .container,
-body.impressora-textil.blackFriday main section#recursos h3.tlt-shelf {
-	border-bottom: none;
-}
-
-body.impressora-textil.blackFriday main section#vantagens h2,
-body.impressora-textil.blackFriday main section#vantagens h3,
-body.impressora-textil.blackFriday main section#vantagens p,
-body.impressora-textil.blackFriday main section#vantagens a {
-	color: #000;
-}
-
-body.impressora-textil.blackFriday main section#bndes .container div .faca-seu-cartao,
-body.impressora-textil.blackFriday main section#bndes h3.tlt-shelf div .faca-seu-cartao {
-	color: #fff;
-}
-
-body.impressora-textil.blackFriday main section#contato .container span,
-body.impressora-textil.blackFriday main section#contato h3.tlt-shelf span {
-	color: #fff;
-}
-
-body.impressora-textil.blackFriday main section#contato .consultor h2,
-body.impressora-textil.blackFriday main section#contato .consultor h3,
-body.impressora-textil.blackFriday main section#contato .consultor p,
-body.impressora-textil.blackFriday main section#contato .consultor a,
-body.impressora-textil.blackFriday main section#contato .showroom h2,
-body.impressora-textil.blackFriday main section#contato .showroom h3,
-body.impressora-textil.blackFriday main section#contato .showroom p,
-body.impressora-textil.blackFriday main section#contato .showroom a {
-	color: #000;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes {
-	font-size: 16px;
-	padding: 50px 0;
-	background: #f2f2f2;
-	text-transform: none;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table {
-	width: 85%;
-	margin: 25px auto;
-	max-width: 1250px;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table thead {
-	font-size: 22px;
-	text-align: left;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table thead th {
-	padding-bottom: 5px;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table tbody tr {
-	border-top: 1px solid #d5d5d5;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table tbody tr td {
-	width: 100%;
-	display: block;
-	padding: 10px 0;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table tbody tr td:first-child {
-	color: #35a1e2;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table tbody tr td ul li {
-	list-style: none;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table tbody tr td ul li:before {
-	content: '-';
-	padding-right: 5px;
-	vertical-align: top;
-}
-
-body.scanncut header + nav.menu {
-	float: none;
-	clear: both;
-	padding: 12px 0;
-	overflow: hidden;
-	text-align: center;
-	background: #8658a3;
-	border-bottom: 1px solid #cfcfcf;
-}
-
-body.scanncut header + nav.menu.menu-persistente {
-	top: 112px;
-	width: 100%;
-	z-index: 99;
-	position: fixed;
-	background-color: #fff;
-}
-
-body.scanncut header + nav.menu ul {
-	margin: 0 auto;
-}
-
-body.scanncut header + nav.menu ul li {
-	padding: 0;
-	border-color: #fff;
-	vertical-align: top;
-	display: inline-block;
-	margin: 0 0 20px !important;
-}
-
-body.scanncut header + nav.menu ul li:first-child a {
-	border-left: 1px solid;
-}
-
-body.scanncut header + nav.menu ul li:nth-child(2) {
-	display: inline-block;
-}
-
-body.scanncut header + nav.menu ul li a {
-	font-size: 12px;
-	color: #fff;
-	display: block;
-	text-decoration: none;
-	border-right: 1px solid;
-	padding: 2px 10px !important;
-}
-
-body.scanncut header + nav.menu ul li a:hover {
-	font-size: 15px;
-	padding: 0 15px !important;
-}
-
-body.scanncut .shelf-scancut .best-price,
-body.scanncut .shelf-scancut .installment,
-body.scanncut .shelf-scancut .preco-boleto {
-	color: #894794;
-}
-
-body.scanncut .shelf-scancut .add a {
-	background-color: #894794 !important;
-}
-
-body.scanncut .shelf-scancut .prateleira ul li {
-	width: 100%;
-}
-
-body.scanncut .shelf-scancut .prateleira ul li .box-item {
-	border: 1px solid #894794;
-}
-
-body.scanncut main {
-	padding: 0;
-}
-
-body.scanncut main .container,
-body.scanncut main h3.tlt-shelf {
-	max-width: 1000px;
-}
-
-body.scanncut main h2 {
-	font-size: 24px;
-	color: #333333;
-	font-weight: 300;
-	line-height: 32px;
-	text-transform: none;
-}
-
-body.scanncut main img {
-	padding: 0;
-	height: auto;
-	max-width: 100%;
-	display: inline-block;
-}
-
-body.scanncut main p {
-	font-size: 16px;
-	float: left;
-	color: #333333;
-	padding: 42px 0;
-	line-height: 20px;
-	text-transform: none;
-}
-
-body.scanncut main .saiba-mais {
-	font-size: 16px;
-	color: #fff;
-	padding: 5px;
-	margin: 5px auto;
-	background: #0088cc;
-	display: inline-block;
-	text-decoration: none;
-}
-
-body.scanncut main .saiba-mais:hover {
-	background: #05a9fb;
-}
-
-body.scanncut main section {
-	padding: 30px 15px;
-	overflow: hidden;
-}
-
-body.scanncut main section.banners-top {
-	background: url("/arquivos/scanncut-fundo.jpg");
-	padding: 0;
-	background-size: auto 64.5%;
-	background-repeat: no-repeat;
-	background-position: top center;
-}
-
-body.scanncut main section.banners-top .container,
-body.scanncut main section.banners-top h3.tlt-shelf {
-	max-width: 1108px;
-}
-
-body.scanncut main section.banners-top .container img,
-body.scanncut main section.banners-top h3.tlt-shelf img {
-	width: 100%;
-	height: auto;
-}
-
-body.scanncut main section.scanncut {
-	text-align: center;
-}
-
-body.scanncut main section.scanncut h2 {
-	color: #990099;
-}
-
-body.scanncut main section.scanncut .frases {
-	font-size: 26px;
-	color: #333;
-	float: left;
-	width: 100%;
-	padding: 40px 0;
-	line-height: 30px;
-	text-align: center;
-	text-transform: none;
-	border-top: 1px solid #d6d6d6;
-}
-
-body.scanncut main section.scanncut .frases .palavras {
-	width: 200px;
-	height: 54px;
-	margin: 10px 0;
-	overflow: hidden;
-	background: #0088cc;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-body.scanncut main section.scanncut .frases .palavras span {
-	color: #fff;
-	display: block;
-	line-height: 48px;
-	animation: loop 10s 3s infinite;
-}
-
-body.scanncut main section.possibilidades h2 {
-	text-align: center;
-}
-
-body.scanncut main section.possibilidades p {
-	text-align: justify;
-}
-
-body.scanncut main section.projetos {
-	text-align: center;
-	background: #F2F2F2;
-}
-
-body.scanncut main section.projetos p {
-	padding: 35px 0;
-}
-
-body.scanncut main section.projetos .projetos-imgs {
-	padding: 0;
-}
-
-body.scanncut main section.projetos .projetos-imgs figure a {
-	text-decoration: none;
-}
-
-body.scanncut main section.projetos .projetos-imgs figure a figcaption {
-	font-size: 16px;
-	padding: 5px 0;
-	text-align: center;
-	text-transform: none;
-}
-
-body.scanncut main section.projetos .projetos-imgs figure a:hover {
-	color: #004b93;
-	text-decoration: underline;
-}
-
-body.scanncut main section.projetos .projetos-imgs figure a:hover img {
-	filter: grayscale(100%);
-}
-
-body.scanncut main section.videos iframe {
-	width: 100%;
-	margin-bottom: 15px;
-}
-
-body.scanncut main section.acessorios .container,
-body.scanncut main section.acessorios h3.tlt-shelf {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-direction: column-reverse;
-	    flex-direction: column-reverse;
-}
-
-body.scanncut main section.frase {
-	display: none;
-	text-align: center;
-}
-
-body.scanncut main section.frase .container,
-body.scanncut main section.frase h3.tlt-shelf {
-	padding: 10px 0;
-	border: 1px solid #ccc;
-	border-left: 0;
-	border-right: 0;
-	position: relative;
-}
-
-body.scanncut main section.frase h2 {
-	font-size: 36px;
-	left: 50%;
-	line-height: 50px;
-	position: absolute;
-	font-weight: normal;
-	-ms-transform: translateX(-50%);
-	    transform: translateX(-50%);
-}
-
-body.scanncut main section.especificacoes {
-	margin-top: 200px;
-	overflow: visible;
-	background: #f2f2f2;
-}
-
-body.scanncut main section.especificacoes .container,
-body.scanncut main section.especificacoes h3.tlt-shelf {
-	margin-top: -200px;
-}
-
-body.scanncut main section.especificacoes h3 {
-	font-size: 16px;
-	color: #333;
-	font-weight: normal;
-	text-transform: none;
-}
-
-body.scanncut main section.especificacoes h2 {
-	font-size: 33px;
-	color: #004b93;
-	padding-bottom: 35px;
-}
-
-body.scanncut main section.especificacoes table {
-	font-size: 12px;
-	width: 100%;
-	display: table;
-	table-layout: fixed;
-}
-
-body.scanncut main section.especificacoes table tr td {
-	background: #fff;
-	padding: 16px 10px;
-	text-align: center;
-	vertical-align: top;
-	text-transform: none;
-	border: 1px solid #ccc;
-}
-
-body.scanncut main section.especificacoes table tr td.espec {
-	color: #0088cc;
-	text-align: left;
-	background: #e9e8e8;
-}
-
-body.scanncut main section.especificacoes table tr td img {
-	max-width: 100%;
-	height: auto;
-}
-
-body.scanncut.blackFriday main h2 {
-	color: #fff;
-}
-
-body.scanncut.blackFriday main p {
-	color: #fff;
-}
-
-body.scanncut.blackFriday main .saiba-mais {
-	color: #fff;
-}
-
-body.scanncut.blackFriday main section.scanncut .frases {
-	color: #fff;
-}
-
-body.scanncut.blackFriday main section.projetos h2,
-body.scanncut.blackFriday main section.projetos p {
-	color: #000;
-}
-
-body.scanncut.blackFriday main section.frase .container,
-body.scanncut.blackFriday main section.frase h3.tlt-shelf {
-	border: none;
-}
-
-body.cursos main .cursos .more-courses {
-	padding: 0;
-	border: 1px solid #e0e0e0;
-}
-
-body.cursos main .cursos .paginador {
-	display: none;
-	margin-top: 25px;
-}
-
-body.categoria.kirigami main {
-	padding-top: 0;
-	position: relative;
-	background: url("/arquivos/kirigami-parallax.jpg") #ebcae8;
-	background-size: 250%;
-	background-repeat: no-repeat;
-	background-position: left bottom;
-}
-
-body.categoria.kirigami main.parallax {
-	background-attachment: fixed;
-}
-
-body.categoria.kirigami main section.banners-top img {
-	width: 300%;
-	height: auto;
-	margin-left: -45%;
-}
-
-body.categoria.kirigami main section.pageInfo {
-	font-size: 14px;
-	text-transform: none;
-}
-
-body.categoria.kirigami main section.pageInfo .container,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-pack: justify;
-	    justify-content: space-between;
-}
-
-body.categoria.kirigami main section.pageInfo .container h3.tlt-shelf,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf h3.tlt-shelf {
-	text-transform: uppercase;
-}
-
-body.categoria.kirigami main section.pageInfo .container h3.tlt-shelf:before,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf h3.tlt-shelf:before,
-body.categoria.kirigami main section.pageInfo .container h3.tlt-shelf:after,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf h3.tlt-shelf:after {
-	border-color: #fff;
-}
-
-body.categoria.kirigami main section.pageInfo .container h3.tlt-shelf + span,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf h3.tlt-shelf + span {
-	color: #ac3ea2;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div {
-	width: 100%;
-	padding: 25px;
-	margin: 15px 0;
-	background: #f5e0f3;
-	border: 5px solid #e6abe0;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:first-of-type .texto,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:first-of-type .texto {
-	float: left;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:last-of-type .fb-page,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:last-of-type .fb-page {
-	width: 100%;
-	overflow: hidden;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:last-of-type a,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:last-of-type a {
-	display: block;
-	color: #ba48ae;
-	padding: 4px 0;
-	text-decoration: none;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:last-of-type a:active,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:last-of-type a:active,
-body.categoria.kirigami main section.pageInfo .container > div:last-of-type a:visited,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:last-of-type a:visited {
-	color: #ba48ae;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:last-of-type a:first-of-type,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:last-of-type a:first-of-type {
-	padding-left: 30px;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:last-of-type a svg,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:last-of-type a svg {
-	width: 20px;
-	height: 20px;
-	margin-right: 5px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:last-of-type a svg path,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:last-of-type a svg path {
-	fill: #b947ae;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div h3,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div h3 {
-	font-size: 24px;
-	color: #bb48af;
-	padding: 15px 0 5px;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div p,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div p {
-	padding: 10px 0;
-	line-height: 18px;
-	text-align: justify;
-}
-
-body.categoria.kirigami main section.shelf {
-	border-bottom: 0;
-}
-
-body.categoria.kirigami main section.shelf li h3.tlt-shelf:after,
-body.categoria.kirigami main section.shelf li h3.tlt-shelf:before {
-	border-color: #bb48af;
-}
-
-body.categoria.kirigami main section.shelf li h3.tlt-shelf + span {
-	color: #bb48af;
-}
-
-body.categoria.kirigami main section.shelf li .box-item .best-price {
-	color: #bb48af;
-}
-
-body.categoria.kirigami main section.shelf li .box-item .preco-boleto {
-	color: #bb48af;
-}
-
-body.categoria.kirigami main section.shelf li .box-item .wrapper-buy-button-asynchronous .add a {
-	background: #bb48af;
-}
-
-body.categoria.kirigami main section.shelf li .box-item .wrapper-buy-button-asynchronous .add a:hover {
-	background: #5a0d67;
-}
-
-body.categoria.kirigami main section.shelf li .box-item .vejaMais a {
-	color: #bb48af;
-}
-
-body.categoria.kirigami main section.shelf li .box-item:hover {
-	border-color: #bb48af;
-}
-
-body.categoria.kirigami main section.banners-bottom {
-	display: none;
-}
-
-body.categoria.kirigami main section.banners-bottom .box-banner img {
-	width: 100%;
-	height: auto;
-}
-
-body.categoria.kirigami.blackFriday main {
-	background-image: none;
-	background-color: #000;
-}
-
-body.favoritos .favList {
-	padding: 15px 0;
-	min-height: 480px;
-}
-
-body.favoritos .favList .favorito {
-	width: 100%;
-	padding: 7px;
-	max-width: 280px;
-	position: relative;
-}
-
-body.favoritos .favList .favorito .removeFavorite {
-	top: 22px;
-	right: 15px;
-	position: absolute;
-}
-
 /* ==========================================================================
    Slick
    ========================================================================== */
@@ -8280,9 +6900,7 @@ body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection
 .slider body.institucional > .container main form .section-slider .formSection-sub-title,
 body.institucional > .container main form .section-slider .slider .formSection-sub-title,
 .slider body.institucional > h3.tlt-shelf main form .section-slider .formSection-sub-title,
-body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection-sub-title,
-.slider body.scanncut main section.projetos .projetos-imgs figure,
-body.scanncut main section.projetos .projetos-imgs .slider figure {
+body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection-sub-title {
 	padding-right: 0;
 }
 
@@ -8611,10 +7229,8 @@ section.blog.shuminoblog .post-contents .post-call,
 .col-sm-4,
 body.institucional > .container main form[name="Fale-Conosco"] fieldset:not(.mensagem),
 body.institucional > h3.tlt-shelf main form[name="Fale-Conosco"] fieldset:not(.mensagem),
-body.clube-shumi main section.conteudo ul.anteriores li,
 .col-sm-5,
 .col-sm-6,
-body.scanncut main section.projetos .projetos-imgs figure,
 .col-sm-7,
 .col-sm-8,
 .col-sm-9,
@@ -8639,8 +7255,7 @@ section.blog.shuminoblog .post-contents .post-call {
 
 .col-sm-4,
 body.institucional > .container main form[name="Fale-Conosco"] fieldset:not(.mensagem),
-body.institucional > h3.tlt-shelf main form[name="Fale-Conosco"] fieldset:not(.mensagem),
-body.clube-shumi main section.conteudo ul.anteriores li {
+body.institucional > h3.tlt-shelf main form[name="Fale-Conosco"] fieldset:not(.mensagem) {
 	width: 33.3333333333%;
 }
 
@@ -8648,8 +7263,7 @@ body.clube-shumi main section.conteudo ul.anteriores li {
 	width: 41.6666666667%;
 }
 
-.col-sm-6,
-body.scanncut main section.projetos .projetos-imgs figure {
+.col-sm-6 {
 	width: 50%;
 }
 
@@ -8998,179 +7612,6 @@ body.institucional > h3.tlt-shelf main section.text p {
 	line-height: 26px;
 }
 
-body.clube-shumi main section.banner-club .box-banner img {
-	width: 150%;
-	margin-left: -25%;
-}
-
-body.clube-shumi main section.banner-club ul.menu-subscribe {
-	left: 7%;
-	top: auto;
-	bottom: 20px;
-}
-
-body.clube-shumi main section.clube-shumi .about p,
-body.clube-shumi main section.clube-shumi .about ul:not(.menu-subscribe),
-body.clube-shumi main section.clube-shumi .reasons p,
-body.clube-shumi main section.clube-shumi .reasons ul:not(.menu-subscribe) {
-	padding: 10px 11%;
-}
-
-body.clube-shumi main section.clube-shumi .about ul:not(.menu-subscribe),
-body.clube-shumi main section.clube-shumi .reasons ul:not(.menu-subscribe) {
-	padding-left: 19%;
-}
-
-body.clube-shumi main section.clube-shumi .about ul:not(.menu-subscribe) li,
-body.clube-shumi main section.clube-shumi .reasons ul:not(.menu-subscribe) li {
-	padding: 0;
-}
-
-body.clube-shumi main section.conteudo .anterior {
-	text-align: left;
-}
-
-body.videos main section.videos .container,
-body.videos main section.videos h3.tlt-shelf {
-	padding: 0 20px;
-}
-
-body.videos main section.videos .container #yt-app #more-videos ul li,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos ul li {
-	width: 30%;
-}
-
-body.impressora-textil main section .item {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-body.impressora-textil main section .item div {
-	padding: 0 0 0 35px;
-}
-
-body.impressora-textil main section .item.text-first {
-	-ms-flex-direction: row;
-	    flex-direction: row;
-}
-
-body.impressora-textil main section .item.text-first div {
-	padding: 0 35px 0 0;
-}
-
-body.impressora-textil main section.banners-top .video .slide-content {
-	left: 5%;
-}
-
-body.impressora-textil main section#impressora-gt-3 {
-	display: block;
-}
-
-body.impressora-textil main section#recursos .banner {
-	display: block;
-}
-
-body.impressora-textil main section#recursos .pranchas {
-	padding-bottom: 0;
-}
-
-body.impressora-textil main section#tip-bar ul li {
-	padding: 0 20px;
-}
-
-body.impressora-textil main section#vantagens ul li {
-	max-width: 20%;
-	padding: 0 15px;
-}
-
-body.impressora-textil main section#bndes .container div,
-body.impressora-textil main section#bndes h3.tlt-shelf div {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-body.impressora-textil main section#especificacoes table {
-	width: 70%;
-	table-layout: fixed;
-}
-
-body.impressora-textil main section#especificacoes table tbody tr td {
-	width: auto;
-	display: table-cell;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table {
-	width: 70%;
-	table-layout: fixed;
-}
-
-body.impressora-textil.blackFriday main section#especificacoes table tbody tr td {
-	width: auto;
-	display: table-cell;
-}
-
-body.scanncut .shelf-scancut .prateleira ul li {
-	width: 50%;
-}
-
-body.scanncut main h2 {
-	font-size: 46px;
-	line-height: 62px;
-}
-
-body.scanncut main .saiba-mais {
-	float: left;
-	margin-left: 0;
-	margin-right: 0;
-}
-
-body.scanncut main section.projetos {
-	text-align: left;
-}
-
-body.scanncut main section.videos iframe {
-	width: 49%;
-}
-
-body.scanncut main section.frase {
-	display: block;
-}
-
-body.scanncut main section.especificacoes table {
-	font-size: 16px;
-}
-
-body.scanncut main section.especificacoes table tr td {
-	padding-left: 25px;
-	padding-right: 25px;
-}
-
-body.cursos main .cursos {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-direction: row-reverse;
-	    flex-direction: row-reverse;
-}
-
-body.cursos main .cursos .curso-box .header img {
-	margin: 0;
-}
-
-body.categoria.kirigami main {
-	padding-bottom: 0;
-}
-
-body.categoria.kirigami main section.banners-top img {
-	width: 100%;
-	margin-left: 0;
-}
-
-body.categoria.kirigami main section.banners-bottom {
-	display: block;
-}
-
 .slider .col-xs-12,
 .slider .calculadora-popup li,
 .calculadora-popup .slider li,
@@ -9212,9 +7653,7 @@ body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection
 .slider body.institucional > .container main form .section-slider .formSection-sub-title,
 body.institucional > .container main form .section-slider .slider .formSection-sub-title,
 .slider body.institucional > h3.tlt-shelf main form .section-slider .formSection-sub-title,
-body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection-sub-title,
-.slider body.scanncut main section.projetos .projetos-imgs figure,
-body.scanncut main section.projetos .projetos-imgs .slider figure {
+body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection-sub-title {
 	padding-right: 7px;
 }
 
@@ -9284,9 +7723,7 @@ body.produto main .ProductImage #show .thumbs,
 body.institucional > .container nav,
 body.institucional > h3.tlt-shelf nav,
 .col-md-3,
-body.scanncut main section.projetos .projetos-imgs figure,
 .col-md-4,
-body.clube-shumi main section.conteudo ul.anteriores li,
 .col-md-5,
 .col-md-6,
 .col-md-7,
@@ -9312,13 +7749,11 @@ body.institucional > h3.tlt-shelf nav {
 	width: 16.6666666667%;
 }
 
-.col-md-3,
-body.scanncut main section.projetos .projetos-imgs figure {
+.col-md-3 {
 	width: 25%;
 }
 
-.col-md-4,
-body.clube-shumi main section.conteudo ul.anteriores li {
+.col-md-4 {
 	width: 33.3333333333%;
 }
 
@@ -9522,6 +7957,21 @@ footer .top-box .instaApp-feed {
 	display: flex;
 }
 
+footer .bg-yellow,
+footer .menu-header ul .menuClose,
+.menu-header ul footer .menuClose,
+footer body.produto main .discountHighLight .flag,
+body.produto main .discountHighLight footer .flag,
+footer body.dep-cat-bus main section.sidebar .menuClose,
+body.dep-cat-bus main section.sidebar footer .menuClose {
+	text-align: left;
+}
+
+footer .mid-box .container > div:first-of-type ul,
+footer .mid-box h3.tlt-shelf > div:first-of-type ul {
+	width: auto;
+}
+
 footer .mid-box .container > div:first-of-type li,
 footer .mid-box h3.tlt-shelf > div:first-of-type li {
 	margin-left: 35px;
@@ -9537,6 +7987,16 @@ footer .mid-box h3.tlt-shelf > div:last-of-type ul li {
 	font-size: 14px;
 	line-height: 18px;
 	display: inline-block;
+}
+
+footer .mid-box ul.txt-magenta {
+	width: auto;
+	text-align: inherit;
+}
+
+footer .mid-box ul.txt-magenta li {
+	display: -ms-inline-flexbox;
+	display: inline-flex;
 }
 
 footer .bottom-box {
@@ -9616,6 +8076,11 @@ footer .copyright p {
 
 .popup-wrapper {
 	overflow: hidden;
+}
+
+.popup-wrapper .popup .CloseButton {
+	top: 20px;
+	right: 20px;
 }
 
 .ui-autocomplete {
@@ -9822,6 +8287,10 @@ body.home section.boxes .lancamentos .buyButton {
 	    transform: translateX(-50%);
 }
 
+body.produto .thumbnails {
+	display: inline-block;
+}
+
 body.produto main section.breadcrumbs {
 	padding: 15px 0;
 }
@@ -9860,6 +8329,15 @@ body.produto main .ProductImage #show .thumbs li:last-of-type {
 
 body.produto main .title-section {
 	padding-top: 0;
+}
+
+body.produto main .price-section button[name="formas-pagamento"] i {
+	height: 37px;
+}
+
+body.produto main .price-section button[name="formas-pagamento"] i svg {
+	width: 55px;
+	height: 55px;
 }
 
 body.produto main .skus-dimensoes.active {
@@ -9921,6 +8399,7 @@ body.dep-cat-bus main section.mainShelf {
 }
 
 body.dep-cat-bus main section.sidebar {
+	top: 0;
 	opacity: 1;
 	padding: 7px;
 	max-width: 100%;
@@ -9986,6 +8465,13 @@ body.busca-vazia main .shearchTitle a {
 	display: block;
 }
 
+body.institucional > .container .left-img,
+body.institucional > h3.tlt-shelf .left-img,
+body.institucional > .container .right-img,
+body.institucional > h3.tlt-shelf .right-img {
+	display: inline-block;
+}
+
 body.institucional > .container main section,
 body.institucional > h3.tlt-shelf main section {
 	padding: 0 15px;
@@ -9998,87 +8484,6 @@ body.institucional > h3.tlt-shelf main section.right-img {
 	width: auto;
 	padding: 0 15px;
 	max-width: 41.6666666667%;
-}
-
-body.clube-shumi main section.banner-club .box-banner img {
-	width: 100%;
-	margin-left: 0;
-}
-
-body.clube-shumi main section.banner-club ul.menu-subscribe {
-	left: 18.75%;
-}
-
-body.clube-shumi main section.conteudo .anterior {
-	padding: 0 7px;
-}
-
-body.clube-shumi main section.conteudo ul.itens {
-	padding-left: 7px;
-}
-
-body.videos main section.videos .container #yt-app #more-videos ul li,
-body.videos main section.videos h3.tlt-shelf #yt-app #more-videos ul li {
-	width: 215.6px;
-}
-
-body.impressora-textil header + nav.menu ul li:nth-child(2) {
-	display: inline-block;
-}
-
-body.impressora-textil header + nav.menu ul li a {
-	padding-top: 3px;
-	border-right: 1px solid;
-	padding-left: 10px !important;
-	padding-right: 10px !important;
-}
-
-body.impressora-textil header + nav.menu ul li a:hover {
-	padding: 0 15px !important;
-}
-
-body.scanncut header + nav.menu ul li {
-	margin: 0 !important;
-}
-
-body.scanncut main section {
-	padding: 30px 0;
-}
-
-body.scanncut main section.acessorios .container,
-body.scanncut main section.acessorios h3.tlt-shelf {
-	-ms-flex-direction: row;
-	    flex-direction: row;
-}
-
-body.categoria.kirigami main {
-	padding-bottom: 50px;
-	background-size: initial;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div {
-	margin: 0;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:first-of-type,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:first-of-type {
-	max-width: 900px;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:first-of-type .texto,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:first-of-type .texto {
-	padding-left: 25px;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div:last-of-type,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div:last-of-type {
-	max-width: 325px;
-}
-
-body.categoria.kirigami main section.pageInfo .container > div h3,
-body.categoria.kirigami main section.pageInfo h3.tlt-shelf > div h3 {
-	padding: 0;
 }
 
 }

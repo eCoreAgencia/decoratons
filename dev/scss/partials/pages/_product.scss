@@ -23,6 +23,14 @@ body.produto{
         }
     }
 
+    .thumbnails {
+      display: none;
+
+      @include mq($screen-md){
+        display: inline-block;
+      }
+    }
+
     .dimensoes-obs {
       span {
         display: block;
@@ -284,6 +292,8 @@ body.produto{
    		.price-section, .sku-section, .title-section {
 		    padding: 20px 7px;
 		    border-bottom: 1px solid #dbd7d7;
+
+
    		}
    		.Availability{
 		    padding: 5px 0;
@@ -322,6 +332,10 @@ body.produto{
                position: initial;
              }
 
+             div {
+              margin: 0 !important;
+             }
+
             button[name="formas-pagamento"]{
                border: 0;
                z-index: 1;
@@ -330,13 +344,20 @@ body.produto{
                user-select: none;
                align-items: center;
                i{
-                height: 37px;
+                height: 23px;
+                @include mq($screen-md){
+                  height: 37px;
+                }
                 border-radius: 10px;
                 align-items: center;
                 display: inline-flex;
                   svg{
-                  width: 55px;
-                  height: 55px;
+                  width: 35px;
+                  height: 35px;
+                  @include mq($screen-md){
+                    width: 55px;
+                    height: 55px;
+                  }
                   display: block;
                   }
                }
@@ -401,7 +422,8 @@ body.produto{
 			.valor-por{
 				@include font-size(0);
 				.skuBestPrice{
-					@extend .txt-dark-blue, .txt-sz-30, .txt-st-normal;
+          @include font-size(2.8);
+					@extend .txt-dark-blue, .txt-st-normal;
 				}
 			}
 			.valor-de{
@@ -549,22 +571,23 @@ body.produto{
 
    		.skus-dimensoes{
    			@extend .transition;
-            margin-right: 10px;
-			@include mq($screen-md){
-				// height: 0;
-				// opacity: 1;
-				// z-index: -1;
-				// margin-top: -50px;
-				&.active{
-					// opacity: 1;
-					// height: 50px;
-					// margin-top: 0;
-					pointer-events: all;
-					// transform: translateY(0);
-				}
+        margin-right: 10px;
+  			@include mq($screen-md){
+  				// height: 0;
+  				// opacity: 1;
+  				// z-index: -1;
+  				// margin-top: -50px;
+  				&.active{
+  					// opacity: 1;
+  					// height: 50px;
+  					// margin-top: 0;
+  					pointer-events: all;
+  					// transform: translateY(0);
+  				}
 			}
 			li{
-				@extend .txt-gray, .txt-sz-16;
+        @include font-size(1.4);
+				@extend .txt-gray;
 				list-style: none;
 				padding-top: 10px;
 				display: inline-block;
@@ -637,9 +660,10 @@ body.produto{
    			}
    			#txtCep{
    				@extend .txt-sz-16;
-            padding: 10px;
-				text-align: center;
+          padding: 10px;
+				  text-align: center;
 			    display: inline-block;
+          border: 1px solid #ccc;
    			}
    			#btnFreteSimulacao{
    				@extend .bg-blue, .txt-white, .bold;

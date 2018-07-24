@@ -29,6 +29,7 @@
 		}
 		span{
 			padding: 0;
+			
 			&:before{
 				@extend .bg-white, .transition;
 				content: '';
@@ -127,6 +128,12 @@
 			margin: 10px auto !important;
 		}
 	}
+
+	span.txt-gray {
+		display: block;
+		line-height: 20px;
+	}
+
 	ul{
 		width: 100%;
 		display: flex;

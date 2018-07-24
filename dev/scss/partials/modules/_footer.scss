@@ -25,6 +25,15 @@ footer {
 			}
 		}
 	}
+
+	.bg-yellow {
+		text-align: center;
+
+		@include mq($screen-md){
+			text-align: left;
+		}
+	}
+
 	.mid-box{
 		padding: 45px 0;
 		h3:not(.title-3){
@@ -62,8 +71,13 @@ footer {
 					padding-bottom: 10px;
 			    }
 			    ul{
+			    	width: 100%;
 			    	float: left;
 			    	padding-top: 10px; 
+
+					@include mq($screen-md){
+						width: auto;
+					}
 			    }
 				li{
 					@include font-size(1.0);
@@ -147,6 +161,25 @@ footer {
 				}
 			}
 		}
+
+		ul.txt-magenta {
+			width: 100%;
+			text-align: center;
+
+			@include mq($screen-md){
+				width: auto;
+				text-align: inherit;
+			}
+
+			li {
+				display: block;
+
+				@include mq($screen-md){
+					display: inline-flex;
+				}
+			}
+		}
+
 		.newsletter{
 			height: 200px;
 		    display: flex;

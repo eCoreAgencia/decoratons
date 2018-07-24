@@ -19,7 +19,17 @@ body.institucional {
 					padding-left: 10px;
 				}
 			}
-		}	
+		}
+
+		.left-img,
+		.right-img {
+			display: none;
+
+			@include mq($screen-md){
+				display: inline-block;
+			}
+		}
+
 		main{
 			flex: 1;
 			padding: 0;

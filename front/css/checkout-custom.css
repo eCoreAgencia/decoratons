@@ -1085,7 +1085,7 @@ body {
       margin-top: -10px;
       -ms-transform: translateY(25%);
           transform: translateY(25%); }
-  body .row:not(.container):not(h3.tlt-shelf):not(body h3.tlt-shelf) {
+  body .row:not(.container):not(h3.tlt-shelf) {
     margin-left: 0; }
   body .container, body h3.tlt-shelf {
     margin: 0 auto; }

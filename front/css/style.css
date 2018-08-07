@@ -2315,7 +2315,7 @@ button[name="favorite"].isFavorite svg:last-of-type {
 }
 
 .vtexIdUI #vtexIdUI-facebook {
-	background: transparent linear-gradient(to bottom, #e1e1ea 0%, #5874b3 1%, #405689 66%, #405689 98%, #5874b3 100%) repeat scroll 0 0 !important;
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #e1e1ea 0%, #5874b3 1%, #405689 66%, #405689 98%, #5874b3 100%) repeat scroll 0 0 !important;
 }
 
 .vtexIdUI .btn-success.vtexIdUI-send-email {
@@ -2507,7 +2507,8 @@ button[name="favorite"].isFavorite svg:last-of-type {
    Minicart
    ========================================================================== */
 
-/* ------------------------------------------------------------ *	#Resumo do carrinho
+/* ------------------------------------------------------------ *\
+	#Resumo do carrinho
 \* ------------------------------------------------------------ */
 
 .sta-cart-overlay,
@@ -3454,7 +3455,7 @@ header.ha-hide {
 	    align-items: center;
 }
 
-.menu-header ul li a:not(.txt-dark-gray):not(header .top-box ul li):not(.calculadora-popup form label):not(.calculadora-popup form label span):not(body.produto main .productDescription#prod-detalhamento li span):not(body.produto main .productSpecification#prod-detalhamento li span):not(body.produto main .quantitySelector input):not(body.produto main .sku-selector-container li.specification):not(body.produto main .sku-selector-container li label):not(body.produto main .frete-quantidade .freight-values #divFreteInvalido):not(body.produto main .frete-quantidade .freight-values th):not(body.dep-cat-bus main .shearchTitle .filtrarProdutos):not(body.dep-cat-bus main .shearchTitle .searchResultsTime .label:before):not(body.dep-cat-bus main .main .searchResultsTime .label:before):not(body.dep-cat-bus main .pager.bottom li.page-number):not(body.dep-cat-bus main section.sidebar ul.Tamanho a):not(body.institucional > .container nav a):not(body.institucional > h3.tlt-shelf nav a):not(body.institucional > .container main form input):not(body.institucional > h3.tlt-shelf main form input):not(body.institucional > .container main form textarea):not(body.institucional > h3.tlt-shelf main form textarea):not(body.institucional > .container main form select):not(body.institucional > h3.tlt-shelf main form select):not(body.institucional > .container main form .menu button):not(body.institucional > h3.tlt-shelf main form .menu button) {
+.menu-header ul li a:not(.txt-dark-gray) {
 	color: red;
 }
 
@@ -6242,11 +6243,9 @@ body.orders .account .profile-detail-display #edit-data-link:hover,
 .account .profile-detail-display body.orders #edit-data-link:hover,
 body.orders .account .profile-detail-display .new-address-link .address-update:hover,
 .account .profile-detail-display .new-address-link body.orders .address-update:hover,
-body.orders
-  .account .address-display-block #edit-data-link:hover,
+body.orders .account .address-display-block #edit-data-link:hover,
 .account .address-display-block body.orders #edit-data-link:hover,
-body.orders
-  .account .address-display-block .new-address-link .address-update:hover,
+body.orders .account .address-display-block .new-address-link .address-update:hover,
 .account .address-display-block .new-address-link body.orders .address-update:hover,
 body.orders body.busca-vazia main .shearchTitle a:hover,
 body.busca-vazia main .shearchTitle body.orders a:hover,
@@ -6272,11 +6271,9 @@ body.dep-cat-bus main .vtex-bootstrap .orderBy:before,
 .account .profile-detail-display .vtex-bootstrap #edit-data-link:hover,
 .vtex-bootstrap .account .profile-detail-display .new-address-link .address-update:hover,
 .account .profile-detail-display .new-address-link .vtex-bootstrap .address-update:hover,
-.vtex-bootstrap
-  .account .address-display-block #edit-data-link:hover,
+.vtex-bootstrap .account .address-display-block #edit-data-link:hover,
 .account .address-display-block .vtex-bootstrap #edit-data-link:hover,
-.vtex-bootstrap
-  .account .address-display-block .new-address-link .address-update:hover,
+.vtex-bootstrap .account .address-display-block .new-address-link .address-update:hover,
 .account .address-display-block .new-address-link .vtex-bootstrap .address-update:hover,
 .vtex-bootstrap body.busca-vazia main .shearchTitle a:hover,
 body.busca-vazia main .shearchTitle .vtex-bootstrap a:hover,
@@ -6298,11 +6295,9 @@ body.orders .account .profile-detail-display #edit-data-link,
 .account .profile-detail-display body.orders #edit-data-link,
 body.orders .account .profile-detail-display .new-address-link .address-update,
 .account .profile-detail-display .new-address-link body.orders .address-update,
-body.orders
-  .account .address-display-block #edit-data-link,
+body.orders .account .address-display-block #edit-data-link,
 .account .address-display-block body.orders #edit-data-link,
-body.orders
-  .account .address-display-block .new-address-link .address-update,
+body.orders .account .address-display-block .new-address-link .address-update,
 .account .address-display-block .new-address-link body.orders .address-update,
 body.orders body.busca-vazia main .shearchTitle a,
 body.busca-vazia main .shearchTitle body.orders a,
@@ -6325,11 +6320,9 @@ body.produto main .notifyme .vtex-bootstrap input.btn-ok,
 .account .profile-detail-display .vtex-bootstrap #edit-data-link,
 .vtex-bootstrap .account .profile-detail-display .new-address-link .address-update,
 .account .profile-detail-display .new-address-link .vtex-bootstrap .address-update,
-.vtex-bootstrap
-  .account .address-display-block #edit-data-link,
+.vtex-bootstrap .account .address-display-block #edit-data-link,
 .account .address-display-block .vtex-bootstrap #edit-data-link,
-.vtex-bootstrap
-  .account .address-display-block .new-address-link .address-update,
+.vtex-bootstrap .account .address-display-block .new-address-link .address-update,
 .account .address-display-block .new-address-link .vtex-bootstrap .address-update,
 .vtex-bootstrap body.busca-vazia main .shearchTitle a,
 body.busca-vazia main .shearchTitle .vtex-bootstrap a,
@@ -6874,8 +6867,7 @@ body.produto main .ProductImage #show .slider .thumbs,
 body.produto main .ProductImage #show .slider #include,
 .slider .account .profile-detail-display,
 .account .slider .profile-detail-display,
-.slider
-  .account .address-display-block,
+.slider .account .address-display-block,
 .account .slider .address-display-block,
 .slider body.institucional > .container nav,
 body.institucional > .container .slider nav,
@@ -7627,8 +7619,7 @@ body.produto main .ProductImage #show .slider .thumbs,
 body.produto main .ProductImage #show .slider #include,
 .slider .account .profile-detail-display,
 .account .slider .profile-detail-display,
-.slider
-      .account .address-display-block,
+.slider .account .address-display-block,
 .account .slider .address-display-block,
 .slider body.institucional > .container nav,
 body.institucional > .container .slider nav,

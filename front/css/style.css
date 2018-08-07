@@ -1763,8 +1763,6 @@ footer .mid-box h3.tlt-shelf > div:last-of-type ul li {
 	line-height: 0;
 	-ms-flex-align: center;
 	    align-items: center;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
 }
 
 footer .mid-box .container > div:last-of-type ul li a,
@@ -3453,10 +3451,6 @@ header.ha-hide {
 	padding: 10px 15px;
 	-ms-flex-align: center;
 	    align-items: center;
-}
-
-.menu-header ul li a:not(.txt-dark-gray) {
-	color: red;
 }
 
 .menu-header ul .menu-item {

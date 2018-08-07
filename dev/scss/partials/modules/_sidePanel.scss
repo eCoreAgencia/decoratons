@@ -90,9 +90,9 @@
 					}
 		    	}
 	    	}
-	    	a:not(.txt-dark-gray){
-	    		color: red;
-	    	}
+	    	// a:not(.txt-dark-gray){
+	    	// 	color: red;
+	    	// }
     	}
     	.menu-item{
     		@extend .transition;

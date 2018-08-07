@@ -114,7 +114,7 @@ footer {
 					    padding: 5px 0;
 						line-height: 0;
 						align-items: center;
-						display: inline-flex;
+						// display: inline-flex; // Centraliza os contatos
 						@include mq($screen-md){
 							@include font-size(1.4);
 							line-height: 18px;

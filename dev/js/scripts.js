@@ -1,5 +1,26 @@
 // $.getScript('http://io.vtex.com.br/vtex.js/2.2.0/vtex.min.js');
 
+$(document).ready(function(event){
+	$('.sizeList li span').click(function(){
+		$(this).find('input').removeAttr('checked');
+		$(this).prev().attr('checked', 'checked');
+		var myLink = $(this).prev().attr('value');
+		$('.sizeList a').css('display', 'block');
+		$('.sizeList a').attr('href', myLink);
+	});
+});
+
+
+$(document).ajaxStop(function(){
+	$('.sizeList li span').click(function(){
+		$(this).find('input').removeAttr('checked');
+		$(this).prev().attr('checked', 'checked');
+		var myLink = $(this).prev().attr('value');
+		$('.sizeList a').css('display', 'block');
+		$('.sizeList a').attr('href', myLink);
+	});
+});
+
 // Polyfill Evento Customizado
 	(function () {
 	  if ( typeof window.CustomEvent === "function" ) return false;
@@ -369,7 +390,7 @@
 	    function Calculator(){
 	    	var config = {
 	    		ac: 'CC', // entidade
-	    		an: 'decoratons', // loja
+	    		an: 'api', // loja
 	    		fields: 'width,height,variation,searchUrl,area,order',
 	    		results: {
 	    			wrapper: 'ul',
@@ -421,6 +442,14 @@
 				});
 				list += '</'+config.results.wrapper+'>';
 				window.Calculadora.sizeList = list;
+
+				$('.sizeList li span').click(function(){
+					$(this).find('input').removeAttr('checked');
+					$(this).prev().attr('checked', 'checked');
+					var myLink = $(this).prev().attr('value');
+					$('.sizeList a').css('display', 'block');
+					$('.sizeList a').attr('href', myLink);
+				});				
 	    	}
 	    	this.renderSizes = function(list,el){
 				el.html(list);
@@ -471,6 +500,15 @@
 				}
 			});
 		}
+
+		$('.sizeList li span').click(function(){
+			$(this).find('input').removeAttr('checked');
+			$(this).prev().attr('checked', 'checked');
+			var myLink = $(this).prev().attr('value');
+			$('.sizeList a').css('display', 'block');
+			$('.sizeList a').attr('href', myLink);
+		});
+
 		$.fn.Calc_tamanhos = function(){
 			var $this = $(this);
 			Calculadora.getSizes(function(){
@@ -492,6 +530,15 @@
 			});
 		}
 	}(window, document, jQuery));
+
+	$('.sizeList li span').click(function(){
+		$(this).find('input').removeAttr('checked');
+		$(this).prev().attr('checked', 'checked');
+		var myLink = $(this).prev().attr('value');
+		$('.sizeList a').css('display', 'block');
+		$('.sizeList a').attr('href', myLink);
+	});
+
 // Calculadora
 
 // Tickets
@@ -832,28 +879,6 @@ $(function() {
 							"Produto Lavável": '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329.983 329.983" width="512" height="512"><g fill="#147eb8"><path d="M175.426 1.282a7.498 7.498 0 0 0-6.183 3.255c-4.089 5.955-100.145 146.668-100.145 217.837 0 58.629 47.698 106.327 106.327 106.327s106.326-47.698 106.326-106.327c0-71.169-96.055-211.882-100.144-217.837a7.496 7.496 0 0 0-6.181-3.255zm0 312.419c-50.358 0-91.327-40.969-91.327-91.327 0-56.606 69.872-167.393 91.327-200.073 21.455 32.68 91.326 143.466 91.326 200.073 0 50.358-40.969 91.327-91.326 91.327z"/><path d="M167.927 286.199a7.5 7.5 0 0 0 7.5 7.5c39.33 0 71.328-31.996 71.328-71.323 0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5c0 31.057-25.269 56.323-56.328 56.323a7.5 7.5 0 0 0-7.5 7.5zM322.483 31.658h-14.574V17.083c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v14.575h-14.575c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h14.575v14.575c0 4.142 3.357 7.5 7.5 7.5s7.5-3.358 7.5-7.5V46.658h14.574c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5zM51.65 257.492H37.075v-14.575c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v14.575H7.5c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h14.575v14.575c0 4.142 3.357 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-14.575H51.65c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"/></g></svg>',
 						}
 					}
-					/*$('.productSpecification').each(function(){
-						var spec = $(this).attr('data-spec');
-						var value = data[0][spec] || null;
-						if(!value){
-							if($(this).attr('data-parent')){
-								$(this).parent().remove();
-							}else{
-								$(this).remove();
-							}
-							return;
-						}
-						var wrapper = 'div';
-						var content = value[0];
-						if($(this).is('#prod-detalhamento')){
-							wrapper= config.listSpec.wrapper;
-							content = '';
-							$.each(value, function(i, item){
-								content += config.listSpec.content.replace(/#icon#/g,config.detalhamentoIcons[item]).replace(/#value#/g, item);
-							});
-						}
-						$(this).replaceWith('<'+wrapper+' id="'+this.id+'" class="'+this.className+' '+spec+'">'+content+'</'+wrapper+'>');
-					}); */
 				},
 				error: function(error){
 					console.log('error', error);
@@ -921,8 +946,8 @@ $(function() {
 			autoplay: true,
 			autoplaySpeed: 5000,
 			pauseOnHover: true,
-			arrows: true,
-			dots: false,
+			arrows: false,
+			dots: true,
 			draggable: true,
 			touchMove: true,
 			slidesToShow: 1,
@@ -1364,9 +1389,9 @@ $(document).ajaxComplete(function(){
 	});
 });
 
-// Alteração no tamanho da fonte na descrições das imagens
+// Alteração no tamanho da fonte nas descrições das imagens
 $(document).ready(function() {
-	$(".txt-sz-16").css("font-size", '14px');
+	$(".txt-sz-16").css("font-size", "14px");
 });
 
 // Alteração no tamanho da fonte do preço

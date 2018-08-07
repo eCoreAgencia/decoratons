@@ -1364,7 +1364,17 @@ $(document).ajaxComplete(function(){
 	});
 });
 
-// Alteração no tamanho da fonte
+// Alteração no tamanho da fonte na descrições das imagens
 $(document).ready(function() {
 	$(".txt-sz-16").css("font-size", '14px');
+});
+
+// Alteração no tamanho da fonte do preço
+$(document).ready(function(){
+    $(".txt-sz-30").css("font-size", "28px");
+});
+
+// Alteração no tamanho da fonte do título das imagens
+$(document).ready(function(){
+    $(".ambiente-title").css("font-size", "13px");
 });

@@ -1381,7 +1381,6 @@ $(document).ajaxStop(function(){
 	});
 });
 
-
 $(document).ajaxComplete(function(){
 	$('button.bt-comprar').click(function(){
 		var myLink = $(this).attr('datahref');
@@ -1396,7 +1395,7 @@ $(document).ready(function() {
 
 // Alteração no tamanho da fonte do preço
 $(document).ready(function(){
-    $(".txt-sz-30").css("font-size", "28px");
+    $(".txt-sz-30").css("font-size", "27px");
 });
 
 // Alteração no tamanho da fonte do título das imagens

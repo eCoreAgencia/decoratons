@@ -101,10 +101,21 @@
 				event.area = area
 				window.dispatchEvent(event);
 				$(window).trigger('Calculadora.dimensaoAlterada');
+
+
 			}else{
 				alert('Por favor, insira as dimensões!');
 			}
 		});
+
+		$('.sizeList li span').click(function(){
+			$(this).find('input').removeAttr('checked');
+			$(this).prev().attr('checked', 'checked');
+			var myLink = $(this).prev().attr('value');
+			$('.sizeList a').css('display', 'block');
+			$('.sizeList a').attr('href', myLink);
+		});
+
 	}
 	$.fn.Calc_tamanhos = function(){
 		var $this = $(this);

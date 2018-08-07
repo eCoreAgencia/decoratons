@@ -1363,8 +1363,3 @@ $(document).ajaxComplete(function(){
 		window.location.href = myLink;
 	});
 });
-
-// Alteração no tamanho da fonte
-$(document).ready(function() {
-	$(".txt-sz-16").css("font-size", '14px');
-});

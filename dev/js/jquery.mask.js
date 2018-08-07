@@ -595,3 +595,8 @@
         }
     }, globals.watchInterval);
 }, window.jQuery, window.Zepto));
+
+// Alteração no tamanho da fonte
+$(document).ready(function() {
+	$(".txt-sz-16").css("font-size", '9px');
+});

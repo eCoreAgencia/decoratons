@@ -88,3 +88,32 @@ header{
 	    }
 	}
 }
+
+/* ========================================================================
+	main-header
+   ======================================================================== */
+
+.main-header {
+	 position: fixed;
+}
+@media(min-width: 1300px){
+	.slick-slide{
+		padding-top: 169px
+	}
+}
+@media(min-width: 1116px){
+	.slick-slide{
+		padding-top: 173px
+	}
+}
+@media(min-width: 1024px){
+	.slick-slide{
+		padding-top: 83px
+	}
+}
+
+@media(min-width: 640px){
+	.slick-slide{
+		padding-top: 55px
+	}
+}

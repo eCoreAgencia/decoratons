@@ -1642,6 +1642,14 @@ header .middle-box .calculator {
 	text-align: center;
 }
 
+/* ========================================================================
+	main-header
+   ======================================================================== */
+
+.main-header {
+	position: fixed;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -3262,10 +3270,6 @@ header.menu-persistente {
 	display: block;
 	position: fixed;
 	z-index: 999999999;
-	animation: grow .7s;
-	-o-animation: grow .7s;
-	-moz-animation: grow .7s;
-	-webkit-animation: grow .7s;
 }
 
 header.menu-persistente .top-elements {
@@ -7169,39 +7173,19 @@ html {
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 640px) {
 
-.visible-sm {
-	display: block !important;
+.slick-slide {
+	padding-top: 55px;
 }
 
-table.visible-sm {
-	display: table;
 }
 
-tr.visible-sm {
-	display: table-row !important;
-}
+@media screen and (min-width: 768px) {
 
-th.visible-sm,
-td.visible-sm {
-	display: table-cell !important;
-}
-
-.visible-sm-block {
-	display: block !important;
-}
-
-.visible-sm-inline {
-	display: inline !important;
-}
-
-.visible-sm-inline-block {
-	display: inline-block !important;
-}
-
-.hidden-sm {
-	display: none !important;
+section.newsletter .news-box {
+	padding: 20px 0;
+	text-align: left;
 }
 
 }
@@ -7653,11 +7637,47 @@ body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection
 
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
-section.newsletter .news-box {
-	padding: 20px 0;
-	text-align: left;
+.visible-sm {
+	display: block !important;
+}
+
+table.visible-sm {
+	display: table;
+}
+
+tr.visible-sm {
+	display: table-row !important;
+}
+
+th.visible-sm,
+td.visible-sm {
+	display: table-cell !important;
+}
+
+.visible-sm-block {
+	display: block !important;
+}
+
+.visible-sm-inline {
+	display: inline !important;
+}
+
+.visible-sm-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-sm {
+	display: none !important;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+.slick-slide {
+	padding-top: 83px;
 }
 
 }
@@ -8469,6 +8489,22 @@ body.institucional > h3.tlt-shelf main section.right-img {
 	width: auto;
 	padding: 0 15px;
 	max-width: 41.6666666667%;
+}
+
+}
+
+@media (min-width: 1116px) {
+
+.slick-slide {
+	padding-top: 173px;
+}
+
+}
+
+@media (min-width: 1300px) {
+
+.slick-slide {
+	padding-top: 169px;
 }
 
 }

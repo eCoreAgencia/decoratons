@@ -7173,19 +7173,39 @@ html {
 
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
-main {
-	padding-top: 50px !important;
+.visible-sm {
+	display: block !important;
 }
 
+table.visible-sm {
+	display: table;
 }
 
-@media screen and (min-width: 768px) {
+tr.visible-sm {
+	display: table-row !important;
+}
 
-section.newsletter .news-box {
-	padding: 20px 0;
-	text-align: left;
+th.visible-sm,
+td.visible-sm {
+	display: table-cell !important;
+}
+
+.visible-sm-block {
+	display: block !important;
+}
+
+.visible-sm-inline {
+	display: inline !important;
+}
+
+.visible-sm-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-sm {
+	display: none !important;
 }
 
 }
@@ -7637,47 +7657,11 @@ body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
 
-.visible-sm {
-	display: block !important;
-}
-
-table.visible-sm {
-	display: table;
-}
-
-tr.visible-sm {
-	display: table-row !important;
-}
-
-th.visible-sm,
-td.visible-sm {
-	display: table-cell !important;
-}
-
-.visible-sm-block {
-	display: block !important;
-}
-
-.visible-sm-inline {
-	display: inline !important;
-}
-
-.visible-sm-inline-block {
-	display: inline-block !important;
-}
-
-.hidden-sm {
-	display: none !important;
-}
-
-}
-
-@media (min-width: 1024px) {
-
-main {
-	padding-top: 83px !important;
+section.newsletter .news-box {
+	padding: 20px 0;
+	text-align: left;
 }
 
 }
@@ -8493,22 +8477,6 @@ body.institucional > h3.tlt-shelf main section.right-img {
 
 }
 
-@media (min-width: 1116px) {
-
-main {
-	padding-top: 173px !important;
-}
-
-}
-
-@media (min-width: 1300px) {
-
-main {
-	padding-top: 169px !important;
-}
-
-}
-
 @media (min-width: 2500px) {
 
 .visible-lg {
@@ -8766,7 +8734,27 @@ body.dep-cat-bus main .shearchTitle .filtrarProdutos {
 
 }
 
+@media (max-width: 4000px) {
+
+main {
+	padding-top: 169px !important;
+}
+
+}
+
+@media (max-width: 1300px) {
+
+main {
+	padding-top: 169px !important;
+}
+
+}
+
 @media (max-width: 1024px) {
+
+main {
+	padding-top: 83px !important;
+}
 
 body.home section .section-title {
 	font-size: 24px;
@@ -8802,6 +8790,14 @@ body.produto .product-box {
 
 body.produto .zoomWrapperImage img {
 	display: none !important;
+}
+
+}
+
+@media (max-width: 769px) {
+
+main {
+	padding-top: 83px !important;
 }
 
 }
@@ -8904,6 +8900,18 @@ body.produto main section.precaucoes .section-title h2 {
 
 .account .modal-body {
 	height: calc(100vh - 65px - 70px);
+}
+
+}
+
+@media (max-width: 414px) {
+
+main {
+	padding-top: 55px !important;
+}
+
+div.container.row {
+	height: 55px !important;
 }
 
 }

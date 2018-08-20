@@ -2058,6 +2058,9 @@ ul.menu-subscribe li.gift a {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url("/arquivos/search.png");
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .MiniCartButton {
@@ -5604,43 +5607,35 @@ body.dep-cat-bus main section.sidebar ul.Cor a:hover {
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Bege"] {
-	background-color: #fefae6;
+	background-color: #d5c0a2;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Roxo"] {
-	background-color: #9a0698;
+	background-color: #9a019a;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa"] {
-	background-color: #ffcccc;
+	background-color: #ffaec3;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Cinza"] {
-	background-color: #d1d1d1;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde"] {
-	background-color: #a9cbbb;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Pêsego"] {
-	background-color: #fdca89;
+	background-color: #d2d3d5;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Marrom"] {
-	background-color: #835e42;
+	background-color: #4b3621;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Amarelo"] {
-	background-color: #ffff33;
+	background-color: #feec0a;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Laranja"] {
-	background-color: #fe7900;
+	background-color: #ff8000;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Vermelho"] {
-	background-color: #ea1d22;
+	background-color: #eb1d22;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Pêssego"] {
@@ -5648,95 +5643,99 @@ body.dep-cat-bus main section.sidebar ul.Cor a[title="Pêssego"] {
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Creme"] {
-	background-color: #fffdd0;
+	background-color: #fffbe6;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Nude"] {
-	background-color: #9a8262;
+	background-color: #f1d5bf;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Avelã"] {
-	background-color: #c09f86;
+	background-color: #fee7be;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Claro"] {
-	background-color: #add8e6;
+	background-color: #ace9f0;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Cobalto"] {
-	background-color: #333c87;
+	background-color: #0048aa;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Royal"] {
-	background-color: #4169e1;
+	background-color: #000180;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Marinho"] {
-	background-color: #120a8f;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Musgo"] {
-	background-color: #ADDFAD;
+	background-color: #000542;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Vinho"] {
-	background-color: #722f37;
+	background-color: #4d0d10;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Palha"] {
-	background-color: #ebdec6;
+	background-color: #ececd2;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Champanhe"] {
-	background-color: #F7E7CE;
+	background-color: #fee7be;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Chocolate"] {
-	background-color: #d2691e;
+	background-color: #94613d;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Café"] {
-	background-color: #4b3621;
+	background-color: #362016;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Turquesa"] {
-	background-color: #40e0d0;
+	background-color: #7ed9d2;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde"] {
+	background-color: #2e9230;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Musgo"] {
+	background-color: #8a9d46;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Claro"] {
-	background-color: #90ee90;
+	background-color: #d0f0bf;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Acinzentado"] {
+	background-color: #abc4b8;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Acinzentado"] {
-	background-color: #084d6e;
+	background-color: #417087;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa Claro"] {
-	background-color: #ffb6c1;
+	background-color: #fce1e2;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa Queimado"] {
-	background-color: #d0a993;
+	background-color: #cf9c9b;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Coral"] {
-	background-color: #ff7f50;
+	background-color: #ff7256;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Grafite"] {
-	background-color: #474a51;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Claro"] {
-	background-color: #90ee90;
+	background-color: #4c4c4c;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Lilás"] {
-	background-color: #c8a2c8;
+	background-color: #d7adee;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Ameixa"] {
-	background-color: #dda0dd;
+	background-color: #8e2554;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Preto"] {
@@ -5744,21 +5743,19 @@ body.dep-cat-bus main section.sidebar ul.Cor a[title="Preto"] {
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Amarelo Claro"] {
-	background-color: #ffffe0;
+	background-color: #fff79b;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Colorido"] { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d902ff+0,ffe035+20,78b726+34,000000+62,4904a3+79,ff6060+100 */
-	background: #d902ff; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #d902ff 0%, #ffe035 20%, #78b726 34%, #000000 62%, #4904a3 79%, #ff6060 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d902ff', endColorstr='#ff6060',GradientType=1 ); /* IE6-9 */
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Colorido"] {
+	background-image: url("arquivo/colorido.jpg");
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Mostarda"] {
-	background-color: #ffdb58;
+	background-color: #e7a103;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Branco"] {
-	background-color: #fff;
+	background-color: #fefefe;
 }
 
 body.dep-cat-bus main section.sidebar ul.Tamanho li {
@@ -7173,19 +7170,39 @@ html {
 
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
-.slick-slide {
-	padding-top: 55px;
+.visible-sm {
+	display: block !important;
 }
 
+table.visible-sm {
+	display: table;
 }
 
-@media screen and (min-width: 768px) {
+tr.visible-sm {
+	display: table-row !important;
+}
 
-section.newsletter .news-box {
-	padding: 20px 0;
-	text-align: left;
+th.visible-sm,
+td.visible-sm {
+	display: table-cell !important;
+}
+
+.visible-sm-block {
+	display: block !important;
+}
+
+.visible-sm-inline {
+	display: inline !important;
+}
+
+.visible-sm-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-sm {
+	display: none !important;
 }
 
 }
@@ -7637,47 +7654,11 @@ body.institucional > h3.tlt-shelf main form .section-slider .slider .formSection
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
 
-.visible-sm {
-	display: block !important;
-}
-
-table.visible-sm {
-	display: table;
-}
-
-tr.visible-sm {
-	display: table-row !important;
-}
-
-th.visible-sm,
-td.visible-sm {
-	display: table-cell !important;
-}
-
-.visible-sm-block {
-	display: block !important;
-}
-
-.visible-sm-inline {
-	display: inline !important;
-}
-
-.visible-sm-inline-block {
-	display: inline-block !important;
-}
-
-.hidden-sm {
-	display: none !important;
-}
-
-}
-
-@media (min-width: 1024px) {
-
-.slick-slide {
-	padding-top: 83px;
+section.newsletter .news-box {
+	padding: 20px 0;
+	text-align: left;
 }
 
 }
@@ -8489,22 +8470,6 @@ body.institucional > h3.tlt-shelf main section.right-img {
 	width: auto;
 	padding: 0 15px;
 	max-width: 41.6666666667%;
-}
-
-}
-
-@media (min-width: 1116px) {
-
-.slick-slide {
-	padding-top: 173px;
-}
-
-}
-
-@media (min-width: 1300px) {
-
-.slick-slide {
-	padding-top: 169px;
 }
 
 }

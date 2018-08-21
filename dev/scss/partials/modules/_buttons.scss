@@ -39,6 +39,9 @@ ul.menu-subscribe{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url('/arquivos/search.png');
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
 }
 
 .MiniCartButton{

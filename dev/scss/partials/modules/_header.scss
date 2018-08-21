@@ -88,3 +88,46 @@ header{
 	    }
 	}
 }
+
+/* ========================================================================
+	main-header
+   ======================================================================== */
+
+.main-header {
+	 position: fixed;
+}
+
+// Mobile
+// Rever se div.container.row é a melhor forma 
+@media(max-width: 414px ){
+	main{
+		padding-top: 55px !important;
+	}
+	div.container.row{
+		height: 55px !important;
+	}
+}
+
+@media(max-width: 769px ){
+	main{
+		padding-top: 83px !important;
+	}
+}
+
+@media(max-width: 1024px){
+	main{
+		padding-top: 83px !important;
+	}
+}
+
+@media(max-width: 1300px){
+	main{
+		padding-top: 169px !important;
+	}
+}
+
+@media(max-width: 4000px){
+	main{
+		padding-top: 169px !important;
+	}
+}

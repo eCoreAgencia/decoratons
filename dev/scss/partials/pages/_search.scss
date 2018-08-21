@@ -324,52 +324,49 @@ body.dep-cat-bus{
 								width: 30px;
 								height: 30px;
 							}
-							&[title="Bege"]{background-color: #fefae6}
-							&[title="Roxo"]{background-color: #9a0698}
-							&[title="Rosa"]{background-color: #ffcccc}
-							&[title="Cinza"]{background-color: #d1d1d1}
-							&[title="Verde"]{background-color: #a9cbbb}
-							&[title="Pêsego"]{background-color: #fdca89}
-							&[title="Marrom"]{background-color: #835e42}
-							&[title="Amarelo"]{background-color: #ffff33}
-							&[title="Laranja"]{background-color: #fe7900}
-							&[title="Vermelho"]{background-color: #ea1d22}
-							&[title="Pêssego"]{background-color: #ffdab9;}
-							&[title="Creme"]{background-color: #fffdd0;}
-							&[title="Nude"]{background-color: #9a8262;}
-							&[title="Avelã"]{background-color: #c09f86;}
-							&[title="Azul Claro"]{background-color: #add8e6;}
-							&[title="Azul Cobalto"]{background-color: #333c87;}
-							&[title="Azul Royal"]{background-color: #4169e1;}
-							&[title="Azul Marinho"]{background-color: #120a8f;}
-							&[title="Verde Musgo"]{background-color: #ADDFAD;}
-							&[title="Vinho"]{background-color: #722f37;}
-							&[title="Palha"]{background-color: #ebdec6;}
-							&[title="Champanhe"]{background-color: #F7E7CE;}
-							&[title="Chocolate"]{background-color: #d2691e;}
-							&[title="Café"]{background-color: #4b3621;}
-							&[title="Turquesa"]{background-color: #40e0d0;}
-							&[title="Verde Claro"]{background-color: #90ee90;}
-							&[title="Azul Acinzentado"]{background-color: #084d6e;}
-							&[title="Rosa Claro"]{background-color: #ffb6c1;}
-							&[title="Rosa Queimado"]{background-color: #d0a993;}
-							&[title="Coral"]{background-color: #ff7f50;}
-							&[title="Grafite"]{background-color: #474a51;}
-							&[title="Verde Claro"]{background-color: #90ee90;}
-							&[title="Lilás"]{background-color: #c8a2c8;}
-							&[title="Ameixa"]{background-color: #dda0dd;}
+							&[title="Creme"]{background-color: #fffbe6;}
+							&[title="Palha"]{background-color: #ececd2;}
+							&[title="Bege"]{background-color: #d5c0a2;}
+							&[title="Nude"]{background-color: #f1d5bf;}
+							&[title="Champanhe"]{background-color: #fee7be;}
+							&[title="Avelã"]{background-color: #845f42;}
+							&[title="Chocolate"]{background-color: #94613d;}
+							&[title="Marrom"]{background-color: #4b3621}
+							&[title="Café"]{background-color: #362016;}
+							&[title="Turquesa"]{background-color: #7ed9d2;}
+							&[title="Azul Claro"]{background-color: #ace9f0;}
+							&[title="Azul Cobalto"]{background-color: #0048aa;}
+							&[title="Azul Royal"]{background-color: #000180;}
+							&[title="Azul Marinho"]{background-color: #000542;}
+							&[title="Azul Acinzentado"]{background-color: #417087;}
+							&[title="Verde Claro"]{background-color: #d0f0bf;}
+							&[title="Verde"]{background-color: #2e9230}
+							&[title="Verde Musgo"]{background-color: #8a9d46;}
+							&[title="Verde Floresta"]{background-color: #006634;}
+							&[title="Verde Acinzentado"]{background-color: #abc4b8;}
+							&[title="Rosa Claro"]{background-color: #fce1e2;}
+							&[title="Rosa"]{background-color: #ffaec3}
+							&[title="Rosa Queimado"]{background-color: #cf9c9b;}
+							&[title="Coral"]{background-color: #ff7256;}
+							&[title="Pink"]{background-color: #ec268f;}
+							&[title="Vermelho"]{background-color: #eb1d22;}
+							&[title="Cinza"]{background-color: #d2d3d5}
+							&[title="Grafite"]{background-color: #4c4c4c;}
 							&[title="Preto"]{background-color: #000;}
-							&[title="Amarelo Claro"]{background-color: #ffffe0;}
-							&[title="Colorido"]{
-								/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d902ff+0,ffe035+20,78b726+34,000000+62,4904a3+79,ff6060+100 */
-								background: #d902ff; /* Old browsers */
-								background: -moz-linear-gradient(left, #d902ff 0%, #ffe035 20%, #78b726 34%, #000000 62%, #4904a3 79%, #ff6060 100%); /* FF3.6-15 */
-								background: -webkit-linear-gradient(left, #d902ff 0%,#ffe035 20%,#78b726 34%,#000000 62%,#4904a3 79%,#ff6060 100%); /* Chrome10-25,Safari5.1-6 */
-								background: linear-gradient(to right, #d902ff 0%,#ffe035 20%,#78b726 34%,#000000 62%,#4904a3 79%,#ff6060 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d902ff', endColorstr='#ff6060',GradientType=1 ); /* IE6-9 */
+							&[title="Branco"]{background-color: #fefefe;}
+							&[title="Roxo"]{background-color: #9a019a}
+							&[title="Lilás"]{background-color: #d7adee;}
+							&[title="Ameixa"]{background-color: #8e2554;}
+							&[title="Vinho"]{background-color: #4d0d10;}
+							&[title="Amarelo"]{background-color: #feec0a}
+							&[title="Amarelo Claro"]{background-color: #fff79b;}
+							&[title="Pêssego"]{background-color: #ffdab9;}
+							&[title="Mostarda"]{background-color: #e7a103;}
+							&[title="Laranja"]{background-color: #ff8000;}
+							&[title="Vermelho Escuro"]{background-color: #bd2426;}
+							&[title="Colorido"]{background-image: url("/arquivos/colorido.jpg");
+								background-size: contain; 
 							}
-							&[title="Mostarda"]{background-color: #ffdb58;}
-							&[title="Branco"]{background-color: #fff;}
 						}
 					}
 					&.Tamanho{

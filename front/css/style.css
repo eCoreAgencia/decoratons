@@ -1642,6 +1642,14 @@ header .middle-box .calculator {
 	text-align: center;
 }
 
+/* ========================================================================
+	main-header
+   ======================================================================== */
+
+.main-header {
+	position: fixed;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -2050,6 +2058,9 @@ ul.menu-subscribe li.gift a {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url("/arquivos/search.png");
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .MiniCartButton {
@@ -3262,10 +3273,6 @@ header.menu-persistente {
 	display: block;
 	position: fixed;
 	z-index: 999999999;
-	animation: grow .7s;
-	-o-animation: grow .7s;
-	-moz-animation: grow .7s;
-	-webkit-animation: grow .7s;
 }
 
 header.menu-persistente .top-elements {
@@ -5599,162 +5606,169 @@ body.dep-cat-bus main section.sidebar ul.Cor a:hover {
 	border: 1px solid #666;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Bege"] {
-	background-color: #fefae6;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Roxo"] {
-	background-color: #9a0698;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa"] {
-	background-color: #ffcccc;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Cinza"] {
-	background-color: #d1d1d1;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde"] {
-	background-color: #a9cbbb;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Pêsego"] {
-	background-color: #fdca89;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Marrom"] {
-	background-color: #835e42;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Amarelo"] {
-	background-color: #ffff33;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Laranja"] {
-	background-color: #fe7900;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Vermelho"] {
-	background-color: #ea1d22;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Pêssego"] {
-	background-color: #ffdab9;
-}
-
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Creme"] {
-	background-color: #fffdd0;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Nude"] {
-	background-color: #9a8262;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Avelã"] {
-	background-color: #c09f86;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Claro"] {
-	background-color: #add8e6;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Cobalto"] {
-	background-color: #333c87;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Royal"] {
-	background-color: #4169e1;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Marinho"] {
-	background-color: #120a8f;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Musgo"] {
-	background-color: #ADDFAD;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Vinho"] {
-	background-color: #722f37;
+	background-color: #fffbe6;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Palha"] {
-	background-color: #ebdec6;
+	background-color: #ececd2;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Bege"] {
+	background-color: #d5c0a2;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Nude"] {
+	background-color: #f1d5bf;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Champanhe"] {
-	background-color: #F7E7CE;
+	background-color: #fee7be;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Avelã"] {
+	background-color: #845f42;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Chocolate"] {
-	background-color: #d2691e;
+	background-color: #94613d;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Café"] {
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Marrom"] {
 	background-color: #4b3621;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Turquesa"] {
-	background-color: #40e0d0;
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Café"] {
+	background-color: #362016;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Claro"] {
-	background-color: #90ee90;
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Turquesa"] {
+	background-color: #7ed9d2;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Claro"] {
+	background-color: #ace9f0;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Cobalto"] {
+	background-color: #0048aa;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Royal"] {
+	background-color: #000180;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Marinho"] {
+	background-color: #000542;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Azul Acinzentado"] {
-	background-color: #084d6e;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa Claro"] {
-	background-color: #ffb6c1;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa Queimado"] {
-	background-color: #d0a993;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Coral"] {
-	background-color: #ff7f50;
-}
-
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Grafite"] {
-	background-color: #474a51;
+	background-color: #417087;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Claro"] {
-	background-color: #90ee90;
+	background-color: #d0f0bf;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Lilás"] {
-	background-color: #c8a2c8;
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde"] {
+	background-color: #2e9230;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Ameixa"] {
-	background-color: #dda0dd;
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Musgo"] {
+	background-color: #8a9d46;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Floresta"] {
+	background-color: #006634;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Verde Acinzentado"] {
+	background-color: #abc4b8;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa Claro"] {
+	background-color: #fce1e2;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa"] {
+	background-color: #ffaec3;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Rosa Queimado"] {
+	background-color: #cf9c9b;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Coral"] {
+	background-color: #ff7256;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Pink"] {
+	background-color: #ec268f;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Vermelho"] {
+	background-color: #eb1d22;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Cinza"] {
+	background-color: #d2d3d5;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Grafite"] {
+	background-color: #4c4c4c;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Preto"] {
 	background-color: #000;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Amarelo Claro"] {
-	background-color: #ffffe0;
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Branco"] {
+	background-color: #fefefe;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Colorido"] { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d902ff+0,ffe035+20,78b726+34,000000+62,4904a3+79,ff6060+100 */
-	background: #d902ff; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #d902ff 0%, #ffe035 20%, #78b726 34%, #000000 62%, #4904a3 79%, #ff6060 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d902ff', endColorstr='#ff6060',GradientType=1 ); /* IE6-9 */
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Roxo"] {
+	background-color: #9a019a;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Lilás"] {
+	background-color: #d7adee;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Ameixa"] {
+	background-color: #8e2554;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Vinho"] {
+	background-color: #4d0d10;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Amarelo"] {
+	background-color: #feec0a;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Amarelo Claro"] {
+	background-color: #fff79b;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Pêssego"] {
+	background-color: #ffdab9;
 }
 
 body.dep-cat-bus main section.sidebar ul.Cor a[title="Mostarda"] {
-	background-color: #ffdb58;
+	background-color: #e7a103;
 }
 
-body.dep-cat-bus main section.sidebar ul.Cor a[title="Branco"] {
-	background-color: #fff;
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Laranja"] {
+	background-color: #ff8000;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Vermelho Escuro"] {
+	background-color: #bd2426;
+}
+
+body.dep-cat-bus main section.sidebar ul.Cor a[title="Colorido"] {
+	background-image: url("/arquivos/colorido.jpg");
+	background-size: contain;
 }
 
 body.dep-cat-bus main section.sidebar ul.Tamanho li {
@@ -8730,7 +8744,27 @@ body.dep-cat-bus main .shearchTitle .filtrarProdutos {
 
 }
 
+@media (max-width: 4000px) {
+
+main {
+	padding-top: 169px !important;
+}
+
+}
+
+@media (max-width: 1300px) {
+
+main {
+	padding-top: 169px !important;
+}
+
+}
+
 @media (max-width: 1024px) {
+
+main {
+	padding-top: 83px !important;
+}
 
 body.home section .section-title {
 	font-size: 24px;
@@ -8766,6 +8800,14 @@ body.produto .product-box {
 
 body.produto .zoomWrapperImage img {
 	display: none !important;
+}
+
+}
+
+@media (max-width: 769px) {
+
+main {
+	padding-top: 83px !important;
 }
 
 }
@@ -8868,6 +8910,18 @@ body.produto main section.precaucoes .section-title h2 {
 
 .account .modal-body {
 	height: calc(100vh - 65px - 70px);
+}
+
+}
+
+@media (max-width: 414px) {
+
+main {
+	padding-top: 55px !important;
+}
+
+div.container.row {
+	height: 55px !important;
 }
 
 }

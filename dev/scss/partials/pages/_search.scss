@@ -324,44 +324,49 @@ body.dep-cat-bus{
 								width: 30px;
 								height: 30px;
 							}
-							&[title="Bege"]{background-color: #d5c0a2}
-							&[title="Roxo"]{background-color: #9a019a}
-							&[title="Rosa"]{background-color: #ffaec3}
-							&[title="Cinza"]{background-color: #d2d3d5}
-							&[title="Marrom"]{background-color: #4b3621}
-							&[title="Amarelo"]{background-color: #feec0a}
-							&[title="Laranja"]{background-color: #ff8000}
-							&[title="Vermelho"]{background-color: #eb1d22}
-							&[title="Pêssego"]{background-color: #ffdab9;}
 							&[title="Creme"]{background-color: #fffbe6;}
+							&[title="Palha"]{background-color: #ececd2;}
+							&[title="Bege"]{background-color: #d5c0a2}
 							&[title="Nude"]{background-color: #f1d5bf;}
+							&[title="Champanhe"]{background-color: #fee7be;}
 							&[title="Avelã"]{background-color: #fee7be;}
+							&[title="Chocolate"]{background-color: #94613d;}
+							&[title="Marrom"]{background-color: #4b3621}
+							&[title="Café"]{background-color: #362016;}
+							&[title="Turquesa"]{background-color: #7ed9d2;}
 							&[title="Azul Claro"]{background-color: #ace9f0;}
 							&[title="Azul Cobalto"]{background-color: #0048aa;}
 							&[title="Azul Royal"]{background-color: #000180;}
 							&[title="Azul Marinho"]{background-color: #000542;}
-							&[title="Vinho"]{background-color: #4d0d10;}
-							&[title="Palha"]{background-color: #ececd2;}
-							&[title="Champanhe"]{background-color: #fee7be;}
-							&[title="Chocolate"]{background-color: #94613d;}
-							&[title="Café"]{background-color: #362016;}
-							&[title="Turquesa"]{background-color: #7ed9d2;}
+							&[title="Azul Acinzentado"]{background-color: #417087;}
+							&[title="Verde Claro"]{background-color: #d0f0bf;}
 							&[title="Verde"]{background-color: #2e9230}
 							&[title="Verde Musgo"]{background-color: #8a9d46;}
-							&[title="Verde Claro"]{background-color: #d0f0bf;}
+							&[title="Verde Floresta"]{background-color: #006634;}
 							&[title="Verde Acinzentado"]{background-color: #abc4b8;}
-							&[title="Azul Acinzentado"]{background-color: #417087;}
 							&[title="Rosa Claro"]{background-color: #fce1e2;}
+							&[title="Rosa"]{background-color: #ffaec3}
 							&[title="Rosa Queimado"]{background-color: #cf9c9b;}
 							&[title="Coral"]{background-color: #ff7256;}
+							&[title="Pink"]{background-color: #ec268f;}
+							&[title="Vermelho"]{background-color: #eb1d22;}
+							&[title="Cinza"]{background-color: #d2d3d5}
 							&[title="Grafite"]{background-color: #4c4c4c;}
+							&[title="Preto"]{background-color: #000;}
+							&[title="Branco"]{background-color: #fefefe;}
+							&[title="Roxo"]{background-color: #9a019a}
 							&[title="Lilás"]{background-color: #d7adee;}
 							&[title="Ameixa"]{background-color: #8e2554;}
-							&[title="Preto"]{background-color: #000;}
+							&[title="Vinho"]{background-color: #4d0d10;}
+							&[title="Amarelo"]{background-color: #feec0a}
 							&[title="Amarelo Claro"]{background-color: #fff79b;}
-							&[title="Colorido"]{background-image: url("arquivo/colorido.jpg"); }
+							&[title="Pêssego"]{background-color: #ffdab9;}
 							&[title="Mostarda"]{background-color: #e7a103;}
-							&[title="Branco"]{background-color: #fefefe;}
+							&[title="Laranja"]{background-color: #ff8000;}
+							&[title="Vermelho Escuro"]{background-color: #bd2426;}
+							&[title="Colorido"]{background-image: url("/arquivos/colorido.jpg");
+								background-size: contain; 
+							}
 						}
 					}
 					&.Tamanho{

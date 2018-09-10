@@ -118,13 +118,14 @@ $(document).ajaxStop(function(){
 					var cart = url;
 
 					$.ajax({
-						url: cart.replace("https://www.kroton.com.br", "").replace("true", "false"),
+						url: cart,
 						type: 'GET',
 						crossDomain: true,
 						dataType: 'html',
 						success: function(){
-							helper.openCart();
-							helper.fillCart();
+							// helper.openCart();
+							// helper.fillCart();
+							window.location.url = '/checkout/#/cart'
 						}
 					});
 				}
@@ -142,7 +143,7 @@ $(document).ajaxStop(function(){
 					var cart = url;
 
 					$.ajax({
-						url: cart.replace("https://www.kroton.com.br", "").replace("true", "false"),
+						url: cart,
 						type: 'GET',
 						crossDomain: true,
 						dataType: 'html',
@@ -182,7 +183,7 @@ $(document).ajaxStop(function(){
 						var cart = "/checkout/cart/add?sku=" + idSku + "&seller=1&redirect=true&sc=2";
 
 						$.ajax({
-							url: cart.replace("https://www.kroton.com.br", "").replace("true", "false"),
+							url: cart,
 							type: 'GET',
 							crossDomain: true,
 							dataType: 'html',

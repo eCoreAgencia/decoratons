@@ -123,9 +123,9 @@ $(document).ajaxStop(function(){
 						crossDomain: true,
 						dataType: 'html',
 						success: function(){
-							// helper.openCart();
-							// helper.fillCart();
-							window.location.url = '/checkout/#/cart'
+							helper.openCart();
+							helper.fillCart();
+							// window.location.url = '/checkout/#/cart'
 						}
 					});
 				}
@@ -312,18 +312,13 @@ $(document).ajaxStop(function(){
 	        cartButton: $(".sta-cart")
 	    })
 
-	    $('header #mini-cart').click(function(){
-	    	$('.sta-cart-container').animate({right: 0},300);
-		});
+	  //   $('header #mini-cart').click(function(){
+	  //   	$('.sta-cart-container').animate({right: 0},300);
+		// });
 		
-		$('header #mini-cart').mouseenter(function(){
-			$('.sta-cart-container').addClass('active');
+		$('header #mini-cart').click(function(){
+			$('.sta-cart-container').toggleClass('active');
 		});
-		
-		$('.sta-cart-container').mouseleave(function(){
-			$('.sta-cart-container').removeClass('active');
-		})
-
 	});
 // Minicart
 

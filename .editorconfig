@@ -5,7 +5,7 @@ end_of_line = lf
 insert_final_newline = true
 
 
-[*.{js,html,css}]
+[*.{js,html,css,scss}]
 charset = utf-8
 
 [*.{html,css,js}]

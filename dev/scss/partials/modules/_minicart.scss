@@ -70,3 +70,11 @@
 .sta-cart-resume span.sta-cart-total{
 	color: #000;
 }
+
+@media (max-width: 450px){
+	.sta-cart-container {
+		right: 0!important;
+		left: unset;
+		top: 55px;
+	}
+}

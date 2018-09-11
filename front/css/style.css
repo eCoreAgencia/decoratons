@@ -8940,6 +8940,16 @@ body.produto main section.precaucoes .section-title h2 {
 
 }
 
+@media (max-width: 450px) {
+
+.sta-cart-container {
+	right: 0 !important;
+	left: unset;
+	top: 55px;
+}
+
+}
+
 @media (max-width: 414px) {
 
 main {

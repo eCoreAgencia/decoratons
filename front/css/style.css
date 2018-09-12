@@ -1650,6 +1650,8 @@ header .middle-box .calculator {
 	position: fixed;
 }
 
+/* BANNER */
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -8834,6 +8836,14 @@ body.produto .zoomWrapperImage img {
 
 main {
 	padding-top: 83px !important;
+}
+
+}
+
+@media (max-width: 768px) {
+
+body.home section.banners-top .box-banner a img {
+	width: 100%;
 }
 
 }

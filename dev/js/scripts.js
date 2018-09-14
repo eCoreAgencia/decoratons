@@ -852,6 +852,12 @@ $(function() {
 				$input.change();
 			});
 		});
+
+		$('.quantitySelector input').on('change', function(){
+			var qtd = $(this).val();
+			$('.frete-quantidade .quantity input').val(qtd);
+			
+		});
 	// Botões quantidade
 
 	// Campo Produto

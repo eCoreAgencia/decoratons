@@ -2529,7 +2529,8 @@ button[name="favorite"].isFavorite svg:last-of-type {
 
 .sta-cart-container {
 	display: none;
-	border-bottom: 2px solid #147eb8;
+	height: 82vh;
+	overflow-y: auto;
 	width: auto;
 	width: 250px;
 	position: fixed;
@@ -2559,6 +2560,7 @@ button[name="favorite"].isFavorite svg:last-of-type {
 	height: 0;
 	margin: 31px -75px auto 30px;
 	background-color: transparent;
+	overflow-y: auto;
 	outline: 0;
 	cursor: pointer;
 	border: 0;
@@ -2582,10 +2584,6 @@ button[name="favorite"].isFavorite svg:last-of-type {
 	padding: 12px;
 	height: auto;
 	overflow: auto;
-}
-
-.sta-cart-resume {
-	height: 141px;
 }
 
 .sta-cart-title .qtd-cart {
@@ -2811,6 +2809,10 @@ button[name="favorite"].isFavorite svg:last-of-type {
 
 .sta-cart-resume span.sta-cart-total {
 	color: #000;
+}
+
+.bt-comprar {
+	bottom: unset !important;
 }
 
 /* ==========================================================================
@@ -8956,6 +8958,7 @@ body.produto main section.precaucoes .section-title h2 {
 	right: 0 !important;
 	left: unset;
 	top: 55px;
+	height: 92vh;
 }
 
 }
